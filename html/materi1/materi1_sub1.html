@@ -36,7 +36,6 @@
     <link href="/css/Materi/materiIndex.css" rel="stylesheet"> 
     <link href="/css/materiResponsive.css" rel="stylesheet">
     <link href="/css/Materi/Materi1/materi1_sub1_berlatih1.css" rel="stylesheet">
-    <link href="/css/materi1_sub1_berlatih1_custom.css" rel="stylesheet">
     <link href="/css/Materi/Materi1/materi1_sub1_berlatih2.css" rel="stylesheet">
 
     <link rel="icon" type="image/png" href="/img/iconWebsite.svg">
@@ -275,12 +274,17 @@
                                 <input type="text" id="isian8" size="10" style="text-align: center" placeholder=". . ." />. Apabila spermatozoa <input type="text" id="isian9" size="10" style="text-align: center" placeholder=". . ." />membuahi sel telur, akan dihasilkan anak perempuan. sedangkan apabila yang membuahi sel telur adalah spermatozoa <input type="text" id="isian10" size="10" style="text-align: center" placeholder=". . ." /> , akan terbentuk anak laki laki.
                               </p>
                               
-<div id="scoreDisplay" class="score-display">Skor: -</div>
+                              
                               <!-- button -->
-                              <div class="d-md-flex justify-content-md-end" style="gap: 10px; margin-top: 10px;">
+                              <div class="d-md-flex justify-content-md-end" style="gap: 10px; margin-top: 20px;">
+                                
+                                <div>
                                 <button class="btn_cekJawaban styled-btn" onclick="cekJawaban()"><b>Cek Jawaban</b></button>
                                 <button class="btn_cekJawaban styled-btn" onclick="cekUlang()"><b>Ulang</b></button>
+                                </div>
                               </div>
+                              <br>
+                              <div id="scoreDisplay" class="score-display">Skor: -</div>
                               <br>
                               <br>
 
@@ -326,15 +330,15 @@
                                 <ul>
                                     <li class="list-item">
                                       <div class="label">Jika anak yang diharapkan <u>1</u>:</div>
-                                      <div class="formula-box">(l+p)<sup>n</sup> = l + p</div>
+                                      <div class="formula-highlight">(l+p)<sup>n</sup> = l + p</div>
                                     </li>
                                     <li class="list-item">
                                       <div class="label">Jika anak yang diharapkan <u>2</u>:</div>
-                                      <div class="formula-box">(l+p)<sup>2</sup> = (l+p)(l+p) = l<sup>2</sup> + 2lp + p<sup>2</sup></div>
+                                      <div class="formula-highlight">(l+p)<sup>2</sup> = (l+p)(l+p) = l<sup>2</sup> + 2lp + p<sup>2</sup></div>
                                     </li>
                                     <li class="list-item">
                                       <div class="label">Jika anak yang diharapkan <u>3</u>:</div>
-                                      <div class="formula-box">(l+p)<sup>3</sup> = l<sup>3</sup> + 3l<sup>2</sup>p + 3lp<sup>2</sup> + p<sup>3</sup></div>
+                                      <div class="formula-highlight">(l+p)<sup>3</sup> = l<sup>3</sup> + 3l<sup>2</sup>p + 3lp<sup>2</sup> + p<sup>3</sup></div>
                                     </li>
                                     <li>
                                       Dan seterusnya....
@@ -374,10 +378,12 @@
                                       sebesar 37,5%.
                                     </b>
                                   </div>
-
+                                  <br>
+                                  <br>  
                                 
                             </div>
                     </div>
+                    
                 </div>
 
                 <!-- page 3 -->
@@ -387,30 +393,55 @@
                         
                         <!-- Tabs -->
                         <div class="tabs">
-                            <button class="tab-button active" onclick="openTab(event, 'latihan1')">Latihan 1</button>
-                            <button class="tab-button" onclick="openTab(event, 'latihan2')">Latihan 2</button>
+                            <button class="tab-button active">Ayo Berlatih 2</button>
+                            <button class="tab-button">Ayo Berlatih 3</button>
                         </div>
 
-                        <!-- Latihan 1 -->
-                        <div id="latihan1" class="tab-content active">
-                            <p>
-                            Diketahui jumlah anak yang diharapkan adalah 
-                            <input type="text" id="total"> orang, terdiri dari 
-                            <input type="text" id="boys"> laki-laki dan 
-                            <input type="text" id="girls"> perempuan.
-                            Maka rumus yang digunakan adalah 
-                            <input type="text" id="term">.
-                            </p>
-                            <p>
-                            Hitung nilainya:
-                            <br>
-                            <input type="text" id="step1"> =
-                            <input type="text" id="step2">
-                            </p>
-                            <p>
-                            Maka peluangnya adalah 
-                            <input type="text" id="result">%.
-                            </p>
+                        <!-- AyoBerlatih2 -->
+                        <div id="AyoBerlatih2" class="tab-content active">
+                            <div class="card w-100 shadow m-2 ms-0" style="background-color: #eee9da;">
+                                <p><b>Petunjuk Pengerjaan :</b></p>
+                                
+                              <!-- <p style="text-align: justify;">
+                                Setelah mengamati gambar di atas, pilihlah gambar <b>bertanda bulat merah</b> yang menunjukkan bangun datar <b>segi banyak</b> dengan cara klik kotak jawaban yang ada di bawah gambar! <br />
+                                <ul>
+                                  <li>Jika ingin melihat gambar lebih jelas, klik tombol pada gambar maka akan tampil gambar yang lebih jelas dan besar.</li>
+                                  <li> Apabila sudah selesai maka klik tombol <span class="bg-primary p-1 ps-2 pe-2 rounded text-white">Selesai</span> untuk melihat hasil pengerjaan. Jika jawabanmu benar maka akan ditampilkan teks
+                                    <span class="text-success fw-bold">Jawabanmu benar!</span> beserta dengan penjelasannya,</li>
+                                    <li>
+                                      Sedangkan jika jawabanmu salah maka akan ditampilkan teks <span class="text-danger fw-bold">Jawabanmu salah!</span> beserta dengan
+                                      penjelasannya.
+                                    </li>
+                                </ul>
+                              </p> -->
+                            </div><br>
+                            <div class="question-box">
+                                <h5>Soal :</h5>
+                                Jumlah <u>anak</u> yang <u>diharapkan</u> 4 orang, 2 <u>laki-laki</u> dan 2 <u>perempuan</u>. <b>Berapa persenkah kemungkinannya?</b>
+                              </div>
+                              <br>
+                            <p>Penyelesaian :</p>
+                            <div class="formula-highlight">
+                                <b>Rumus :<input type="text" id="isian1" size="10" style="text-align: center" placeholder=". . ." /> = <input type="text" id="isian2" size="10" style="text-align: center" placeholder=". . ." />
+                              </div>
+
+                              <p>
+                                Karena <u>anak yang diharapkan</u> 4 orang <u>terdiri 2 laki-laki</u> dan <u>2 perempuan</u> maka rumus<br>
+                                yang digunakan adalah 6l<sup>2</sup>p<sup>2</sup>. Sehingga:
+                              </p>
+                            
+                              <p>
+                                6l<sup>2</sup>p<sup>2</sup> = 6(1/2)<sup>2</sup>(1/2)<sup>2</sup><br>
+                                = 6(1/4)(1/4)<br>
+                                = 6/16 × 100%<br>
+                                = 37,5%
+                              </p>
+                            
+                                <b>
+                                  Sehingga kemungkinan memperoleh 2 anak laki-laki dan 2 anak Perempuan sebesar 37,5%.
+                                </b>
+                              
+                            
 
                             <div class="button-group">
                             <button onclick="checkAnswers()">Cek Jawaban</button>
@@ -420,9 +451,9 @@
                             <div class="result" id="feedback"></div>
                         </div>
 
-                        <!-- Latihan 2 -->
-                        <div id="latihan2" class="tab-content">
-                            <p>Latihan 2 masih kosong. Tambahkan soal lain di sini.</p>
+                        <!-- AyoBerlatih3 -->
+                        <div id="AyoBerlatih3" class="tab-content">
+                            <p>Latihan 3 masih kosong. Tambahkan soal lain di sini.</p>
                         </div>
                         
                     </div>
@@ -490,21 +521,35 @@
     
     <!-- JS Interaktif -->
 <script type="module" src="/js/materi1/materi1_latihan1.js"></script>
-    <script src="/js/materi1/materi1_latihan2.js"></script>
+<script type="module" src="/js/materi1/materi1_latihan2.js"></script>
 
-   
-    
+<script>
+  function adjustInputWidth(input) {
+    const minWidth = 30; // minimum width in pixels
+    const maxWidth = 800; // maximum width in pixels
+    const tempSpan = document.createElement('span');
+    tempSpan.style.visibility = 'hidden';
+    tempSpan.style.whiteSpace = 'pre';
+    tempSpan.style.font = window.getComputedStyle(input).font;
+    document.body.appendChild(tempSpan);
 
+    function updateWidth() {
+      tempSpan.textContent = input.value || input.placeholder || '';
+      let newWidth = tempSpan.offsetWidth + 10; // add some padding
+      if (newWidth < minWidth) newWidth = minWidth;
+      if (newWidth > maxWidth) newWidth = maxWidth;
+      input.style.width = newWidth + 'px';
+    }
 
+    input.addEventListener('input', updateWidth);
+    updateWidth();
+  }
 
-</html>
-    <!-- JS Interaktif -->
-<script type="module" src="/js/materi1/materi1_latihan1.js"></script>
-    <script src="/js/materi1/materi1_latihan2.js"></script>
+  document.addEventListener('DOMContentLoaded', () => {
+    const inputs = document.querySelectorAll('input[id^="isian"]');
+    inputs.forEach(input => {
+      adjustInputWidth(input);
+    });
+  });
+</script>
 
-   
-    
-
-
-
-</html>
