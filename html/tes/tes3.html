@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Drag and Drop Game</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        background-color: #f4f4f4;
+      }
+      .dragndrop {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        width: 100%;
+        max-width: 1200px;
+        margin: 0 auto;
+        height: 100vh;
+        padding: 20px;
+      }
+      .container {
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+        justify-content: flex-start;
+        align-items: center;
+        width: 70%;
+      }
+      .container-text {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        justify-content: flex-start;
+        align-items: center;
+        width: 28%;
+        padding: 10px;
+        background-color: #f0f0f0;
+        border-radius: 8px;
+      }
+      .column {
+        width: 200px;
+        height: 40px;
+        border: 4px dashed gray;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: white;
+        transition: border-color 0.3s, background-color 0.3s;
+        margin-bottom: 10px;
+      }
+      .text {
+        width: 200px;
+        padding: 10px;
+        border: 2px solid gray;
+        border-radius: 5px;
+        background-color: white;
+        text-align: center;
+        cursor: pointer;
+        user-select: none;
+        transition: transform 0.2s, background-color 0.3s;
+      }
+      .text.placeholder {
+        opacity: 0.5;
+        pointer-events: none;
+      }
+      .text:hover {
+        transform: scale(1.05);
+        background-color: #e7e7e7;
+      }
+      .correct {
+        border-color: green;
+        background-color: #d4ffd4;
+      }
+      .incorrect {
+        border-color: red;
+        background-color: #ffd4d4;
+      }
+      .cek-button,
+      .reset-button {
+        padding: 10px 20px;
+        font-size: 16px;
+        background-color: #007bff;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        margin-right: 10px;
+      }
+      .cek-button:hover,
+      .reset-button:hover {
+        background-color: #0056b3;
+      }
+      .score-container {
+        display: flex;
+        
+        width: 100%;
+        margin-top: 20px;
+      }
+      .score-text {
+        font-size: 16px;
+        font-weight: bold;
+        margin-left: 200px;
+        text-align: center;
+        flex-grow: 1;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="dragndrop">
+      <div class="container">
+        <div class="column" data-target="1"></div>
+        <div class="column" data-target="2"></div>
+        <div class="column" data-target="3"></div>
+        <div class="score-container">
+          <button class="cek-button">Cek Jawaban</button>
+          <button class="reset-button">Ulang</button>
+          <span class="score-text">Skor: 0%</span>
+        </div>
+      </div>
+      <div class="container-text">
+        <p class="text" draggable="true" data-source="1">Fahrull Ikhsan Hidayatullah</p>
+        <p class="text" draggable="true" data-source="2">Text 2</p>
+        <p class="text" draggable="true" data-source="3">Text 3</p>
+      </div>
+    </div>
+    <script>
+      const columns = document.querySelectorAll(".column");
+      const texts = document.querySelectorAll(".text");
+      const cekButton = document.querySelector(".cek-button");
+      const resetButton = document.querySelector(".reset-button");
+      const scoreText = document.querySelector(".score-text");
+      const textContainers = document.querySelector(".container-text");
+
+      let originalTexts = [];
+      let isChecked = false; // Track if the answers have been checked
+
+      window.onload = () => {
+        originalTexts = Array.from(textContainers.children);
+      };
+
+      texts.forEach((text) => {
+        text.addEventListener("dragstart", handleDragStart);
+        text.addEventListener("dragend", handleDragEnd);
+      });
+
+      columns.forEach((column) => {
+        column.addEventListener("dragover", handleDragOver);
+        column.addEventListener("drop", handleDrop);
+      });
+
+      cekButton.addEventListener("click", cekJawaban);
+      resetButton.addEventListener("click", resetGame);
+
+      let draggedElement = null;
+
+      function handleDragStart(event) {
+        draggedElement = event.target;
+        setTimeout(() => {
+          draggedElement.classList.add("placeholder");
+        }, 0);
+      }
+
+      function handleDragEnd() {
+        draggedElement.classList.remove("placeholder");
+        draggedElement = null;
+      }
+
+      function handleDragOver(event) {
+        event.preventDefault();
+      }
+
+      function handleDrop(event) {
+        event.preventDefault();
+        const target = event.target;
+
+        if (target.classList.contains("column") && !target.hasChildNodes()) {
+          target.appendChild(draggedElement);
+        }
+      }
+
+      function cekJawaban() {
+        if (isChecked) return; // Prevent checking again if already checked
+
+        let correctCount = 0;
+        columns.forEach((column) => {
+          const targetNumber = column.dataset.target;
+          const text = column.querySelector(".text");
+
+          if (text && text.dataset.source === targetNumber) {
+            column.classList.add("correct");
+            column.classList.remove("incorrect");
+            correctCount++;
+          } else {
+            column.classList.add("incorrect");
+            column.classList.remove("correct");
+          }
+        });
+
+        const score = (correctCount / columns.length) * 100;
+        scoreText.textContent = `Skor: ${score}%`;
+
+        cekButton.disabled = true; // Disable button after checking
+        isChecked = true; // Mark the game as checked
+      }
+
+      function resetGame() {
+        columns.forEach((column) => {
+          column.innerHTML = "";
+          column.classList.remove("correct", "incorrect");
+        });
+
+        originalTexts.forEach((text) => {
+          textContainers.appendChild(text);
+        });
+
+        scoreText.textContent = "Skor: 0%";
+
+        cekButton.disabled = false; // Enable the button again after reset
+        isChecked = false; // Reset the checked state
+      }
+    </script>
+  </body>
+</html>

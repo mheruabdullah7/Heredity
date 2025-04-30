@@ -1,0 +1,849 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Heredity</title>
+
+    <!-- ICON -->
+   <link href="/fontawesome/css/fontawesome.css" rel="stylesheet">
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+   <link href="/fontawesome/css/brands.css" rel="stylesheet">
+   <link href="/fontawesome/css/solid.css" rel="stylesheet">
+
+
+   <!-- Jquery -->
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js" charset="UTF-8"></script>
+
+   <!-- Boostrap -->
+   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+   
+   <!-- font -->
+   <link rel="preconnect" href="https://fonts.googleapis.com">
+   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+   <link href="https://fonts.googleapis.com/css2?family=Boogaloo&family=Roboto+Flex:opsz,wght@8..144,500&family=Signika+Negative:wght@700&display=swap" rel="stylesheet">
+
+   <!-- Mathjax -->
+   <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+   <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3.0.1/es5/tex-mml-chtml.js"></script>
+
+    <!-- css -->
+    <link href="/css/Materi/materiIndex.css" rel="stylesheet"> 
+    <link href="/css/materiResponsive.css" rel="stylesheet">
+    <link href="/css/Materi/Materi1/materi1_sub1_berlatih.css" rel="stylesheet">
+
+    <link rel="icon" type="image/png" href="/img/iconWebsite.svg">
+</head>
+<body>
+    <!-- No Internet -->
+    <div class="noKoneksi" hidden>
+        <div class="row">
+          <img src="/img/noKoneksi.svg" style="width: 35%;" alt="">
+          <div class="mt-3 fs-3 text-white fw-bold text-center">
+            Cek Koneksi Internet Anda...
+          </div>
+        </div>
+    </div>
+    <!-- Loading -->
+    <!-- <div class="loader">
+        <span>Loading...</span>
+    </div> -->
+    <!-- Header -->
+    <div class="sidebarr">
+        <div class="logo-details">
+            <i class="fa fa-h-square" aria-hidden="true"></i>
+            <span class="logo_name">Heredity</span>
+        </div>
+
+        <ul class="nav-link">
+            <!-- Penentuan Jenis Kelamin -->
+            <li>
+                <div class="iconn-link ">
+                    <a href="#" class="menubar">
+                        <i class="fa-sharp fa-solid fa-book"></i>
+                        <span class="link_nama">Hereditas Pada Manusia</span>
+                    </a>
+                    <i class="fa-sharp fa-solid fa-angle-down"></i>
+                </div>
+                <ul class="sub-menuu ">
+                    <div class="boxSub-menuu ">
+                        <li>
+                            <a class="link_nama" href="#">
+                                Hereditas Pada Manusia
+                            </a>
+                        </li>
+                        <!-- list sub menu -->
+                        <li>
+                            <a href="/html/materi.html" >
+                                Penentuan jenis kelamin
+                                
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" >
+                                Pewarisan sifat dengan hukum Mendel
+                            </a>
+                        </li>
+                        
+                        <li>
+                            <a href="/html/materi1/materi1_kuis.html">
+                                Kuis
+                            </a>
+                        </li>
+
+                    </div>
+                </ul>
+            </li>
+
+            <!--  Penyakit Keturunan -->
+            <li>
+                <div class="iconn-link aktif">
+                    <a href="#">
+                        <i class="fa-sharp fa-solid fa-book"></i>
+                        <span class="link_nama">Penyakit Keturunan</span>
+                    </a>
+                    <i class="fa-sharp fa-solid fa-angle-down"></i>
+                </div>
+                <ul class="sub-menuu menuAktif">
+                    <div class="boxSub-menuu">
+                        <li>
+                            <a class="link_nama" href="#">
+                                Penyakit Keturunan 
+                            </a>
+                        </li>
+                        <!-- list sub menu -->
+                        <li>
+                            <a href="/html/materi2/materi2_sub1.html " class="aktif2">
+                                Penyakit keturunan karena kelainan gen
+                            </a>
+                        </li>
+                        <li>
+                            <a href="/html/materi2/materi2_sub2.html">
+                                Penyakit keturunan karena kelainan kromosom
+                            </a>
+                        </li>
+                        <li>
+                            <a href="/html/materi2/materi2_kuis.html">
+                                Kuis
+                            </a>
+                        </li>
+                    </div>
+                </ul>
+            </li>
+
+            <!-- Golongan Darah-->
+            <li>
+                <div class="iconn-link">
+                    <a href="#">
+                        <i class="fa-sharp fa-solid fa-book"></i>
+                        <span class="link_nama">Golongan Darah</span>
+                    </a>
+                    <i class="fa-sharp fa-solid fa-angle-down"></i>
+                </div>
+                <ul class="sub-menuu">
+                    <div class="boxSub-menuu">
+                        <li>
+                            <a class="link_nama" href="#">
+                                Golongan Darah
+                            </a>
+                        </li>
+                        <!-- list sub menu -->
+                        <li>
+                            <a href="/html/materi3/materi3_sub1.html">
+                                Sistem ABO
+                            </a>
+                        </li>
+                        <li>
+                            <a href="/html/materi3/materi3_sub2.html">
+                                Sistem MN
+                            </a>
+                        </li>
+                        <li>
+                            <a href="/html/materi3/materi3_sub3.html">
+                                Sistem RH
+                            </a>
+                        </li>
+                        <li>
+                            <a href="/html/materi3/materi3_kuis.html">
+                                Kuis
+                            </a>
+                        </li>
+                    </div>
+                </ul>
+            </li>
+
+            <!-- Evaluasi -->
+            <li>
+                <div class="iconn-link">
+                    <a href="/html/evaluasi.html">
+                        <i class="fa-sharp fa-solid fa-pen-to-square"></i>
+                      <span class="link_nama" >Evaluasi</span>
+                    </a>
+                </div>
+                <ul class="sub-menuu blankk">
+                    <div class="boxSub-menuu">
+                        <li><a class="link_nama" href="/html/evaluasi.html" style="pointer-events:painted">Evaluasi</a></li>
+                    </div>
+                </ul>
+            </li>
+            
+            <!-- Akun Profil -->
+            <li>
+                <div class="profile-details  d-md-flex">
+                   
+                    <div class="name-job text-capitalize w-100 mx-3">
+                        <div class="profile_name">
+                            <div class="profile_name" id="namaSiswa"></div>
+                            <div class="status">NISN. 
+                                <span id="nisnProfil"></span>
+                            </div>
+                        </div>
+                    </div>
+                    <i class="fa-sharp fa-solid fa-right-from-bracket" onclick="LogOut()"></i>
+                </div>
+                <!-- <div class="profile-details d-md-flex ">
+                    <div class="profile-content">
+                        <img src="/img/profile.png" alt="">
+                    </div>
+                    <div class="name-job text-capitalize">
+                        <div class="profile_name" id="namaSiswa"></div>
+                        <div class="status">No Abs. <span id="absSiswa"></span></div>
+                    </div>
+                    <i class="fa-sharp fa-solid fa-right-from-bracket" onclick="LogOut()"></i>
+                </div> -->
+            </li>
+        </ul>
+    </div>
+
+    <!-- section Utama -->
+    <section class="home-section">
+        
+        <div class="home-content">
+            <i class="fa-sharp fa-solid fa-bars"></i>
+            <span class="text">Penyakit Keturunan / <i style="color: white">Penyakit keturunan karena kelainan gen</i></span>
+            <a href="/dasboard.html">
+                <i class="fa-sharp fa-solid fa-house"></i>
+            </a>
+        </div>
+
+        
+        <div class="konten">
+            
+            <div class="materi">
+                <!-- Tujuan Pembelajaran -->
+                <div class="card-body">
+                        
+                    <a class="tombol fs-6" data-bs-toggle="collapse" href="#tujuan" role="button"  aria-controls="tujuan" 
+                        style="text-decoration: none; color: white;">
+                        <div class="card-header tombol text-center" style="background-color: #005eff; border-radius: 5px 5px 0 0px; padding: 5px 15px">
+                            Tujuan Pembelajaran (klik untuk menutup/membuka)
+                        </div>
+                    </a>
+        
+                    <div class="shadow-sm mt-1 collapse show" id="tujuan">
+                      <div class="card card-body bg-light border-1" style="border-radius: 0 0 5px 5px; background-color: #f4f4f4">
+                        <ul>
+                            <li class="fs-6">Siswa mampu menganalisis kasus penyakit keturunan</li>
+                        </ul>
+                      </div>
+                    </div>
+                </div>
+                <!-- Akhir Tujuan Pembelajaran -->
+                
+                <br>
+
+                <!-- page 1 -->
+                <div id="satu" >
+                    <p class="header">Teori</p>
+                    <div class="card" style="border: 2px solid #005eff; margin-top: -5px;">
+                        
+                        <p style="font-weight: bolder;">Penyakit Keturunan</p>
+                        <p>Setiap orang pasti menginginkan tubuh yang sehat dan terbebas dari segala macam penyakit. Namun, beberapa penyakit tertentu tidak dapat dicegah keberadaannya karena termasuk penyakit genetik yang diturunkan. Penyakit keturunan adalah suatu penyakit kelainan genetik yang diwariskan dari orang tua kepada anaknya. Namun, ada orang tua yang hanya bertindak sebagai pembawa sifat (carrier) dan penyakit ini baru muncul setelah dipicu oleh lingkungan dan gaya hidupnya. Penyakit tersebut dapat diwariskan karena faktor penyebab penyakit terdapat di dalam gen yang kemudian diturunkan dari orang tua kepada anaknya.</p>
+                        <p>Banyak sekali kelainan atau pelyakit keturunan pada manusia. Penyakit keturunan tidak menular dan tidak dapat disembuhkan, tetapi dapat dihindari. Penyakit keturunan pada manusia ada yang disebabkan oleh kelainan pada gen dan ada yang disebabkan oleh ketidaknormalan jumlah kromosom.</p>
+                        <br>
+                        <p style="font-weight: bold;">Penyakit keturunan karena kelainan gen</p>
+                        <p>Beberapa penyakit keturunan karena kelainan gén, antara lain buta warna, hemofilia, albino, dan talasemia. Buta warna dan hemofilia merupakan penyakit keturunan yang disebabkan oleh gen yang terdapat pada kromosom kelamin (gonosom), yaitu kromosom X. Sementara albino, diabetes mellitus, dan talasemia disebabkan oleh gen pada autosom (kromosom tubuh).</p>
+                    </div>
+                    <br>
+                
+                </div>
+
+                <!-- page 2 -->
+                <div id="dua">
+                    
+                    <br>
+
+                    <!-- Materi -->
+                    <div class="sub-materi">
+                        
+                        <!-- Mari Mengamati -->
+                        <p class="header">Teori</p>
+                        
+                            <!-- box mari mengamati -->
+                            
+                            <div class="card" style="border: 2px solid #005eff; margin-top: -5px;">
+                                <p style="font-weight: bold;">a. Buta Warna</p>
+                                <div style="display: flex; gap: 5%; align-items: center; justify-content: center; align-self: center;">
+                                    <img src="/img/butawarna1.png" style="width: 30%; align-self: center;" alt="">
+                                    <img src="/img/butawarna2.png" style="width: 30%;" alt="">
+                                </div>
+                                <br>
+                                
+                                <p>Buta warna adalah kelainan yang ditandai dengan ketidakmampuan untuk membedakan warna. Buta warna dibedakan menjadi 2 (dua), yaitu buta warna parsial (sebagian) dan buta warna total. Penderita buta warna parsial tidak bisa membedakan warna merah dan warna hijau, sedangkan buta warna total tidak bisa membedakan semua warna, dalam penglihatannya hanya warna hitam dan putih saja. Kelainan ini dikendalikan oleh gen c yang bersifat resesif sehingga perempuan yang bergenotip XcXc akan meninggal ketika dia masih dalam kandungan atau ketika masih dalam bayi.  Dengan demikian, penderita buta warna kebanyakan adalah laki-laki. </p>
+                                <p>Laki-laki penderita buta warna bergenotif XcY, sedangkan laki-laki normal bergenotip XCY. Perempuan yang bergenotip  XCXc merupakan perempuan normal, tetapi pembawa buta warna (carrier).. Apabila dalam pasangan alel dengan kromosom X yang normal, maka cacat buta warna tidak akan terjadi, tetapi bila berpasangan dengan kromosom y, maka laki-laki akan menderita buta warna. Jika perempuan pembawa buta warna menikah dengan lelaki normal maka kemungkinan anaknya ada yang buta warna. </p>
+                                <p>simbol</p>
+                                <p>c = Buta warna</p>
+                                <p>C = Normal</p>
+
+                            </div>
+                    </div>
+                </div>
+
+                <!-- page 3 -->
+                <div id="tiga">
+                    <p class="header">Latihan</p>
+                    <div class="card" style="border: 2px solid #005eff; margin-top: -5px;">
+                        <form id="form1">
+                            <p>Tentukan rasio anak laki-laki buta warna dan anak perempuan carrier dari hasil keturunan jika perempuan pembawa buta warna menikah dengan laki-laki normal!</p>
+                            <p>P : &#9794; Laki-laki normal &#10006; &nbsp; &#9792; Perempuan pembawa buta warna </p>
+                                
+                            <p> &ensp; &ensp; &ensp; <select id="drop1">
+                                <option value="0">Pilih jawaban</option>
+                                <option value="10">XCY</option>
+                                <option value="0">XcY</option>
+                                <option value="0">XCXC</option>
+                                <option value="0">XCXc</option>
+                                
+                            </select> &#10006;  <select id="drop2">
+                                <option value="0">Pilih jawaban</option>
+                                <option value="0">XCY</option>
+                                <option value="0">XcY</option>
+                                <option value="0">XCXC</option>
+                                <option value="10">XCXc</option>
+                            </select>  </p>
+                            <p>G :    &ensp; <select id="drop3">
+                                <option value="0">Pilih jawaban</option>
+                                <option value="10">XC, Y</option>
+                                <option value="0">Xc, Y</option>
+                                <option value="0">XC, XC</option>
+                                <option value="0">XC, Xc</option>
+                            </select> &#10006;  <select id="drop4">
+                                <option value="0">Pilih jawaban</option>
+                                <option value="0">XC, Y</option>
+                                <option value="0">Xc, Y</option>
+                                <option value="0">XC, XC</option>
+                                <option value="10">XC, Xc</option>
+                            </select></p>
+                            <p> F<sub>1</sub> : &nbsp; <select id="drop5">
+                                <option value="0">Pilih jawaban</option>
+                                <option value="10">XCY</option>
+                                <option value="0">XCX</option>
+                                <option value="0">XCYc</option>
+                                <option value="0">XCYC</option>
+                                
+                            </select></p> <p> &ensp; &ensp; &ensp; <select id="drop6">
+                                <option value="0">Pilih jawaban</option>
+                                <option value="0">XcX</option>
+                                <option value="10">XcY</option>
+                                <option value="0">XCYc</option>
+                                <option value="0">XCYC</option>
+                                
+                                
+                            </select> </p>
+                            <p> &ensp; &ensp; &ensp; <select id="drop7">
+                                <option value="0">Pilih jawaban</option>
+                                <option value="0">XCYc</option>
+                                <option value="0">XCYC</option>
+                                <option value="0">XcX</option>
+                                <option value="10">XCXC</option>
+                                
+                            </select>
+                            <p> &ensp;&ensp;&ensp; &nbsp; <select id="drop8">
+                                <option value="0">Pilih jawaban</option>
+                                <option value="10">XCXc</option>
+                                <option value="0">XCYc</option>
+                                <option value="0">XCYC</option>
+                                <option value="0">XcX</option>
+                            </select> <p>  F<sub>1</sub> memiliki rasio fenotipe Perempuan carrier sebesar <select id="drop9">
+                                <option value="0">Pilih jawaban</option>
+                                <option value="0">0%</option>
+                                <option value="10">25%</option>
+                                <option value="0">75%</option>
+                                <option value="0">100%</option>
+                            </select>   dan laki-laki buta warna sebesar 
+                            <select id="drop10">
+                                <option value="0">Pilih jawaban</option>
+                                <option value="0">0%</option>
+                                <option value="10">25%</option>
+                                <option value="0">75%</option>
+                                <option value="0">100%</option>
+                                
+                            </select> </p> 
+
+                            <p><button type="submit" value="Submit">Submit</button></p>
+                        </form>  
+
+                        <p>Skor Anda : <span id="grade1">__</span></p>
+                        
+                        
+                    </div>
+                    
+                </div>
+
+                <!-- page 4 -->
+                <div id="empat">
+                    
+                    <br>
+
+                    <!-- Materi -->
+                    <div class="sub-materi">
+                        
+                        <!-- Mari Mengamati -->
+                        <p class="header">Teori</p>
+                            <!-- box mari mengamati -->
+                            
+                            <div class="card" style="border: 2px solid #005eff; margin-top: -5px;">
+                                <p style="font-weight: bold;">b. Hemofilia</p>
+                                <div style="display: flex; gap: 5%; align-items: center; justify-content: center; align-self: center;">
+                                    <img src="/img/hemofilia1.jpg" style="width: 50%; align-self: center;" alt="">
+                                    
+                                </div>
+                                <br>
+                                <p>Hemofilia adalah penyakit genetik yang ditandai dengan darah yang sulit membeku. Hal ini karena tubuh penderita hemofilia kekurangan faktor pembeku darah sehingga darah sulit membeku. Apabila seorang penderita hemofilia mengalami luka maka akan mengalami pendarahan terus menerus sehingga luka sekecil apapun dapat menyebabkan penderita meninggal karena kehabisan darah. Darah yang normal akan membeku dalam waktu 5 menit, sedangkan darah penderita hemofilia memerlukan waktu antar 16 menit-20 menit untuk membeku. Dalam jangka waktu tersebut sudah cukup bagi penderita hemofilia untuk kehabisan darah jika terjadi pendarahan. </p>
+                                <p>Penyakit ini dikendalikan oleh gen h yang bersifat resesif yang terpaut pada kromosom X. Penderita hemofilia biasanya laki-laki yang bergenotip XhY. Penyakit hemofilia tidak ditemukan pada wanita karena gen h penyebab hemofilia bersifat letal jika dalam keadaan homozigot resesif. Dengan demikian, perempuan yang bergenotif XhXh akan meninggal sebelum dilahirkan atau ketika masih bayi. Perempuan yang bergenotip XHXh adalah perempuan normal, akan tetapi perempuan tersebut merupakan pembawa hemofilia.</p>
+                                <p>Semua perempuan yang bergenotip heterozigot adalah carrier. Jika perempuan tersebut menikah dengan laki-laki normal, maka ada kemungkinan anak laki-laki dari keturunannya menderita hemofilia.</p>
+                                <p>simbol : h = hemofilia</p>
+
+                            </div>
+                    </div>
+                </div>
+
+                <!-- page 5 -->
+                <div id="lima">
+                    <p class="header">Latihan</p>
+                    <div class="card" style="border: 2px solid #005eff; margin-top: -5px;">
+                        <form id="form2">
+                            <p>Tentukan hasil keturunan jika laki-laki hemofilia menikah dengan perempuan normal, kemudian anak perempuan dari hasil tersebut dinikahkan dengan laki-laki normal, bagaimanakah keturunannya?</p>
+                            <p>P : &#9794; Laki-laki Hemofilia &#10006; &nbsp; &#9792; Perempuan Normal </p>
+                                
+                            <p> &ensp; &ensp; &ensp; <select id="drop21">
+                                <option value="0">Pilih jawaban</option>
+                                <option value="10">X<sup>h</sup>Y</option>
+                                <option value="0">X<sup>H</sup>Y</option>
+                                <option value="0">X<sup>H</sup>X<sup>H</sup></option>
+                                <option value="0">X<sup>H</sup>X<sup>h</sup></option>
+                                
+                            </select> &#10006;  <select id="drop22">
+                                <option value="0">Pilih jawaban</option>
+                                <option value="10">X<sup>h</sup>Y</option>
+                                <option value="0">X<sup>H</sup>Y</option>
+                                <option value="0">X<sup>H</sup>X<sup>H</sup></option>
+                                <option value="0">X<sup>H</sup>X<sup>h</sup></option>
+                            </select>  </p>
+                            <p>G :    &ensp; <select id="drop23">
+                                <option value="0">Pilih jawaban</option>
+                                <option value="10">X<sup>h</sup>, Y</option>
+                                <option value="0">X<sup>H</sup>, Y</option>
+                                <option value="0">X<sup>h</sup>, X<sup>h</sup></option>
+                                <option value="0">X<sup>H</sup>, X<sup>H</sup></option>
+                            </select> &#10006;  <select id="drop24">
+                                <option value="0">Pilih jawaban</option>
+                                <option value="10">X<sup>h</sup>, Y</option>
+                                <option value="0">X<sup>H</sup>, Y</option>
+                                <option value="0">X<sup>h</sup>, X<sup>h</sup></option>
+                                <option value="0">X<sup>H</sup></option>
+                            </select></p>
+                            <p> F<sub>1</sub> : &nbsp; <select id="drop25">
+                                <option value="0">Pilih jawaban</option>
+                                <option value="10">XHY, XHXh</option>
+                                <option value="0">XhY, XHXh</option>
+                                <option value="0">XhY, XHXH</option>
+                                <option value="0">XHY, XHXH</option>
+                                
+                            </select></p><p>P : &#9794; Laki-laki Normal &#10006; &nbsp; &#9792; Perempuan Normal</p> <p>&ensp;&ensp;&ensp; &ensp;<select id="drop26">
+                                <option value="0">Pilih jawaban</option>
+                                <option value="10">X<sup>h</sup>Y</option>
+                                <option value="0">X<sup>H</sup>Y</option>
+                                <option value="0">X<sup>H</sup>X<sup>H</sup></option>
+                                <option value="0">X<sup>H</sup>X<sup>h</sup></option>
+                                
+                                
+                            </select> &#10006;
+                             <select id="drop27">
+                                <option value="0">Pilih jawaban</option>
+                                <option value="10">X<sup>h</sup>Y</option>
+                                <option value="0">X<sup>H</sup>Y</option>
+                                <option value="0">X<sup>H</sup>X<sup>H</sup></option>
+                                <option value="0">X<sup>H</sup>X<sup>h</sup></option>
+                                
+                            </select>
+                            <p>  G :    &ensp;    <select id="drop28">
+                                <option value="0">Pilih jawaban</option>
+                                <option value="10">X<sup>h</sup>, Y</option>
+                                <option value="0">X<sup>H</sup>, Y</option>
+                                <option value="0">X<sup>h</sup>, X<sup>h</sup></option>
+                                <option value="0">X<sup>H</sup>, X<sup>h</sup></option>
+                            </select>    &#10006;<select id="drop29">
+                                <option value="0">Pilih jawaban</option>
+                                <option value="10">X<sup>h</sup>, Y</option>
+                                <option value="0">X<sup>H</sup>, Y</option>
+                                <option value="0">X<sup>h</sup>, X<sup>h</sup></option>
+                                <option value="0">X<sup>H</sup>, X<sup>h</sup></option>
+                            </select>   <p>F<sub>1</sub> : &nbsp; 
+                            <select id="drop210">
+                                <option value="0">Pilih jawaban</option>
+                                <option value="10">XHY, XhY XHXh, XHXH </option>
+                                <option value="0">XhY, XhY XhXh, XHXH</option>
+                                <option value="0">XHY, XhY XHXH, XHXH</option>
+                                <option value="0">XhY, XhY XHXH, XHXH</option>
+                                
+                            </select> </p> 
+
+                            <p><button type="submit" value="Submit">Submit</button></p>
+                        </form>  
+
+                        <p>Skor Anda : <span id="grade2">__</span></p>
+                        
+                        
+                    </div>
+                    
+                </div>
+
+                <!-- page 6 -->
+                <div id="enam">
+                    
+                    <br>
+
+                    <!-- Materi -->
+                    <div class="sub-materi">
+                        
+                        <!-- Mari Mengamati -->
+                        <p class="header">Teori</p>
+                            <!-- box mari mengamati -->
+                            
+                            <div class="card" style="border: 2px solid #005eff; margin-top: -5px;">
+                                <p style="font-weight: bold;">c. Albino</p>
+                                <div style="display: flex; gap: 5%; align-items: center; justify-content: center; align-self: center;">
+                                    <img src="/img/albino1.jpg" style="width: 50%; align-self: center;" alt="">
+                                    
+                                </div>
+                                <br>
+                                <p>Albino merupakan kelainan yang disebabkan oleh ketidakmampuan tubuh dalam membentuk pigmen melanin. Hal ini menyebabkan seseorang menderita albino, warna kulit dan rambutnya menjadi putih (tidak berpigmen). Keadaan tersebut menyebabkan penderita albino tampak seperti bule. Selain itu, warna retina penderita albino biasanya juga kekurangan pigmen sehingga penderita albino merasa perih matanya jika melihat cahaya matahari yang terang, selain itu penderita albino juga sangat mudah terkena kanker kulit dan sedikit kurang pendengarannya.</p>
+                                <p>Albino dikendalikan oleh gen autosom yang bersifat resesif dengan simbol a sebagai gen penyebab albino dan A sebagai gen normal. Jika seseorang bergenotip aa maka orang tersebut akan menderita albino, sedangkan orang yang bergenotip Aa merupakan orang yang normal, tetapi berpotensi sebagai pembawa albino. Orang yang normal memiliki genotip AA.</p>
+
+                            </div>
+                    </div>
+                </div>
+
+                <!-- page 7 -->
+                <div id="tujuh">
+                    <p class="header">Latihan</p>
+                    <div class="card" style="border: 2px solid #005eff; margin-top: -5px;">
+                        <form id="form3">
+                            <p>Tentukan hasil keturunan jika laki-laki Albino menikah dengan perempuan normal, kemudian anak dari hasil tersebut dinikahkan dengan perempuan carrier, bagaimanakah keturunannya?</p>
+                            <p>P : &#9794; Laki-laki Albino &#10006; &nbsp; &#9792; Perempuan Normal </p>
+                                
+                            <p> &ensp; &ensp; &ensp; <select id="drop31">
+                                <option value="0">Pilih jawaban</option>
+                                <option value="10">aa</option>
+                                <option value="0">AA</option>
+                                <option value="0">Aa</option>
+                                
+                                
+                            </select> &#10006;  <select id="drop32">
+                                <option value="0">Pilih jawaban</option>
+                                <option value="0">aa</option>
+                                <option value="10">AA</option>
+                                <option value="0">Aa</option>
+                            </select>  </p>
+                            <p>G :    &ensp; <select id="drop33">
+                                <option value="0">Pilih jawaban</option>
+                                <option value="10">a</option>
+                                <option value="0">A</option>
+                                <option value="0">A, a</option>
+                                
+                            </select> &#10006;  <select id="drop34">
+                                <option value="0">Pilih jawaban</option>
+                                <option value="0">a</option>
+                                <option value="10">A</option>
+                                <option value="0">A, a</option>
+                            </select></p>
+                            <p> F<sub>1</sub> : &nbsp; <select id="drop35">
+                                <option value="0">Pilih jawaban</option>
+                                <option value="10">Aa</option>
+                                <option value="0">AA</option>
+                                <option value="0">aa</option>
+                                
+                            </select></p><p>P : &#9794; Laki-laki Albino &#10006; &nbsp; &#9792; Perempuan carrier</p> <p>&ensp;&ensp;&ensp; &ensp;<select id="drop36">
+                                <option value="0">Pilih jawaban</option>
+                                <option value="10">aa</option>
+                                <option value="0">AA</option>
+                                <option value="0">Aa</option>
+                                
+                                
+                            </select> &#10006;
+                             <select id="drop37">
+                                <option value="0">Pilih jawaban</option>
+                                <option value="0">aa</option>
+                                <option value="0">AA</option>
+                                <option value="10">Aa</option>
+                                
+                            </select>
+                            <p>  G :    &ensp;    <select id="drop38">
+                                <option value="0">Pilih jawaban</option>
+                                <option value="10">a</option>
+                                <option value="0">A</option>
+                                <option value="0">A, a</option>
+                            </select>    &#10006;<select id="drop39">
+                                <option value="0">Pilih jawaban</option>
+                                <option value="0">a</option>
+                                <option value="0">A</option>
+                                <option value="10">A, a</option>
+                            </select>   <p>F<sub>1</sub> : &nbsp; 
+                            <select id="drop310">
+                                <option value="0">Pilih jawaban</option>
+                                <option value="10">Aa</option>
+                                <option value="0">AA</option>
+                                <option value="0">aa</option>
+                                <option value="0">Aa, AA</option>
+                                <option value="0">AA, aa</option>
+                                <option value="10">Aa, aa</option>
+                                
+                            </select> </p> 
+
+                            <p><button type="submit" value="Submit">Submit</button></p>
+                        </form>  
+
+                        <p>Skor Anda : <span id="grade3">__</span></p>
+                        
+                    </div>
+                    
+                </div>
+
+                <!-- page 8 -->
+                <div id="delapan">
+                    
+                    <br>
+
+                    <!-- Materi -->
+                    <div class="sub-materi">
+                        
+                        <!-- Mari Mengamati -->
+                        <p class="header">Teori</p>
+                            <!-- box mari mengamati -->
+                            
+                            <div class="card" style="border: 2px solid #005eff; margin-top: -5px;">
+                                <p style="font-weight: bold;">d. Diabetes Melitus</p>
+                                <div style="display: flex; gap: 5%; align-items: center; justify-content: center; align-self: center;">
+                                    <img src="/img/diabetes1.jpg" style="width: 50%; align-self: center;" alt="">
+                                </div>
+                                <br>
+                                <p>Diabetes mellitus atau kencing manis merupakan penyakit metabolisme pada tubuh manusia yang ditandai dengan tubuh penderitanya tidak mam- pu mengubah glukosa menjadi glikogen karena pankreas kurang atau tidak mampu menghasilkan insulin. Akibatnya, kelebihan glukosa pada darah akan dibuang melalui urine sehingga urine penderita mengandung glukosa. Penya- kit ini ditentukan oleh gen d, sedangkan alelnya gen D menyebabkan orang tidak menerita diabetes. Perkawinan antara perempuan normal dan laki-laki penderita diabets akan menghasilkan keturunan perempuan normal, tetapi bersifat karier. Jika anak perempuan dari perkawinan itu kelak menikah de- ngan laki-laki penderita diabetes, kemungkinan separuh anaknya akan menderita diabetes dan separuh lagi normal karier.</p>
+
+                            </div>
+                    </div>
+                </div>
+
+                <!-- page 9 -->
+                <div id="sembilan">
+                    <p class="header">Latihan</p>
+                    <div class="card" style="border: 2px solid #005eff; margin-top: -5px;">
+                        <form id="form4">
+                            <p> jika laki-laki pengidap diabetes menikah dengan perempuan normal, kemudian anak dari hasil tersebut dinikahkan dengan laki-laki pengidap diabetes, bagaimanakah hasil keturunannya?</p>
+                            <p>P : &#9794; Laki-laki Albino &#10006; &nbsp; &#9792; Perempuan Normal </p>
+                                
+                            <p> &ensp; &ensp; &ensp; <select id="drop41">
+                                <option value="0">Pilih jawaban</option>
+                                <option value="10">dd</option>
+                                <option value="0">DD</option>
+                                <option value="0">Dd</option>
+                                
+                                
+                            </select> &#10006;  <select id="drop42">
+                                <option value="0">Pilih jawaban</option>
+                                <option value="10">dd</option>
+                                <option value="0">DD</option>
+                                <option value="0">Dd</option>
+                            </select>  </p>
+                            <p>G :    &ensp; <select id="drop43">
+                                <option value="0">Pilih jawaban</option>
+                                <option value="10">d</option>
+                                <option value="0">D</option>
+                                <option value="0">D, d</option>
+                                
+                            </select> &#10006;  <select id="drop44">
+                                <option value="0">Pilih jawaban</option>
+                                <option value="10">d</option>
+                                <option value="0">D</option>
+                                <option value="0">D, d</option>
+                            </select></p>
+                            <p> F<sub>1</sub> : &nbsp; <select id="drop45">
+                                <option value="0">Pilih jawaban</option>
+                                <option value="10">Dd</option>
+                                <option value="0">DD</option>
+                                <option value="0">dd</option>
+                                <option value="0">Dd, DD</option>
+                                <option value="0">DD, dd</option>
+                                <option value="0">Dd, dd</option>
+                                
+                            </select></p><p>P : &#9794; Laki-laki Albino &#10006; &nbsp; &#9792; Perempuan carrier</p> <p>&ensp;&ensp;&ensp; &ensp;<select id="drop46">
+                                <option value="0">Pilih jawaban</option>
+                                <option value="10">dd</option>
+                                <option value="0">DD</option>
+                                <option value="0">Dd</option>
+                                
+                                
+                            </select> &#10006;
+                             <select id="drop47">
+                                <option value="0">Pilih jawaban</option>
+                                <option value="10">dd</option>
+                                <option value="0">DD</option>
+                                <option value="0">Dd</option>
+                                
+                            </select>
+                            <p>  G :    &ensp;    <select id="drop48">
+                                <option value="0">Pilih jawaban</option>
+                                <option value="10">d</option>
+                                <option value="0">D</option>
+                                <option value="0">D, d</option>
+                            </select>    &#10006;<select id="drop49">
+                                <option value="0">Pilih jawaban</option>
+                                <option value="0">d</option>
+                                <option value="0">D</option>
+                                <option value="10">D, d</option>
+                            </select>   <p>F<sub>2</sub> : &nbsp; 
+                            <select id="drop410">
+                                <option value="0">Pilih jawaban</option>
+                                <option value="0">Dd</option>
+                                <option value="0">DD</option>
+                                <option value="0">dd</option>
+                                <option value="0">Dd, DD</option>
+                                <option value="0">DD, dd</option>
+                                <option value="10">Dd, dd</option>
+                                
+                            </select> </p> 
+
+                            <p><button type="submit" value="Submit">Submit</button></p>
+                        </form>  
+
+                        <p>Skor Anda : <span id="grade4">__</span></p>
+                        
+                        
+                    </div>
+                    
+                </div>
+
+                
+                
+
+
+                    
+            </div>
+
+            <!-- Konten Akhir -->
+            <div class="bawah">
+                <!-- Page Link -->
+                <!-- <div class="col-5"> -->
+                    <nav aria-label="...">
+                        <ul class="pagination justify-content-center pagination-sm7">
+                            <li class="page-item disabled" id="btnsebelum" >
+                            <a id="prev" class="page-link"  onclick="" tabindex="-1" hidden style="cursor: pointer;">
+                                <span aria-hidden="true">&laquo;</span>
+                            </a>
+                            </li>
+                            <li class="page-item"  ><a class="page-link pageAktif" id="btnsatu" onclick="satu();" style="cursor: pointer;">1</a></li>
+                            <li class="page-item" ><a class="page-link" id="btndua" onclick="dua();" style="cursor: pointer;">2</a></li>
+                            <li class="page-item" ><a class="page-link" id="btntiga" onclick="tiga();" style="cursor: pointer;">3</a></li>
+                            <li class="page-item" ><a class="page-link" id="btnempat" onclick="empat();" style="cursor: pointer;">4</a></li>
+                            <li class="page-item" ><a class="page-link" id="btnlima" onclick="lima();" style="cursor: pointer;">5</a></li>
+                            <li class="page-item" ><a class="page-link" id="btnenam" onclick="enam();" style="cursor: pointer;">6</a></li>
+                            <li class="page-item" ><a class="page-link" id="btntujuh" onclick="tujuh();" style="cursor: pointer;">7</a></li>
+                            <li class="page-item" ><a class="page-link" id="btndelapan" onclick="delapan();" style="cursor: pointer;">8</a></li>
+                            <li class="page-item" ><a class="page-link" id="btnsembilan" onclick="sembilan();" style="cursor: pointer;">9</a></li>
+                            
+                            <li class="page-item" id="btnselanjutnya" >
+                            <a id="next" class="page-link" onclick="dua();" style="cursor: pointer;" >
+                                <span aria-hidden="true">&raquo;</span>
+                            </a>
+                            </li>
+                            <li class="page-item" id="btnselanjutnya">
+                                <a class="page-link ml-1" id="mnext" href="/html/materi2/materi2_sub2.html" hidden>Materi selanjutnya</a>
+                            </li>
+                        </ul>
+                    </nav>
+                    
+                <!-- </div> -->
+            </div>
+        </div>
+        
+    </section>
+
+     <!-- Modal zoom gambar -->
+    <div class="gambar_modal">
+        <div class="tutup d-flex px-3">
+            <span class="modalTxt position-absolute top-50 start-50 translate-middle text-dark text-center "></span>
+            <i class="fas fa-times position-absolute top-50 end-0 translate-middle-y mx-3 "></i>
+        </div>
+        <div class="modalContent">
+            <img src="" class="modalImg img-fluid" />
+        </div>
+    </div>
+
+    <!-- MathJax -->
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    </script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js" charset="UTF-8"></script>
+    <!-- JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+    <script src = " https://unpkg.com/sweetalert/dist/sweetalert.min.js " > </script> 
+
+    <!-- JS -->
+    <script src="/js/materiIndex.js"></script>
+    <script src="/js/db/dataSiswa.js"></script>
+    <script src="/js/asset/paginator_9.js"></script>
+    <script src="/js/materi2/materi2_latihan1.js"></script>
+    <script src="/js/materi2/materi2_latihan2.js"></script>
+    
+    <!-- JS Interaktif -->
+    
+    <script src="/js/materi1/materi1_sub1_berlatih.js"></script>
+    <script src="/js/materi2/materi2_latihan1.js"></script>
+    <script src="/js/materi2/materi2_latihan2.js"></script>
+    <script src="/js/materi2/materi2_latihan3.js"></script>
+    <script src="/js/materi2/materi2_latihan4.js"></script>
+
+    <script src="https://files.liveworksheets.com/embed/embed.js"></script>
+    <script language="javascript">
+    loadliveworksheet(1265941,'zyrxpopy',1524,'www',5306686);
+    </script>
+
+</body>
+<!-- Modal Page 2 -->
+<!-- Isi ModalModal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+    <div class="modal-content">
+        <div class="modal-header">
+            <h1 class="modal-title fs-5" id="exampleModalLabel">Petunjuk Pengerjaan</h1>
+        </div>
+        <div class="modal-body">
+            <ol>
+                <li class="lh-lg">mengamati video, selanjutnya coba untuk mengerjakan lembar kerja yang telah disediakan </li>
+                <li class="lh-lg">Pada table berikut silahkan beri tanda
+                    <img src="/img/check-box.png" width="30px" height="30px">
+                    pada kolom salah satu katagori yaitu belum terverifikasi benar, bernilai benar, dan bernilai salah</li>
+                <li class="lh-lg">Jika pilihan Anda benar, maka pada kolom keterangan akan muncul tulisan benar</li>
+                <li class="lh-lg">Jika jawaban Anda salah, maka pada kolom keterangan akan muncul tulisan salah</li>
+            </ol>
+        </div>
+        <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Tutup</button>
+        </div>
+    </div>
+    </div>
+</div>
+<!-- Akhir Modal Petunjuk Tabel Pengamatan -->
+
+
+</html>

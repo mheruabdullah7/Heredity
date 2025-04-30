@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Data Siswa</title>
+
+    <!-- ICON -->
+   <link href="/fontawesome/css/fontawesome.css" rel="stylesheet">
+   <link href="/fontawesome/css/brands.css" rel="stylesheet">
+   <link href="/fontawesome/css/solid.css" rel="stylesheet">
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+
+    <!-- Jquery -->
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js" charset="UTF-8"></script> -->
+   
+   <!-- Boostrap -->
+   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+   
+   <!-- font -->
+   <link rel="preconnect" href="https://fonts.googleapis.com">
+   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+   <link href="https://fonts.googleapis.com/css2?family=Boogaloo&family=Roboto+Flex:opsz,wght@8..144,500&family=Signika+Negative:wght@700&display=swap" rel="stylesheet">
+
+    <!-- css -->
+    <link href="/css/Materi/materiIndex.css" rel="stylesheet"> 
+    <link href="/css/materiResponsive.css" rel="stylesheet">
+    <link href="/css/HalamanGuru/tbGuru.css" rel="stylesheet">
+
+    <!--Datatable-->
+    <link href="https://cdn.datatables.net/v/bs5/dt-1.13.4/datatables.min.css" rel="stylesheet"/>
+ 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.1.1/crypto-js.min.js"></script>
+
+
+    <link rel="icon" type="image/png" href="/img/iconWebsite.svg">
+</head>
+<body>
+    <!-- Header -->
+    <div class="sidebarr">
+        <div class="logo-details">
+
+            <img src="/assets/White logo - no background.png" alt="">
+        </div>
+
+        <ul class="nav-link">
+            <!-- Data Siswa -->
+            <li>
+                <div class="iconn-link aktif">
+                    <a href="#" class="menubar">
+                        <i class="fa-sharp fa-solid fa-users-line"></i>
+                        <span class="link_nama">Data Siswa</span>
+                    </a>
+                </div>
+                <ul class="sub-menuu blankk">
+                    <div class="boxSub-menuu">
+                        <li class="aktif2"><a  href="#" >Data Siswa</a></li>
+                    </div>
+                </ul>
+            </li>
+
+            <!--  Rekap Tugas -->
+            <li>
+                <div class="iconn-link">
+                    <a href="rekapTugas.html">
+                        <i class="fa-sharp fa-solid fa-list-check"></i>                        
+                        <span class="link_nama">Rekap Tugas</span>
+                    </a>
+                </div>
+                <ul class="sub-menuu blankk">
+                    <div class="boxSub-menuu">
+                        <li><a  href="rekapTugas.html" >Rekap Tugas</a></li>
+                    </div>
+                </ul>
+            </li>
+
+            <!-- Rekap Kuis -->
+            <li>
+                <div class="iconn-link">
+                    <a href="rekapKuis.html">
+                        <i class="fa-sharp fa-solid fa-list-check"></i>  
+                        <span class="link_nama">Rekap Kuis</span>
+                    </a>
+                </div>
+                <ul class="sub-menuu blankk">
+                    <div class="boxSub-menuu">
+                        <li><a  href="rekapKuis.html" >Rekap Kuis</a></li>
+                    </div>
+                </ul>
+            </li>
+
+            <!-- Nilai Evaluasi -->
+            <li>
+                <div class="iconn-link">
+                    <a href="nilaiEvaluasi.html">
+                        <i class="fa-sharp fa-solid fa-pen-to-square"></i>
+                        <span class="link_nama" >Nilai Evaluasi</span>
+                    </a>
+                </div>
+                <ul class="sub-menuu blankk">
+                    <div class="boxSub-menuu">
+                        <li><a  href="nilaiEvaluasi.html" >Nilai Evaluasi</a></li>
+                    </div>
+                </ul>
+            </li>
+
+            <!-- Edit KKM -->
+            <!-- <li>
+                <div class="iconn-link">
+                    <a href="/html/halamanGuru/editKKM.html">
+                        <i class="fa-sharp fa-solid fa-square-pen"></i>
+                        <span class="link_nama" >Edit KKM</span>
+                    </a>
+                </div>
+                <ul class="sub-menuu blankk">
+                    <div class="boxSub-menuu">
+                        <li><a class="link_nama" href="/html/halamanGuru/editKKM.html" style="pointer-events:painted">Data Kelas</a></li>
+                    </div>
+                </ul>
+            </li>
+             -->
+            <!-- Data Kelas -->
+            <li>
+                <div class="iconn-link">
+                    <a href="dataKelas.html">
+                        <i class="fa-sharp fa-solid fa-school"></i>
+                        <span class="link_nama" >Data Kelas</span>
+                    </a>
+                </div>
+                <ul class="sub-menuu blankk">
+                    <div class="boxSub-menuu">
+                        <li><a  href="dataKelas.html" >Data Kelas</a></li>
+                    </div>
+                </ul>
+            </li>
+            
+            
+
+            
+
+           
+        </ul>
+    </div>
+
+    <!-- section Utama -->
+    <section class="home-section">
+
+        <div class="home-content">
+
+            
+            <i class="fa-sharp fa-solid fa-bars"></i>
+            <span class="text">Data Siswa</span>
+           
+
+           <div class="dropdown ">
+                
+            <button class="btn btn-secondary dropdown-toggle"  type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                <span class="profile_name" id="namaSiswa"></span>
+                <i class="fi fi-rr-user"></i>
+            </button>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="#">
+                <div class="split">
+                    <span>Halaman Profil</span>
+                    <i class="fi fi-rr-user"></i>
+                </div>
+              </a></li>
+              
+              <li><a class="dropdown-item" href="#" onclick="LogOut()">
+                <div class="split">
+                    <span>Keluar</span>
+                    <i class="fi fi-rs-sign-out-alt"></i>
+                </div>
+            </a>
+            </li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="dropdown ">
+                
+                <button class="btn btn-secondary dropdown-toggle"  type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    <span class="profile_name" id="namaSiswa"></span>
+                    <i class="fi fi-rr-user"></i>
+                </button>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="#">
+                    <div class="split">
+                        <span>Halaman Profil</span>
+                        <i class="fi fi-rr-user"></i>
+                    </div>
+                  </a></li>
+                  
+                  <li><a class="dropdown-item" href="#" onclick="LogOut()">
+                    <div class="split">
+                        <span>Keluar</span>
+                        <i class="fi fi-rs-sign-out-alt"></i>
+                    </div>
+                </a>
+                </li>
+                </ul>
+              </div>
+        
+
+        <div class="konten">
+            <div class="materi h-100" style="border-bottom-left-radius: 0px;border-bottom-right-radius: 0px;">
+                <div class="d-md-flex justify-content-between mx-2 btnTambahAkun align-items-center" >
+                    <div class="d-md-flex justify-content-between">
+                        <div class="mx-2">
+                            <div class="input-group mx-2">
+                                <label class="input-group-text bg-dark-subtle fw-bold" for="kelas">Kelas :</label>
+                                <select id="kelas" class="form-select" name="kelas">
+                                    <option value="" selected="selected" hidden>Pilih Kelas</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="mx-2">
+                            <button type="button" class="btn btn-success" id="cari">Cari&nbsp;<i class="fas fa-search"></i></button>
+                        </div>
+                    </div>
+                    <div class="tambahSiswa d-md-flex px-3 py-1 rounded" id="tambahSiswaClick" data-bs-toggle="modal" data-bs-target="#tambahSiswa" >
+                        <i class="fa-sharp fa-solid fa-user-plus mt-1 "></i>
+                        <b class="px-2">Tambah Akun</b>
+                    </div>
+                </div>
+                <div class="card mt-2" style="border: 2px solid #B081A4;">
+                    <div class="card-body">
+                        <div class="table-responsive">
+                            <table id="example" class="table-striped" style="width:100%">
+                                <thead>
+                                    <tr >
+                                        <th class="text-center">NISN</th>
+                                        <th class="text-center">Nama</th>
+                                        <th class="text-center">Kelas</th>
+                                        <!-- <th class="text-center">Nomor Absen</th> -->
+                                        <th class="text-center">Aksi</th>
+                                    </tr>
+                                </thead>
+            
+                                <tbody id="dataSiswa"></tbody>
+                                
+                            </table>
+    
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+    </section>
+
+    <!-- JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+    <!-- JS -->
+    <script src="/js/indexGuru.js"></script>
+    
+    <!-- DT Bootsraps -->
+   
+    <script src=" https://code.jquery.com/jquery-3.5.1.js"></script>
+    <script src="https://cdn.datatables.net/1.13.4/js/jquery.dataTables.min.js"></script>
+    <script src="https://cdn.datatables.net/1.13.4/js/dataTables.bootstrap5.min.js" ></script>
+
+    <!-- CSS DT  -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.2.0/css/bootstrap.min.css" type="text/css"></script>
+    <script src="https://cdn.datatables.net/1.13.4/css/dataTables.bootstrap5.min.css" type="text/css"></script>
+    
+    <script type="module" src="/js/db/guru/dtSiswa_guru.js" ></script>
+</body>
+
+<!-- Modal edit -->
+<div id="editData" class="modal fade" data-backdrop="static" data-keyboard="false">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h4 class="modal-title">Data Siswa</h4>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <div class="popup update">
+            <form action="">
+              <input type="text" placeholder="Nama Siswa" name="namaEdit" class="form-control mb-3" />
+              <input type="text" placeholder="NISN" name="nisnEdit" class="form-control mb-3" disabled aria-label="Close" />
+              <select id="kelasEdit" class="form-select mb-3" name="kelasEdit" aria-placeholder="Pilih Kelas">
+                <option selected hidden>Pilih Kelas</option>
+              </select>
+              <!-- <input type="text" placeholder="No Absen" name="absenEdit" class="form-control mb-3" /> -->
+              <!-- <input type="password" placeholder="Password" name="passEdit" class="form-control mb-3" disabled/> -->
+
+              <!-- Tambahkan ikon mata (eye) dari Font Awesome pada elemen input -->
+              <div class="form-group">
+                <label for="password">Kata Sandi</label>
+                <div class="input-group">
+                    <input type="password" placeholder="Password" name="passEdit" class="form-control mb-3" id="passwordSiswa"/>
+
+                    <div class="input-group-append " id="showPasswordBtn">
+                        <button class="btn btn-outline-secondary mt-1" type="button" id="btnEyePw">
+                            <i id="mataPW" class="fas fa-eye"></i>
+                        </button>
+                    </div>
+                </div>
+          </div>
+              <div class="modal-footer">
+                <button id="keluar" type="button" class="keluar btn btn-secondary" data-bs-dismiss="modal">Batal</button>
+                <button type="submit" id="submit2" class="btn btn-primary">Kirim</button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+</div>
+
+  <!-- Add Modal HTML -->
+  <div class="modal fade" id="tambahSiswa" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title fw-bold" id="exampleModalLabel">TAMBAH DATA SISWA</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <div class="popup add">
+            <form action="">
+              <input type="text" placeholder="Nama Siswa" name="namaTambah" class="form-control mb-3" />
+              <input type="text" placeholder="NISN" name="nisTambah" class="form-control mb-3" />
+              <select id="kelasadd" class="form-select mb-3" name="kelasTambah" aria-placeholder="Pilih Kelas">
+                <option selected hidden>Pilih Kelas</option>
+              </select>
+              <!-- <input type="text" placeholder="No Absen" name="absenTambah" class="form-control mb-3" /> -->
+              <!-- <input type="password" placeholder="Password" name="passTambah" class="form-control mb-3" /> -->
+
+              <!-- Tambahkan ikon mata (eye) dari Font Awesome pada elemen input -->
+              <div class="form-group">
+                  <label for="password">Kata Sandi</label>
+                  <div class="input-group">
+                      <input type="password" placeholder="Password" name="passTambah" class="form-control mb-3" id="passwordTambahSiswa"/>
+  
+                      <div class="input-group-append " id="showPasswordTambahBtn">
+                          <button class="btn btn-outline-secondary mt-1" type="button" id="btnEyePw">
+                          <i id="mataPW" class="fas fa-eye"></i>
+                          </button>
+                      </div>
+                  </div>
+            </div>
+            
+              <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Batal</button>
+                <button type="submit" class="btn btn-primary">Kirim</button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</html>

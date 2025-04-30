@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- ICON -->
+   <link href="/fontawesome/css/fontawesome.css" rel="stylesheet">
+   <link href="/fontawesome/css/brands.css" rel="stylesheet">
+   <link href="/fontawesome/css/solid.css" rel="stylesheet">
+
+
+   <!-- Jquery -->
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js" charset="UTF-8"></script>
+
+   <!-- Boostrap -->
+   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+   
+   <!-- font -->
+   <link rel="preconnect" href="https://fonts.googleapis.com">
+   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+   <link href="https://fonts.googleapis.com/css2?family=Boogaloo&family=Roboto+Flex:opsz,wght@8..144,500&family=Signika+Negative:wght@700&display=swap" rel="stylesheet">
+
+   <!-- Mathjax -->
+   <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+   <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3.0.1/es5/tex-mml-chtml.js"></script>
+
+    <!-- css -->
+    <link href="/css/Materi/materiIndex.css" rel="stylesheet"> 
+    <link href="/css/materiResponsive.css" rel="stylesheet">
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.1.1/crypto-js.min.js"></script>
+    <title>Kuis 2</title>
+    <link rel="icon" type="image/png" href="/img/iconWebsite.svg">
+    
+</head>
+<body>
+    
+    <section class="home-sectionKuis w-100">
+        <div class="d-md-flex justify-content-between mx-3 home-contentKuis" style="height: 10%;">
+            <div class="logo-details w-10">
+                <i class="fa-solid fa-scale-balanced"></i>
+                <span class="logo_name">PLSV & PtLSV</span>
+            </div>
+            <span class="text mt-2" style="margin-left: -150px;">Evaluasi</span>
+                <i class="fa-sharp fa-solid fa-house mt-3 home"></i>
+        </div>
+
+        <div class="kontenKuis overflow-auto">
+             <!-- Modal Petunjuk Tabel Pengamatan -->
+             <center>
+                <button type="button" class="btn mx-3" data-bs-toggle="modal" data-bs-target="#exampleModal"
+                    style="background-color: white; color: #005eff; border: 3px dashed #005eff">
+                    <i class="fas fa-search"></i>
+                    Petunjuk Pengerjaan (Klik untuk melihat petunjuk pengerjaan!)
+                </button>
+            </center>
+            <br>
+
+            <div class=" mx-3 row my-3">
+                <div class="col-md-9">
+                    <div class="card ms-2 my-2">
+                        <div class="card-header d-flex justify-content-between">
+                            <div class="card-header-2 flex-grow-1">Soal Nomor <span class="nomor-soal"></span> Dari 20</div>
+                            <div class="timer-soal px-2 rounded-2  shadow bg-body-tertiary text-center"
+                            style="background-color: white; color: #005eff; border: 3px solid #005eff; width: 85px;"></div>
+                        </div>
+                        <div class="card-body w-100" >
+                            <div class="pilihan-ganda">
+                                <!-- soal di ambil dari firebase -->
+                            </div>
+                  
+                            <div class="d-md-flex justify-content-between ">
+                                <button class="btn btn-danger kembali-evaluasi">Soal Sebelumnya</button>
+                                <button class="btn btn-primary lanjut-evaluasi">Soal Selanjutnya</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="card ms-2 my-2">
+                        <div class="card-header">
+                            Nomor Soal
+                        </div>
+                        <div class="card-body ">
+                            <div class="nomorSoal p-1">
+                                <div class="isi-peta">
+
+                                    <div class="kolom-peta mb-2">
+                                      <button class="kotak-soal-evaluasi soal-sedang-dibuka">1</button>
+                                      <button class="kotak-soal-evaluasi">2</button>
+                                      <button class="kotak-soal-evaluasi">3</button>
+                                      <button class="kotak-soal-evaluasi">4</button>
+                                      <button class="kotak-soal-evaluasi">5</button>
+                                    </div>
+                                    <div class="kolom-peta mb-2">
+                                      <button class="kotak-soal-evaluasi">6</button>
+                                      <button class="kotak-soal-evaluasi">7</button>
+                                      <button class="kotak-soal-evaluasi">8</button>
+                                      <button class="kotak-soal-evaluasi">9</button>
+                                      <button class="kotak-soal-evaluasi">10</button>
+                                    </div>
+                                    <div class="kolom-peta mb-2">
+                                        <button class="kotak-soal-evaluasi">11</button>
+                                        <button class="kotak-soal-evaluasi">12</button>
+                                        <button class="kotak-soal-evaluasi">13</button>
+                                        <button class="kotak-soal-evaluasi">14</button>
+                                        <button class="kotak-soal-evaluasi">15</button>
+                                      </div>
+                                      <div class="kolom-peta mb-2">
+                                        <button class="kotak-soal-evaluasi">16</button>
+                                        <button class="kotak-soal-evaluasi">17</button>
+                                        <button class="kotak-soal-evaluasi">18</button>
+                                        <button class="kotak-soal-evaluasi">19</button>
+                                        <button class="kotak-soal-evaluasi">20</button>
+                                      </div>
+                                </div>
+                                <div class="petunjuk-peta">
+                                    <h5>Keterangan :</h5>
+                                    <div class="belum-dijawab d-md-flex my-2">
+                                      <div class="kode-belum-dijawab"></div>
+                                      <div class="mt-2 mx-2">Belum dijawab</div>
+                                    </div>
+                                    <div class="sudah-dijawab d-md-flex my-2">
+                                      <div class="kode-sudah-dijawab"></div>
+                                      <div class="mt-2 mx-2">Sudah dijawab</div>
+                                    </div>
+                                </div>
+
+
+                                <div class="d-md-flex justify-content-md-end">
+                                    <button class="btn_cekJawaban px-3" style="width: fit-content;" id="submit-evaluasi"><b>Selesai</b></button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+    </section>
+
+     <!-- Modal zoom gambar -->
+     <div class="gambar_modal">
+        <div class="tutup d-flex px-3">
+            <span class="modalTxt position-absolute top-50 start-50 translate-middle text-dark text-center "></span>
+            <i class="fas fa-times position-absolute top-50 end-0 translate-middle-y mx-3 "></i>
+        </div>
+        <div class="modalContent">
+          <img src="" class="modalImg" />
+        </div>
+    </div>
+
+    <!-- MathJax -->
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    </script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js" charset="UTF-8"></script>
+    <script>
+        MathJax = {
+            loader: {load: ['input/asciimath', 'output/chtml', 'ui/menu']},
+            asciimath: {
+                delimiters: [['$','$'], ['`','`']]
+            }
+        };
+    </script>
+    
+    <!-- JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+    <script src = " https://unpkg.com/sweetalert/dist/sweetalert.min.js " > </script> 
+    <script type="module" src="../js/db/dbEvaluasi.js"></script>
+    <script src="/js/asset/waktuMundur.js"></script>
+    <script>
+        countdown(1, 30); 
+    </script>
+    
+</body>
+<!-- Isi ModalModal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+    <div class="modal-content">
+        <div class="modal-header">
+            <h1 class="modal-title fs-5" id="exampleModalLabel">Petunjuk Pengerjaan</h1>
+        </div>
+        <div class="modal-body">
+            <ol>
+                <li class="lh-lg">Kuis 1 terdiri dari 10 soal berupa pilihan ganda </li>
+                <li class="lh-lg">Setiap soal memiliki bobot nilai sebesar 10</li>
+                <li class="lh-lg">Jawablah soal dengan menekan pilihan jawaban yang dianggap benar</li>
+                <li class="lh-lg">Waktu pengerjaan adalah 30 menit. Jika waktu pengerjaan habis, maka tampilan akan beralih ke halaman hasil</li>
+                <li class="lh-lg">Setelah semua pertanyaan selesai dijawab, tekan tombol "Selesai" dan halaman hasil akan muncul</li>
+                <li class="lh-lg">Selesaikan semua soal sebelum waktu habis karena jika waktu habis maka secara otomatis kuis akan tertutup</li>
+            </ol>
+        </div>
+        <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Tutup</button>
+        </div>
+    </div>
+    </div>
+</div>
+</html>

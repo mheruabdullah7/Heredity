@@ -1,0 +1,30 @@
+/* table {
+    width: 10%;
+    border-collapse: collapse;
+    table-layout: fixed;
+  } */
+ 
+  thead {
+    background-color: #4086fe;
+    font-weight: bold;
+    color: white;
+}
+
+th, td {
+    padding: 10px;
+    text-align: left;
+    border: 1px solid #ddd;
+}
+
+/* Data Siswa */
+.tambahSiswa{
+    width: fit-content;
+    height: fit-content;
+    background-color: #0087ff;
+    color: white;
+    cursor: pointer;
+}
+
+.profile-details{
+    display: flex;
+}

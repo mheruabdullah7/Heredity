@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login-Guru</title>
+
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js"
+      charset="UTF-8"
+    ></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.1.1/crypto-js.min.js"></script>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe"
+      crossorigin="anonymous"
+    ></script>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ"
+      crossorigin="anonymous"
+    />
+
+    <!-- ICON -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap"
+      rel="stylesheet"
+    />
+
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <!-- css -->
+    <link href="/css/index.css" rel="stylesheet" />
+
+    <link rel="icon" type="image/png" href="/img/iconWebsite.svg" />
+  </head>
+  <body>
+    <div class="bg-card">
+      <div class="card">
+        <img src="/assets/Color logo - no background.png" width="200px" >
+        <p class="judul-login">Media Interaktif Pewarisan Sifat pada Manusia</p>
+        <div class="login-container">
+          <h4>Login Guru</h4>
+          <div class="login-form">
+            <div class="form-controll">
+              <div class="subform">NIP</div>
+              <input
+                type="text"
+                class="regis"
+                placeholder="*NIP"
+                id="NIPInp"
+              />
+            </div>
+            <div class="login-form">
+              <div class="password-container">
+                <div class="subform">Password</div>
+                <input
+                  type="password"
+                  class="regis"
+                  placeholder="*Password"
+                  id="passInp"
+                  autocomplete="on"
+                /><i 
+                  id="togglePassword"
+                  class="password-toggle fas fa-eye-slash"
+                ></i>
+              </div>
+            </div>
+
+            <button type="text" class="btn-masuk" id="sub_btn">Masuk</button>
+            <div>
+              <a href="index.html">
+                <button class="btn-sebagai">Masuk sebagai Siswa</button></a
+              >
+            </div>
+            <br />
+            <p>
+              Belum mempunyai Akun?
+              <a
+                href="registerguru.html"
+                class="buatAKun"
+                style="
+                  margin: -5px auto 0px auto;
+                  text-decoration: none;
+                  width: fit-content;
+                "
+                >Buat Akun!</a
+              >
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="hero">
+        <img
+        src="/assets/Computer login-amico.svg"
+        alt=""
+        srcset=""
+        class="svg-img"
+        style="position: absolute;"
+      />
+      </div>
+      
+    </div>
+    
+
+    <script>
+      // #menampilkan dan menyembunyikan password
+
+      $("#togglePassword").click(function () {
+        var passwordInput = $("#passInp");
+        var passwordFieldType = passwordInput.attr("type");
+
+        if (passwordFieldType === "password") {
+          passwordInput.attr("type", "text");
+          $("#togglePassword").toggleClass("fa-eye fa-eye-slash");
+          $("#togglePassword").css("color", "#353ba7");
+        } else {
+          passwordInput.attr("type", "password");
+          $("#togglePassword").toggleClass("fa-eye-slash fa-eye");
+          $("#togglePassword").css("color", "#353ba7");
+        }
+      });
+    </script>
+
+    <script type="module">
+      // Import the functions you need from the SDKs you need
+      import { initializeApp } from "https://www.gstatic.com/firebasejs/9.19.1/firebase-app.js";
+      import { getAnalytics } from "https://www.gstatic.com/firebasejs/9.19.1/firebase-analytics.js";
+      import {
+        getDatabase,
+        ref,
+        onValue,
+        set,
+        update,
+        child,
+        get,
+        remove,
+      } from "https://www.gstatic.com/firebasejs/9.19.1/firebase-database.js";
+      import {
+        getAuth,
+        onAuthStateChanged,
+      } from "https://www.gstatic.com/firebasejs/9.19.1/firebase-auth.js";
+      // TODO: Add SDKs for Firebase products that you want to use
+      // https://firebase.google.com/docs/web/setup#available-libraries
+
+      // Your web app's Firebase configuration
+      const firebaseConfig = {
+    apiKey: "AIzaSyADUmOEWb7NE5pWV-BwHfAt7pF-IV3PP2U",
+    authDomain: "heredity-86b90.firebaseapp.com",
+    databaseURL: "https://heredity-86b90-default-rtdb.firebaseio.com",
+    projectId: "heredity-86b90",
+    storageBucket: "heredity-86b90.appspot.com",
+    messagingSenderId: "61653132520",
+    appId: "1:61653132520:web:106995cc62a7be388a955d",
+    measurementId: "G-P991YR1DP8"
+  };
+
+      // Initialize Firebase
+      const app = initializeApp(firebaseConfig);
+      const db = getDatabase();
+
+      // Referensi
+      const nip = document.getElementById("NIPInp");
+      const pass = document.getElementById("passInp");
+      const submit = document.getElementById("sub_btn");
+
+// Authentication proses
+function AuthenticateUser(){
+        const dbref = ref(db);
+        if((pass.value == "") || (nip.value == "null")){
+            Swal.fire({
+                icon: 'error',
+                title: 'Data Masih Kosong',
+                text: 'Mohon Cek Kembali Lagi',
+            })
+              
+        }else{
+
+          get(child(dbref, "UserGuru/" + nip.value)).then((snapshot)=>{
+            if(snapshot.exists()){
+                let dbpassguru = decPass (snapshot.val().password);
+                let dbnip = snapshot.val().nip;
+                let dbnama = snapshot.val().nama;
+              
+                  if(((dbpassguru == pass.value) && (dbnip == nip.value))){
+                    // login(snapshot.val())
+                    
+                    sessionStorage.setItem('nip', dbnip);
+                    sessionStorage.setItem('nama', dbnama);
+                    
+                  Swal.fire({
+                    icon: "success",
+                    title: "Selamat!",
+                    text: "Anda berhasil masuk",
+                  }).then(() => {
+                    window.location = "/html/halamanguru/guru.html";
+                  });
+                  }else{
+                    Swal.fire({
+                        icon: 'error',
+                        title: 'NIP atau Password Kamu Salah',
+                        text: 'Mohon Cek Kembali Lagi',
+                    })
+                  }
+            }else{
+              Swal.fire({
+                  icon: 'error',
+                  title: 'Akun Belum Terdaftar',
+              })
+            }
+          });
+  
+          
+        }
+
+      }
+
+      // Encription password
+      function decPass(dbpass) {
+        var pass12 = CryptoJS.AES.decrypt(dbpass, pass.value);
+        return pass12.toString(CryptoJS.enc.Utf8);
+      }
+
+      // assign the events
+      submit.addEventListener("click", AuthenticateUser);
+      btnguru.addEventListener("click", function () {
+        window.location = "loginguru.html";
+      });
+
+      // Ambil data nama dari localStorage dan masukkan ke dalam elemen HTML
+      const nama = localStorage.getItem("nama");
+      if (nama) {
+        const namaSpan = document.createElement("span");
+        namaSpan.textContent = nama;
+
+        // Pastikan elemen dengan id "nama" ada di halaman
+        const targetElem = document.getElementById("nama");
+        if (targetElem) {
+          targetElem.appendChild(namaSpan);
+        }
+      }
+    </script>
+  </body>
+</html>

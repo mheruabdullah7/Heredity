@@ -1,0 +1,260 @@
+@import url('https://fonts.googleapis.com/css2?family=Boogaloo&family=Roboto+Flex:opsz,wght@8..144,500&family=Signika+Negative:wght@700&display=swap');
+
+body {
+  background-color: #fff;
+  color: #005eff;
+  
+}
+
+/* Header */
+#header {
+  background: #005eff;
+  z-index: 997;
+  transition: all 0.3s ease;
+  padding: 10px 0;
+}
+
+#header #logo h1 {
+  color: #505050;
+  font-size: 28px;
+  font-weight: 600;
+  letter-spacing: 1px;
+  margin: 0;
+}
+
+#header #logo h1 a {
+  color: #555;
+  display: inline-block;
+  text-decoration: none;
+}
+
+#header #logo img {
+  padding: 0;
+  margin: 0;
+}
+
+
+
+/* NavBar */
+.navbar {
+  padding: 0;
+}
+
+.navbar ul {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  list-style: none;
+  align-items: center;
+}
+
+.navbar li {
+  position: relative;
+  padding: 15px;
+}
+
+.navbar a,
+.navbar a:focus {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0px;
+  font-family: 'Signika Negative', sans-serif;
+  font-size: 18px;
+  color: white;
+  white-space: nowrap;
+  transition: 0.3s;
+  letter-spacing: 0;
+}
+
+.navbar a i,
+.navbar a:focus i {
+  font-size: 12px;
+  line-height: 0;
+  margin-left: 5px;
+}
+
+.navbar .active:focus,
+.navbar .active {
+  border: solid white 1px;
+  border-radius: 10px;
+  padding: 10px;
+
+}
+
+.navbar a:hover,
+.navbar li:hover>a {
+  background-color: #3d84ff;  
+  color: white;
+
+}
+
+/* Beranda*/
+#beranda {
+  width: 100%;
+  height: 650px;
+  
+  position: relative;
+  
+  
+  background-color: white;
+}
+
+#beranda .beranda-container {
+  position: absolute;
+  bottom: 0;
+  top: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+}
+
+#beranda h1 {
+  margin: 0 0 10px 0;
+  font-size: 48px;
+  font-weight: 700;
+  line-height: 56px;
+  font-family: 'Signika Negative', sans-serif;
+  color: #534371;
+}
+
+#beranda h2 {
+  color: #777;
+  margin-bottom: 30px;
+  font-size: 20px;
+  font-family: 'Signika Negative', sans-serif;
+  font-weight: 300;
+}
+
+#beranda img {
+  max-width: 95%;
+  margin-bottom: 30px;
+}
+
+#beranda .btn-menu {
+  font-family: "Roboto", sans-serif;
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 13px;
+  letter-spacing: 1px;
+  display: inline-block;
+  padding: 11px 36px;
+  border-radius: 50px;
+  transition: 0.5s;
+  margin-bottom: 30px;
+  border: 2px solid #005eff;
+  background: white;
+  color: #005eff;
+  text-decoration: none;
+}
+
+#beranda .btn-menu:hover {
+  background: #005eff;
+  color: #fff;
+  box-shadow: 0 0 30px #777;
+}
+
+
+
+
+
+/* Menu */
+#menu {
+  display: inline-block;
+  width: 100%;
+  height: 500px;
+  background-color: #005eff;
+  color: white;
+  padding-top: 150px;
+  padding-bottom: 100px;
+  justify-items: center;
+}
+
+#menu .feature-block {
+  border-radius: 10px;
+  background: white none repeat scroll 0 0;
+  padding: 20px;
+  transition: all 0.5s ease-in-out 0s;
+  
+}
+
+#menu .feature-block img {
+  height: 150px;
+  margin-bottom: 30px;
+  width: 150px;
+}
+
+#menu .feature-block:hover {
+  
+  transition: all 0.5s ease-in-out 0s;
+}
+
+
+
+
+#menu .row a {
+  color: #005eff;
+  text-decoration: none;
+  text-transform: capitalize;
+  transition: 0.3s;
+}
+
+#menu .row .feature-block:hover {
+  color: white;
+  background: #2e7bff;
+  border: solid white 1px;
+}
+
+/* Tentang */
+#tentang {
+  display: inline-block;
+  padding-top: 150px;
+  padding-bottom: 200px;  
+  width: 100%;
+}
+
+#tentang .tentang-block {
+  background: #fff none repeat scroll 0 0;
+  box-shadow: 0 0 35px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  padding:20px;
+  margin-bottom: 20px;
+  margin-top: 20px;
+  /* transition: all 0.5s ease-in-out 0s; */
+}
+
+#tentang .tentang-block img {
+  height: 60px;
+  margin-bottom: 30px;
+  width: 60px;
+}
+
+#tentang .tentang-block h4 {
+  margin-bottom: 20px;
+}
+
+#tentang .tentang-block p {
+  margin-bottom: 0;
+}
+
+/* Footer */
+footer{
+  color: #fff;
+  background: #005eff;
+  margin-top: -60px;
+  text-align: center;
+  padding: 20px;
+}
+footer p{
+  margin: 0;
+  padding: 0;
+  font-family: "Open Sans", sans-serif;
+  font-weight: normal;
+  font-size: 14px;
+  letter-spacing: 0;
+}
+

@@ -1,0 +1,471 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Heredity</title>
+
+    <!-- ICON -->
+   <link href="/fontawesome/css/fontawesome.css" rel="stylesheet">
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+   <link href="/fontawesome/css/brands.css" rel="stylesheet">
+   <link href="/fontawesome/css/solid.css" rel="stylesheet">
+
+
+   <!-- Jquery -->
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js" charset="UTF-8"></script>
+
+   <!-- Boostrap -->
+   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+   
+   <!-- font -->
+   <link rel="preconnect" href="https://fonts.googleapis.com">
+   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+   <link href="https://fonts.googleapis.com/css2?family=Boogaloo&family=Roboto+Flex:opsz,wght@8..144,500&family=Signika+Negative:wght@700&display=swap" rel="stylesheet">
+
+   <!-- Mathjax -->
+   <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+   <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3.0.1/es5/tex-mml-chtml.js"></script>
+
+    <!-- css -->
+    <link href="/css/Materi/materiIndex.css" rel="stylesheet"> 
+    <link href="/css/materiResponsive.css" rel="stylesheet">
+    <link href="/css/Materi/Materi1/materi1_sub1_berlatih.css" rel="stylesheet">
+
+    <link rel="icon" type="image/png" href="/img/iconWebsite.svg">
+</head>
+<body>
+    <!-- No Internet -->
+    <div class="noKoneksi" hidden>
+        <div class="row">
+          <img src="/img/noKoneksi.svg" style="width: 35%;" alt="">
+          <div class="mt-3 fs-3 text-white fw-bold text-center">
+            Cek Koneksi Internet Anda...
+          </div>
+        </div>
+    </div>
+    <!-- Loading -->
+    <!-- <div class="loader">
+        <span>Loading...</span>
+    </div> -->
+    <!-- Header -->
+    <div class="sidebarr">
+        <div class="logo-details">
+            <i class="fa fa-h-square" aria-hidden="true"></i>
+            <span class="logo_name">Heredity</span>
+        </div>
+
+        <ul class="nav-link">
+            <!-- Penentuan Jenis Kelamin -->
+            <li>
+                <div class="iconn-link ">
+                    <a href="#" class="menubar">
+                        <i class="fa-sharp fa-solid fa-book"></i>
+                        <span class="link_nama">Hereditas Pada Manusia</span>
+                    </a>
+                    <i class="fa-sharp fa-solid fa-angle-down"></i>
+                </div>
+                <ul class="sub-menuu ">
+                    <div class="boxSub-menuu ">
+                        <li>
+                            <a class="link_nama" href="#">
+                                Hereditas Pada Manusia
+                            </a>
+                        </li>
+                        <!-- list sub menu -->
+                        <li>
+                            <a href="/html/materi.html" >
+                                Penentuan jenis kelamin
+                                
+                            </a>
+                        </li>
+                        <li>
+                            <a href="/html/materi1/materi1_sub2.html" >
+                                Pewarisan sifat dengan hukum Mendel
+                            </a>
+                        </li>
+                        
+                        <li>
+                            <a href="/html/materi1/materi1_kuis.html">
+                                Kuis
+                            </a>
+                        </li>
+
+                    </div>
+                </ul>
+            </li>
+
+            <!--  Penyakit Keturunan -->
+            <li>
+                <div class="iconn-link aktif">
+                    <a href="#">
+                        <i class="fa-sharp fa-solid fa-book"></i>
+                        <span class="link_nama">Penyakit Keturunan</span>
+                    </a>
+                    <i class="fa-sharp fa-solid fa-angle-down"></i>
+                </div>
+                <ul class="sub-menuu menuAktif">
+                    <div class="boxSub-menuu">
+                        <li>
+                            <a class="link_nama" href="#">
+                                Penyakit Keturunan 
+                            </a>
+                        </li>
+                        <!-- list sub menu -->
+                        <li>
+                            <a href="/html/materi2/materi2_sub1.html">
+                                Penyakit keturunan karena kelainan gen
+                            </a>
+                        </li>
+                        <li>
+                            <a href="/html/materi2/materi2_sub2.html" class="aktif2">
+                                Penyakit keturunan karena kelainan kromosom
+                            </a>
+                        </li>
+                        <li>
+                            <a href="/html/materi2/materi2_kuis.html">
+                                Kuis
+                            </a>
+                        </li>
+                    </div>
+                </ul>
+            </li>
+
+            <!-- Golongan Darah-->
+            <li>
+                <div class="iconn-link">
+                    <a href="#">
+                        <i class="fa-sharp fa-solid fa-book"></i>
+                        <span class="link_nama">Golongan Darah</span>
+                    </a>
+                    <i class="fa-sharp fa-solid fa-angle-down"></i>
+                </div>
+                <ul class="sub-menuu">
+                    <div class="boxSub-menuu">
+                        <li>
+                            <a class="link_nama" href="#">
+                                Golongan Darah
+                            </a>
+                        </li>
+                        <!-- list sub menu -->
+                        <li>
+                            <a href="/html/materi3/materi3_sub1.html">
+                                Sistem ABO
+                            </a>
+                        </li>
+                        <li>
+                            <a href="/html/materi3/materi3_sub2.html">
+                                Sistem MN
+                            </a>
+                        </li>
+                        <li>
+                            <a href="/html/materi3/materi3_sub3.html">
+                                Sistem RH
+                            </a>
+                        </li>
+                        <li>
+                            <a href="/html/materi3/materi3_kuis.html">
+                                Kuis
+                            </a>
+                        </li>
+                    </div>
+                </ul>
+            </li>
+
+            <!-- Evaluasi -->
+            <li>
+                <div class="iconn-link">
+                    <a href="/html/evaluasi.html">
+                        <i class="fa-sharp fa-solid fa-pen-to-square"></i>
+                      <span class="link_nama" >Evaluasi</span>
+                    </a>
+                </div>
+                <ul class="sub-menuu blankk">
+                    <div class="boxSub-menuu">
+                        <li><a class="link_nama" href="/html/evaluasi.html" style="pointer-events:painted">Evaluasi</a></li>
+                    </div>
+                </ul>
+            </li>
+            
+            <!-- Akun Profil -->
+            <li>
+                <div class="profile-details  d-md-flex">
+                   
+                    <div class="name-job text-capitalize w-100 mx-3">
+                        <div class="profile_name">
+                            <div class="profile_name" id="namaSiswa"></div>
+                            <div class="status">NISN. 
+                                <span id="nisnProfil"></span>
+                            </div>
+                        </div>
+                    </div>
+                    <i class="fa-sharp fa-solid fa-right-from-bracket" onclick="LogOut()"></i>
+                </div>
+                <!-- <div class="profile-details d-md-flex ">
+                    <div class="profile-content">
+                        <img src="/img/profile.png" alt="">
+                    </div>
+                    <div class="name-job text-capitalize">
+                        <div class="profile_name" id="namaSiswa"></div>
+                        <div class="status">No Abs. <span id="absSiswa"></span></div>
+                    </div>
+                    <i class="fa-sharp fa-solid fa-right-from-bracket" onclick="LogOut()"></i>
+                </div> -->
+            </li>
+        </ul>
+    </div>
+
+    <!-- section Utama -->
+    <section class="home-section">
+        
+        <div class="home-content">
+            <i class="fa-sharp fa-solid fa-bars"></i>
+            <span class="text">Penyakit Keturunan / <i style="color: white">Penyakit keturunan karena kelainan kromosom</i></span>
+            <a href="/dasboard.html">
+                <i class="fa-sharp fa-solid fa-house"></i>
+            </a>
+        </div>
+
+        
+        <div class="konten">
+            
+            <div class="materi">
+                <!-- Tujuan Pembelajaran -->
+                <div class="card-body">
+                        
+                    <a class="tombol fs-6" data-bs-toggle="collapse" href="#tujuan" role="button"  aria-controls="tujuan" 
+                        style="text-decoration: none; color: white;">
+                        <div class="card-header tombol text-center" style="background-color: #005eff; border-radius: 5px 5px 0 0px; padding: 5px 15px">
+                            Tujuan Pembelajaran (klik untuk menutup/membuka)
+                        </div>
+                    </a>
+        
+                    <div class="shadow-sm mt-1 collapse show" id="tujuan">
+                      <div class="card card-body bg-light border-1" style="border-radius: 0 0 5px 5px; background-color: #f4f4f4">
+                        <ul>
+                            <li class="fs-6">Siswa mampu menganaslisis kasus penyakit keturunan</li>
+                        </ul>
+                      </div>
+                    </div>
+                </div>
+                <!-- Akhir Tujuan Pembelajaran -->
+                
+                <br>
+
+                <!-- page 1 -->
+                <div id="satu" >
+                    <p class="header">Teori</p>
+                    <div class="card" style="border: 2px solid #005eff; margin-top: -5px;">
+                        <p>Selain disebabkan oleh kelainan gen, penyakit keturunan dapat pula disebabkan oleh adanya ketidaknormalan jumlah kromosom. Manusia normal selalu memiliki 46 kromosom yang terjadi dari 22 pasang autosom dan satu pasang gonosom (kromosom kelamin). Pada laki-laki, kromosom kelaminnya terdiri atas satu kromosom X dan satu kromosom Y sehingga rumus kromosomnya ditulis 22AAXY. Pada perempuan, kromosom kelaminnya terdiri atas sepasang kromosom X sehingga rumus kelaminnya ditulis 22AAXX. Pada manusia kromosom X bertugas membawa gen-gen yang memberi sifat-sifat perempuan sedangkan kromosom Y bertugas membawa gen-gen yang menentukan sifat-sifat laki-laki. Akan tetapi, pada kondisi tertentu dapat terjadi kelebihan atau kekurangan jumlah kromosom yang menyebabkan kelainan pada pemiliknya. Kelainan yang disebabkan oleh kelebihan atau kekurangan jumlah kromosom, antara lain sindrom Turner, sindrom Klinefelter, laki-laki super dan perempuan super serta sindrom Down, dan lain-lain.</p>
+                        <p>Karena tidak dapat diobati atau disembuhkan, pencegahan terhadap penyakit keturunan merupakan hal yang sangat penting. Berbagai cara yang dapat diterapkan untuk menghindari penyakit keturunan, antara lain :</p>
+                        <ol type="1">
+                            <li>menghindari perkawinan antarkeluarga dekat karena akan memperbesar peluang munculnya
+                                gen resesif penyebab kelainan.</li>
+                            <li>menghindari perkawinan dengan orang yang memiliki kelainan mental</li>
+                            <li>melakukan pemeriksaan tentang asal usul dan kesehatan pasangan sebelum melangsungkan pernikahan</li>
+                            <li>memahami dan memasyarakatkan prinsip-prinsip genetika di kalangan muda</li>
+                        </ol>
+                    </div>
+                    <br>
+                
+                </div>
+
+                <!-- page 2 -->
+                <div id="dua">
+                    
+                    <br>
+
+                    <!-- Materi -->
+                    <div class="sub-materi">
+                        
+                        <!-- Mari Mengamati -->
+                        <p class="header">Teori</p>
+                            <!-- box mari mengamati -->
+                            
+                            <div class="card" style="border: 2px solid #005eff; margin-top: -5px;">
+                                <p style="font-weight: bold;">Jenis-jenis Kelainan Kromosom</p>
+                                <p>Ada berbagai jenis gangguan yang bisa timbul dari kromosom yang berkembang secara abnormal. Berikut contoh kelainan kromosom yang ada:</p>
+                                <ol type="1">
+                                    <li>Down Syndrome</li>
+                                    <p>Down syndrome merupakan jenis kelainan kromosom yang paling umum. Kondisi ini disebut juga dengan istilah trisomi 21 karena mempunyai tiga salinan kromosom 21. Normalnya, kromosom 21 hanya terdiri dari dua salinan saja. Bayi yang lahir dengan kondisi ini memiliki karakteristik wajah yang khas, yaitu sudut luar mata yang mengarah ke atas serta memiliki telinga kecil dan leher pendek. Pertumbuhan bayi dengan down syndrome akan terhambat karena adanya masalah pada perkembangan intelektual dan keterlambatan kognitif.</p>
+                                    <li>Sindrom Turner</li>
+                                    <p>Sindrom Turner merupakan kelainan kromosom yang hanya muncul pada wanita. Kelainan ini disebabkan oleh hilangnya sebagian atau seluruh kromosom X. Bayi yang memiliki sindrom Turner akan mengalami masalah penglihatan dan pendengaran. Di usia dewasa, wanita dengan sindrom Turner akan mengalami kemandulan.</p>
+                                    <li>Sindrom Klinefelter</li>
+                                    <p>Sindrom Klinefelter atau dikenal sebagai XXY syndrome disebabkan oleh kelebihan kromosom X pada pria. Akibat dari sindrom ini, bayi akan tumbuh dengan otot lemah, tubuh yang tinggi, rambut tubuh tumbuh tipis dan ukuran organ vital yang kecil. Sindrom Klinefelter juga menyebabkan disfungsi seksual dan kemandulan saat bayi dewasa.</p>
+                                    <li>Trisomi 13 (Sindrom Patau)</li>
+                                    <p>Sindrom Patau atau trisomi 13 muncul karena terdapat pat tiga salinan kromosom 13. Sindrom ini bisa menyebabkan kelainan pada bagian tubuh bayi serta kecacatan pada intelektual. Penderita trisomi 13 akan mengalami kelainan otak, kelainan jantung, sumsum tulang belakang dan hipotonia.</p>
+                                    <li>Trisomi 18 (Sindrom Edwards)</li>
+                                    <p>Sindrom Edwards muncul karena adanya tiga salinan dari sebagian atau seluruh kromosom 18 akibat kesalahan dalam pembentukan sel telur atau sperma. Dalam kasus yang umum terjadi, janin dengan sindrom Edwards akan mengalami keguguran, meninggal saat dilahirkan. Jika pun bayi hidup, bayi akan memiliki kelainan fisik yang cukup parah.</p>
+                                    <li>Sindrom XYY (Sindrom Jacob)</li>
+                                    <p>XYY syndrome sangat langka dan hanya muncul 1 dari 1000 kelahiran bayi laki-kali. Penyebab utama sindrom Jacob ini adalah kelebihan kromosom Y. Gejala sindrom XYY bervariasi pada setiap orang. Namun pada umumnya kelainan ditunjukkan dengan gejala gangguan bicara, kesulitan koordinasi, tremor dan otot yang lemah.</p>
+                                    <li>Sindrom Triple X (Trisomi X)</li>
+                                    <p>sindrom Triple X adalah sindrom kelebihan kromosom X yang menyerang wanita. Sama halnya dengan sindrom XYY, sindrom Triple X tergolong langka. Gejala yang muncul akibat sindrom ini adalah tinggi di atas rata-rata, otot lemah, gangguan bicara, dan sulit mengendalikan tubuh.</p>
+                                </ol>
+                            </div>
+                    </div>
+                </div>
+
+                <!-- page 3 -->
+                <div id="tiga">
+                    <p class="header">Latihan</p>
+                    <div class="card" style="border: 2px solid #005eff; margin-top: -5px;">
+                        <form id="form1">
+                            <p>1. "jenis kelainan kromosom yang paling umum. Kondisi ini disebut juga dengan istilah trisomi 21 karena mempunyai tiga salinan kromosom 21. Normalnya, kromosom 21 hanya terdiri dari dua salinan saja."</p> <p>Jenis Kelainan kromosom : <select id="drop1">
+                                <option value="0">Pilih jawaban</option>
+                                <option value="0">sindrom Triple X</option>
+                                <option value="20">Down Syndrome</option>
+                                <option value="0">Sindrom Turner</option>
+                                <option value="0">Sindrom Jacob</option>
+                                <option value="0">Sindrom Klinefelter</option>
+                                
+                            </select> 
+                            <p>2. "dikenal sebagai XXY syndrome disebabkan oleh kelebihan kromosom X pada pria. Akibat dari sindrom ini, bayi akan tumbuh dengan otot lemah, tubuh yang tinggi, rambut tubuh tumbuh tipis dan ukuran organ vital yang kecil. Sindrom Klinefelter juga menyebabkan disfungsi seksual dan kemandulan saat bayi dewasa."</p> <p>Jenis Kelainan kromosom : <select id="drop2">
+                                <option value="0">Pilih jawaban</option>
+                                <option value="0">sindrom Triple X</option>
+                                <option value="0">Down Syndrome</option>
+                                <option value="0">Sindrom Turner</option>
+                                <option value="0">Sindrom Jacob</option>
+                                <option value="20">Sindrom Klinefelter</option>
+                            </select> 
+                            <p>3. "kelainan kromosom yang hanya muncul pada wanita. Kelainan ini disebabkan oleh hilangnya sebagian atau seluruh kromosom X. "</p> <p>Jenis Kelainan kromosom : <select id="drop3">
+                                <option value="0">Pilih jawaban</option>
+                                <option value="0">sindrom Triple X</option>
+                                <option value="0">Down Syndrome</option>
+                                <option value="20">Sindrom Turner</option>
+                                <option value="0">Sindrom Jacob</option>
+                                <option value="0">Sindrom Klinefelter</option>
+                                
+                            </select> 
+                            <p>4. "Penyebab utama kelainan ini adalah kelebihan kromosom Y. Gejala sindrom XYY bervariasi pada setiap orang. Namun pada umumnya kelainan ditunjukkan dengan gejala gangguan bicara, kesulitan koordinasi, tremor dan otot yang lemah."</p> <p>Jenis Kelainan kromosom : <select id="drop4">
+                                <option value="0">Pilih jawaban</option>
+                                <option value="0">sindrom Triple X</option>
+                                <option value="0">Down Syndrome</option>
+                                <option value="0">Sindrom Turner</option>
+                                <option value="20">Sindrom Jacob</option>
+                                <option value="0">Sindrom Klinefelter</option>
+                                
+                            </select> 
+                            <p>5. "sindrom kelebihan kromosom X yang menyerang wanita. Gejala yang muncul akibat sindrom ini adalah tinggi di atas rata-rata, otot lemah, gangguan bicara, dan sulit mengendalikan tubuh."</p> <p>Jenis Kelainan kromosom : <select id="drop5">
+                                <option value="0">Pilih jawaban</option>
+                                <option value="20">sindrom Triple X</option>
+                                <option value="0">Down Syndrome</option>
+                                <option value="0">Sindrom Turner</option>
+                                <option value="0">Sindrom Jacob</option>
+                                <option value="0">Sindrom Klinefelter</option>
+                                
+                            </select> 
+                            
+
+                            <p><button type="submit" value="Submit">Submit</button></p>
+                        </form>  
+
+                        <p>Skor Anda : <span id="grade">__</span></p>
+                        
+                        
+                    </div>
+                    
+                </div>
+                
+                
+
+
+                    
+            </div>
+
+            <!-- Konten Akhir -->
+            <div class="bawah">
+                <!-- Page Link -->
+                <!-- <div class="col-5"> -->
+                    <nav aria-label="...">
+                        <ul class="pagination justify-content-center pagination-sm7">
+                            <li class="page-item disabled" id="btnsebelum" >
+                            <a id="prev" class="page-link"  onclick="" tabindex="-1" hidden style="cursor: pointer;">
+                                <span aria-hidden="true">&laquo;</span>
+                            </a>
+                            </li>
+                            <li class="page-item"  ><a class="page-link pageAktif" id="btnsatu" onclick="satu();" style="cursor: pointer;">1</a></li>
+                            <li class="page-item" ><a class="page-link" id="btndua" onclick="dua();" style="cursor: pointer;">2</a></li>
+                            <li class="page-item" ><a class="page-link" id="btntiga" onclick="tiga();" style="cursor: pointer;">3</a></li>
+                            
+                            <li class="page-item" id="btnselanjutnya" >
+                            <a id="next" class="page-link" onclick="dua();" style="cursor: pointer;" >
+                                <span aria-hidden="true">&raquo;</span>
+                            </a>
+                            </li>
+                            <li class="page-item" id="btnselanjutnya">
+                                <a class="page-link ml-1" id="mnext" href="/html/materi2/materi2_kuis.html" hidden>Kuis</a>
+                            </li>
+                        </ul>
+                    </nav>
+                    
+                <!-- </div> -->
+            </div>
+        </div>
+        
+    </section>
+
+     <!-- Modal zoom gambar -->
+    <div class="gambar_modal">
+        <div class="tutup d-flex px-3">
+            <span class="modalTxt position-absolute top-50 start-50 translate-middle text-dark text-center "></span>
+            <i class="fas fa-times position-absolute top-50 end-0 translate-middle-y mx-3 "></i>
+        </div>
+        <div class="modalContent">
+            <img src="" class="modalImg img-fluid" />
+        </div>
+    </div>
+
+    <!-- MathJax -->
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    </script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js" charset="UTF-8"></script>
+    <!-- JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+    <script src = " https://unpkg.com/sweetalert/dist/sweetalert.min.js " > </script> 
+
+    <!-- JS -->
+    <script src="/js/materiIndex.js"></script>
+    <script src="/js/db/dataSiswa.js"></script>
+    <script src="/js/asset/paginator_4.js"></script>
+    <script src="/js/materi3/materi3_latihan1.js"></script>
+    
+    <!-- JS Interaktif -->
+    
+    <script src="/js/materi1/materi1_sub1_berlatih.js"></script>
+    <script src="/js/materi3/materi3_latihan1.js"></script>
+
+    <script src="https://files.liveworksheets.com/embed/embed.js"></script>
+    <script language="javascript">
+    loadliveworksheet(1265941,'zyrxpopy',1524,'www',5306686);
+    </script>
+
+</body>
+<!-- Modal Page 2 -->
+<!-- Isi ModalModal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+    <div class="modal-content">
+        <div class="modal-header">
+            <h1 class="modal-title fs-5" id="exampleModalLabel">Petunjuk Pengerjaan</h1>
+        </div>
+        <div class="modal-body">
+            <ol>
+                <li class="lh-lg">mengamati video, selanjutnya coba untuk mengerjakan lembar kerja yang telah disediakan </li>
+                <li class="lh-lg">Pada table berikut silahkan beri tanda
+                    <img src="/img/check-box.png" width="30px" height="30px">
+                    pada kolom salah satu katagori yaitu belum terverifikasi benar, bernilai benar, dan bernilai salah</li>
+                <li class="lh-lg">Jika pilihan Anda benar, maka pada kolom keterangan akan muncul tulisan benar</li>
+                <li class="lh-lg">Jika jawaban Anda salah, maka pada kolom keterangan akan muncul tulisan salah</li>
+            </ol>
+        </div>
+        <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Tutup</button>
+        </div>
+    </div>
+    </div>
+</div>
+<!-- Akhir Modal Petunjuk Tabel Pengamatan -->
+
+
+</html>

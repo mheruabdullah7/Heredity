@@ -1,0 +1,74 @@
+
+
+/* soal Pilihan pengolahan data */
+.pilihan {
+    width: 150px;
+    height: 30px;
+    background: #005eff;
+    border: none;
+    border-radius: 10px;
+    display: inline-block;
+    color: black;
+    text-align: center;
+    margin-bottom: 15px;
+    margin-top: 15px;
+    cursor: pointer;
+  }
+  .pilihan:hover {
+    background-color: #e3a93597;
+    border: 2px solid #534371;
+  }
+  .ulang{
+    background: #dc3545;
+    color: white;
+  }
+  .ulang:hover{
+    background: #a22632;
+    border: none;
+  }
+  .soalHilang{
+    display: none;
+  }
+  
+  .hilang {
+    display: none;
+  }
+  
+  #bnr1,
+  #bnr2,
+  #bnr3,
+  #bnr4,
+  #bnr5,
+  #bnr6,
+  #bnr7,
+  #bnr8,
+  #bnr9,
+  #bnr10 {
+    border: 1px solid #B081A4;
+    border-radius: 3px;
+    padding: 3px 10px;
+    box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.4);
+    width: 90%;
+    color: black;
+    margin-top: -30px;
+  }
+  
+  #slh1,
+  #slh2,
+  #slh3,
+  #slh4,
+  #slh5,
+  #slh6,
+  #slh7,
+  #slh8,
+  #slh9,
+  #slh10 {
+    border: 1px solid #B081A4;
+    border-radius: 3px;
+    padding: 3px 10px;
+    box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.4);
+    width: fit-content;
+    color: black;
+    margin-top: -30px;
+  }
+    

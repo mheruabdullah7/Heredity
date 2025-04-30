@@ -1,0 +1,479 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Heredity</title>
+
+    <!-- ICON -->
+   <link href="/fontawesome/css/fontawesome.css" rel="stylesheet">
+   <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/2.0.0/uicons-regular-rounded/css/uicons-regular-rounded.css'>   
+   <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/2.0.0/uicons-thin-rounded/css/uicons-thin-rounded.css'>
+   <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/2.0.0/uicons-regular-straight/css/uicons-regular-straight.css'>
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+   <link href="/fontawesome/css/brands.css" rel="stylesheet">
+   <link href="/fontawesome/css/solid.css" rel="stylesheet">
+
+
+   <!-- Jquery -->
+   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js" charset="UTF-8"></script>
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+   <script type="text/javascript" src="http://code.jquery.com/jquery-latest.js"></script>
+
+   <!-- Boostrap -->
+   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+
+   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+   
+   <!-- font -->
+   <link rel="preconnect" href="https://fonts.googleapis.com">
+   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+   <link href="https://fonts.googleapis.com/css2?family=Boogaloo&family=Roboto+Flex:opsz,wght@8..144,500&family=Signika+Negative:wght@700&display=swap" rel="stylesheet">
+
+   <!-- Mathjax -->
+   <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+   <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3.0.1/es5/tex-mml-chtml.js"></script>
+
+    <!-- css -->
+    <link href="/css/Materi/materiIndex.css" rel="stylesheet"> 
+    <link href="/css/materiResponsive.css" rel="stylesheet">
+    <link href="/css/Materi/Materi1/materi1_sub1_berlatih.css" rel="stylesheet">
+
+    <link rel="icon" type="image/png" href="/img/iconWebsite.svg">
+</head>
+<body>
+    
+    <!-- Header -->
+    <div class="sidebarr">
+        <div class="logo-details">
+
+            <img src="/assets/logo-no-background.png" alt="">
+        </div>
+
+        <ul class="nav-link">
+            <!-- Beranda -->
+            <li>
+                <a class="iconn-link" href="/dasboard.html">
+                    <div class="menubar">
+                        <i class="fi fi-rr-home"></i>
+                        <span class="link_nama" > Beranda</span>
+                    </div>
+                </a>
+            </li>
+            <!-- Pendahuluan -->
+            <li>
+                <a class="iconn-link" href="/pendahuluan.html">
+                    <div class="menubar">
+                        <i class="fi fi-rr-book-bookmark"></i>
+                        <span class="link_nama" >Pendahuluan</span>
+                    </div>
+                </a>
+            </li>
+            <!-- Materi 1 -->
+            <li>
+                <div class="iconn-link aktif">
+                    <a href="#" class="menubar">
+                        <i class="fi fi-rr-book-bookmark"></i>
+                        <span class="link_nama">Materi 1</span>
+                    </a>
+                    <span class="fa-sharp fa-solid fa-angle-down"></span>
+                </div>
+                <ul class="sub-menuu menuAktif">
+                    <div class="boxSub-menuu ">
+                        <li>
+                            <a class="link_nama" href="#">
+                                Materi 1
+                            </a>
+                        </li>
+                        <!-- list sub menu -->
+                        <li>
+                            <a href="/html/materi1/materi1_sub1.html">
+                                Penentuan dan teori kemungkinan jenis kelamin pada manusia
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" class="aktif2">
+                                Sifat fisik yang diturunkan, Pedigree, & teori hukum mendel
+                            </a>
+                        </li>
+                        <li>
+                            <a href="/html/materi1/materi1_sub2.html">
+                                Golongan darah
+                            </a>
+                        </li>
+                        <li>
+                            <a href="/html/materi1/materi1_kuis.html">
+                                Kuis
+                            </a>
+                        </li>
+
+                    </div>
+                </ul>
+            </li>
+
+            <!--  Materi 2 -->
+            <li>
+                <div class="iconn-link">
+                    <a href="#" class="menubar">
+                        <i class="fi fi-rr-book-bookmark"></i>
+                        <span class="link_nama">Materi 2</span>
+                    </a>
+                    <span class="fa-sharp fa-solid fa-angle-down"></span>
+                </div>
+                <ul class="sub-menuu">
+                    <div class="boxSub-menuu">
+                        <li>
+                            <a class="link_nama" href="/html/materi2/materi2_sub1.html">
+                                Materi 2 
+                            </a>
+                        </li>
+                        <!-- list sub menu -->
+                        <li>
+                            <a href="/html/materi2/materi2_sub1.html">
+                                Kelainan dan penyakit menurun oleh Alel yang tertaut pada Autosom
+                            </a>
+                        </li>
+                        <li>
+                            <a href="/html/materi2/materi2_sub2.html">
+                                Kelainan dan penyakit menurun oleh Alel yang tertaut pada Kromosom Kelamin
+                            </a>
+                        </li>
+                        <li>
+                            <a href="/html/materi2/materi2_sub3.html">
+                                Cara menghindari kelainan dan penyakit genetik pada manusia
+                            </a>
+                        </li>
+                        <li>
+                            <a href="/html/materi2/materi2_kuis.html">
+                                Kuis
+                            </a>
+                        </li>
+                    </div>
+                </ul>
+            </li>
+
+            
+            <!-- Evaluasi -->
+            <li>
+                <a class="iconn-link" href="/html/evaluasi.html">
+                    <div class="menubar">
+                        <i class="fi fi-rr-test"></i>
+                        <span class="link_nama" >Evaluasi</span>
+                    </div>
+                </a>
+            </li>
+                      
+            
+        </ul>
+    </div>
+
+    <!-- section Utama -->
+    <section class="home-section">
+        
+        <div class="home-content">
+            <i class="fa-sharp fa-solid fa-bars"></i>
+            <!-- <span class="text">Hereditas Pada Manusia / <i style="color: rgb(0, 0, 0)">Penentuan jenis kelamin</i></span> -->
+            <div class="dropdown ">
+                
+                <button class="btn btn-secondary dropdown-toggle"  type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    <span class="profile_name" id="namaSiswa"></span>
+                    <i class="fi fi-rr-user"></i>
+                </button>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="#">
+                    <div class="split">
+                        <span>Halaman Profil</span>
+                        <i class="fi fi-rr-user"></i>
+                    </div>
+                  </a></li>
+                  
+                  <li><a class="dropdown-item" href="#" onclick="LogOut()">
+                    <div class="split">
+                        <span>Keluar</span>
+                        <i class="fi fi-rs-sign-out-alt"></i>
+                    </div>
+                </a>
+                </li>
+                </ul>
+              </div>
+                
+        </div>
+
+        
+        <div class="konten">
+            
+            <div class="materi">
+                <!-- Tujuan Pembelajaran -->
+                <div class="card-body">
+                        
+                    <a class="tombol fs-6" data-bs-toggle="collapse" href="#tujuan" role="button"  aria-controls="tujuan" 
+                        style="text-decoration: none; color: white;">
+                        <div class="card-header tombol text-center" style="background-color: #005eff; border-radius: 5px 5px 0 0px; padding: 5px 15px">
+                            Tujuan Pembelajaran (klik untuk menutup/membuka)
+                        </div>
+                    </a>
+        
+                    <div class="shadow-sm mt-1 collapse show" id="tujuan">
+                      <div class="card card-body bg-light border-1" style="border-radius: 0 0 5px 5px; background-color: #f4f4f4">
+                        <ul>
+                            <li class="fs-6">Menganalisis variasi sifat pada manusia meliputi sifat fisik atau fisiologi</li>
+                            <li class="fs-6">Menganalisis penurunan sifat pada manusia melalui peta silsilah keluarga</li>
+                        </ul>
+                      </div>
+                    </div>
+                </div>
+                <!-- Akhir Tujuan Pembelajaran -->
+                
+                <!-- page 1 -->
+                <div id="satu" >
+                    <br>
+                    <p class="header">Teori</p>
+                    <div class="card" style="border: 2px solid #005eff; margin-top: -5px;">
+                       <h6 style="color: #005eff;">Sifat Fisik Pada Manusia Yang Dikendalikan Oleh Gen Dominan Dan Gen Resesif </h6>
+                       <p>Sudah kalian pahami bahwa seluruh sifat pada diri manusia didapatkan dari orang tua, meliputi sifat fisik, fisiologi, maupun psikologi. Ada pun beberapa sifat fisik manusia yang dikendalikan oleh gen dominan dan gen resesif seperti yang dijabarkan pada Tabel berikut</p>
+                       <br>
+                       <img src="/assets/gambar1_materi1_sub2.png" width="70%" style="align-self: center;">
+                       <br>
+                       <p>Pernahkah kalian mengamati betuk cuping telinga kalian dengan milik orang tua atau saudara? Apakah bentuk cuping kalian sama dengan mereka? Sering kali yang ditemukan di masyarakat adalah bentuk cuping telinga yang menggantung dibandingkan dengan cuping melekat. Hal tersebut disebabkan oleh sifat dominan dari cuping telinga yang meggantung, dan dipengaruhi oleh genotipe kedua orang tua.</p>
+                    </div>
+                    
+                    <br>
+                
+                </div>
+
+                <!-- page 2 -->
+                <div id="dua">
+                    
+                    <br>
+
+                    <!-- Materi -->
+                    <div class="sub-materi">
+                        
+                        <p class="header">Teori</p>
+                            
+                            <div class="card" style="border: 2px solid #005eff; margin-top: -5px;">
+                                <h6 style="color: #005eff;">Pedigree (Peta Silsilah Keluarga)</h6>
+                                <img src="/assets/gambar2_materi1_sub2.png" alt="" width="200" style="align-self: center;">
+                                <p>Peta silsilah keluarga atau yang juga disebut dengan pedigree merupakan diagram yang menunjukkan penurunan karakter-karakter tertentu dari leluhur kepada keturunannya dari generasi ke generasi berikutnya di dalam suatu populasi.
+
+                                </p>
+                                <p>Adapun manfaat dari pedigree adalah sebagai berikut:</p>
+                                <ul ><img src="/assets/gambar3_materi1_sub2.png" alt="" width="150"  id="hp"/>
+                                    <li>Mengatur perkawinan untuk menghindari munculnya penyakit keturunan</li>
+                                    <li>Mempertahankan sifat-sifat yang unggul dalam keluarga</li>
+                                    <li>Memperbaiki mutu genetik keluarga</li>
+                                </ul>
+                                <p>Berikut adalah contoh pedigree atau peta silsilah keluarga yang menunjukkan iwayat pewarisan penyakit hemofilia keluarga kerajaan Inggris yand dimulai dari Ratu Victoria sebagai pembawa gen hemofilia (carrier).</p>
+                                <img src="/assets/gambar4_materi1_sub2.png" alt="">
+                            </div>
+                    </div>
+                </div>
+
+                <!-- page 3 -->
+                <div id="tiga">
+                    <br>
+                    <p class="header">Teori</p>
+                    <div class="card" style="border: 2px solid #005eff; margin-top: -5px;">
+                        <h6 style="color: #005eff;">Golongan Darah</h6>
+                        <br>
+                        <img src="/assets/gambar5_materi1_sub2.png" >
+                        <br>
+                        <p>Mungkin kalian sudah familiar dengan golongan darah A, B, AB, dan O. Tapi tahukah kalian jika sebenarnya banyak sekali cara penggolongan darah yang telah ditemukan oleh para ilmuwan. Namun, saat ini dikenal tiga sistem penggolongan darah yaitu sistem ABO, MN, dan rhesus. Penentuan golongan darah tersebut berdasarkan pada ada tidaknya antigen tertentu dalam darah.</p>
+                        <br>
+                        <img src="/assets/gambar6_materi1_sub2.png" width="90%" style="align-self: center;">
+                    </div>
+                    
+                </div>
+                <!-- page 4 -->
+                <div id="empat">
+                    
+                    <br>
+
+                    <!-- Materi -->
+                    <div class="sub-materi">
+                        
+                        <!-- Mari Mengamati -->
+                        <p class="header">Teori</p>
+                            <!-- box mari mengamati -->
+                            
+                            <div class="card" style="border: 2px solid #005eff; margin-top: -5px;">
+                                
+
+                            </div>
+                    </div>
+                </div>
+                <!-- page 5 -->
+                <div id="lima">
+                    <p class="header">Latihan</p>
+                    <div class="card" style="border: 2px solid #005eff; margin-top: -5px;">
+                        <form id="form2">
+                            <p>Tentukan hasil keturunan jika laki-laki hemofilia menikah dengan perempuan normal, kemudian anak perempuan dari hasil tersebut dinikahkan dengan laki-laki normal, bagaimanakah keturunannya?</p>
+                            <p>P : &#9794; Laki-laki Hemofilia &#10006; &nbsp; &#9792; Perempuan Normal </p>
+                                
+                            <p> &ensp; &ensp; &ensp; <select id="drop21">
+                                <option value="0">Pilih jawaban</option>
+                                <option value="10">X<sup>h</sup>Y</option>
+                                <option value="0">X<sup>H</sup>Y</option>
+                                <option value="0">X<sup>H</sup>X<sup>H</sup></option>
+                                <option value="0">X<sup>H</sup>X<sup>h</sup></option>
+                                
+                            </select> &#10006;  <select id="drop22">
+                                <option value="0">Pilih jawaban</option>
+                                <option value="10">X<sup>h</sup>Y</option>
+                                <option value="0">X<sup>H</sup>Y</option>
+                                <option value="0">X<sup>H</sup>X<sup>H</sup></option>
+                                <option value="0">X<sup>H</sup>X<sup>h</sup></option>
+                            </select>  </p>
+                            <p>G :    &ensp; <select id="drop23">
+                                <option value="0">Pilih jawaban</option>
+                                <option value="10">X<sup>h</sup>, Y</option>
+                                <option value="0">X<sup>H</sup>, Y</option>
+                                <option value="0">X<sup>h</sup>, X<sup>h</sup></option>
+                                <option value="0">X<sup>H</sup>, X<sup>H</sup></option>
+                            </select> &#10006;  <select id="drop24">
+                                <option value="0">Pilih jawaban</option>
+                                <option value="10">X<sup>h</sup>, Y</option>
+                                <option value="0">X<sup>H</sup>, Y</option>
+                                <option value="0">X<sup>h</sup>, X<sup>h</sup></option>
+                                <option value="0">X<sup>H</sup></option>
+                            </select></p>
+                            <p> F<sub>1</sub> : &nbsp; <select id="drop25">
+                                <option value="0">Pilih jawaban</option>
+                                <option value="10">XHY, XHXh</option>
+                                <option value="0">XhY, XHXh</option>
+                                <option value="0">XhY, XHXH</option>
+                                <option value="0">XHY, XHXH</option>
+                                
+                            </select></p><p>P : &#9794; Laki-laki Normal &#10006; &nbsp; &#9792; Perempuan Normal</p> <p>&ensp;&ensp;&ensp; &ensp;<select id="drop26">
+                                <option value="0">Pilih jawaban</option>
+                                <option value="10">X<sup>h</sup>Y</option>
+                                <option value="0">X<sup>H</sup>Y</option>
+                                <option value="0">X<sup>H</sup>X<sup>H</sup></option>
+                                <option value="0">X<sup>H</sup>X<sup>h</sup></option>
+                                
+                                
+                            </select> &#10006;
+                             <select id="drop27">
+                                <option value="0">Pilih jawaban</option>
+                                <option value="10">X<sup>h</sup>Y</option>
+                                <option value="0">X<sup>H</sup>Y</option>
+                                <option value="0">X<sup>H</sup>X<sup>H</sup></option>
+                                <option value="0">X<sup>H</sup>X<sup>h</sup></option>
+                                
+                            </select>
+                            <p>  G :    &ensp;    <select id="drop28">
+                                <option value="0">Pilih jawaban</option>
+                                <option value="10">X<sup>h</sup>, Y</option>
+                                <option value="0">X<sup>H</sup>, Y</option>
+                                <option value="0">X<sup>h</sup>, X<sup>h</sup></option>
+                                <option value="0">X<sup>H</sup>, X<sup>h</sup></option>
+                            </select>    &#10006;<select id="drop29">
+                                <option value="0">Pilih jawaban</option>
+                                <option value="10">X<sup>h</sup>, Y</option>
+                                <option value="0">X<sup>H</sup>, Y</option>
+                                <option value="0">X<sup>h</sup>, X<sup>h</sup></option>
+                                <option value="0">X<sup>H</sup>, X<sup>h</sup></option>
+                            </select>   <p>F<sub>1</sub> : &nbsp; 
+                            <select id="drop210">
+                                <option value="0">Pilih jawaban</option>
+                                <option value="10">XHY, XhY XHXh, XHXH </option>
+                                <option value="0">XhY, XhY XhXh, XHXH</option>
+                                <option value="0">XHY, XhY XHXH, XHXH</option>
+                                <option value="0">XhY, XhY XHXH, XHXH</option>
+                                
+                            </select> </p> 
+
+                            <p><button type="submit" value="Submit">Submit</button></p>
+                        </form>  
+
+                        <p>Skor Anda : <span id="grade2">__</span></p>
+                        
+                        
+                    </div>
+                    
+                </div>
+
+
+
+                    
+            </div>
+
+            <!-- Konten Akhir -->
+            <div class="bawah">
+                <!-- Page Link -->
+                <!-- <div class="col-5"> -->
+                    <nav aria-label="...">
+                        <ul class="pagination justify-content-center pagination-sm7">
+                            <li class="page-item disabled" id="btnsebelum" >
+                            <a id="prev" class="page-link"  onclick="" tabindex="-1" hidden style="cursor: pointer;">
+                                <span aria-hidden="true">&laquo;</span>
+                            </a>
+                            </li>
+                            <li class="page-item"  ><a class="page-link pageAktif" id="btnsatu" onclick="satu();" style="cursor: pointer;">1</a></li>
+                            <li class="page-item" ><a class="page-link" id="btndua" onclick="dua();" style="cursor: pointer;">2</a></li>
+                            <li class="page-item" ><a class="page-link" id="btntiga" onclick="tiga();" style="cursor: pointer;">3</a></li>
+                            <li class="page-item" ><a class="page-link" id="btnempat" onclick="empat();" style="cursor: pointer;">4</a></li>
+                            <li class="page-item" ><a class="page-link" id="btnlima" onclick="lima();" style="cursor: pointer;">5</a></li>
+                            
+                            
+                            <li class="page-item" id="btnselanjutnya" >
+                            <a id="next" class="page-link" onclick="dua();" style="cursor: pointer;" >
+                                <span aria-hidden="true">&raquo;</span>
+                            </a>
+                            </li>
+                            <li class="page-item" id="btnselanjutnya">
+                                <a class="page-link ml-1" id="mnext" href="/html/materi1/materi1_sub3.html" hidden>Materi Selanjutnya</a>
+                            </li>
+                        </ul>
+                    </nav>
+                    
+                <!-- </div> -->
+            </div>
+        </div>
+        
+    </section>
+
+     <!-- Modal zoom gambar -->
+    <div class="gambar_modal">
+        <div class="tutup d-flex px-3">
+            <span class="modalTxt position-absolute top-50 start-50 translate-middle text-dark text-center "></span>
+            <i class="fas fa-times position-absolute top-50 end-0 translate-middle-y mx-3 "></i>
+        </div>
+        <div class="modalContent">
+            <img src="" class="modalImg img-fluid" />
+        </div>
+    </div>
+
+    <!-- MathJax -->
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    </script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js" charset="UTF-8"></script>
+    <!-- JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+    <script src = " https://unpkg.com/sweetalert/dist/sweetalert.min.js " > </script> 
+
+    <!-- JS -->
+    <script src="/js/materiIndex.js"></script>
+    <script src="/js/db/dataSiswa.js"></script>
+    <script src="/js/asset/paginator_5.js"></script>
+    
+    
+    <!-- JS Interaktif -->
+    
+    <script src="/js/materi1/materi1_sub1_berlatih.js"></script>
+    <script src="/js/materi1/materi1_latihan1.js"></script>
+
+    <script src="https://files.liveworksheets.com/embed/embed.js"></script>
+    <script language="javascript">
+    loadliveworksheet(1265941,'zyrxpopy',1524,'www',5306686);
+    </script>
+
+    
+
+
+
+</html>

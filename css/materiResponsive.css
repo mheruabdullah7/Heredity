@@ -1,0 +1,249 @@
+@media screen and (max-width: 1200px){
+    .sidebarr.close .profile-details img{
+      padding: 10px;
+      margin: 0 10px 0 5px;
+    }
+  }
+  @media screen and (max-width: 1000px){
+   
+    .sidebarr .profile-details{
+      background: none;
+      width: 30%
+    }
+    .sidebarr{
+      width: 30%;
+    }
+    .sidebarr ~.home-section{
+      left: 30%;
+      width: calc(100% - 30%);
+    }
+    .home-section .home-content{
+      height: 7%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0px 10px 0px 10px;
+    }
+  }
+  @media screen and (max-width: 850px){
+    .sidebarr .profile-details{
+      background: none;
+      width: 5%;
+    }
+    .sidebarr .profile-details i{
+        display: none;
+    }
+    .sidebarr{
+      width: 30%;
+    }
+    .sidebarr ~.home-section{
+      left: 30%;
+      width: calc(100% - 30%);
+    }
+    .home-section .home-content{
+      height: 10%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0px 10px 0px 10px;
+    }
+    .sidebarr.close .profile-details img{
+      padding: 5px;
+      margin: 0 5px 0 0px;
+    }
+
+    @media screen and (max-width: 700px){
+   
+    .sidebarr .profile-details{
+      background: none;
+      width: 30%
+    }
+    .sidebarr{
+      width: 70%;
+    }
+    .sidebarr ~.home-section{
+      left: 70%;
+      width: calc(100% - 70%);
+      width: 100%;
+    }
+    .home-section .home-content{
+      height: 10%;
+      
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0px 10px 0px 10px;
+    }
+  }
+    /* .sidebarr.close .profile-details img{
+      height: 42px;
+      width: 42px;
+      object-fit: cover;
+      border-radius: 9px;
+      margin: 0 12px 0 5px;
+      background-color: #F3EAD8;
+      transition: all 0.5s ease;
+  } */
+  }
+  /* @media screen and (max-width: 700px){
+    
+    .tutup {
+      height: 19%;
+    }
+    .sidebarr{
+      width: 60%;
+    }
+    .sidebarr ~.home-section{
+      left: 60%;
+      width: calc(100% - 60%);
+    }
+    .sidebarr .logo-details .logo_name{
+      opacity: 0;
+      pointer-events: none;
+      transition-delay: 0s;
+    }
+    .sidebarr .nav-link{
+        overflow: visible;
+    }
+    .sidebarr .nav-link i.fa-angle-down{
+        display: flex;
+    }
+    .sidebarr .nav-link li a .link_nama{
+        opacity: 0;
+        pointer-events: none;
+    }
+    .sidebarr .nav-link li .iconn-link{
+        display: flex;
+    }
+  
+    .sidebarr .nav-link li .sub-menuu{
+        position: absolute;
+        left: 100%;
+        top: -10px;
+        margin-top: 0px;
+        padding: 0px 0px;
+        transition: 0s;
+        opacity: 0;
+        pointer-events: none;
+        transition: 0s;
+        display: block !important;
+    }
+  
+    .sidebarr .nav-link li:hover .sub-menuu{
+        top: 0px;
+        opacity: 1;
+        pointer-events: auto;
+        transition: all 0.4s ease;
+        width: max-content;
+    }
+    .sidebarr .nav-link li .sub-menuu .link_nama{
+        display: flex;
+    }
+    .sidebarr .nav-link li .sub-menuu .link_nama{
+        font-size: 18px;
+        opacity: 1;
+        display: block;
+        pointer-events: none;
+        text-align: center;
+        color: black;
+    }
+    .sidebarr .profile-details{
+        background: none;
+        width: 14%;
+        margin: 0px;
+    }
+   
+    .sidebarr .profile-details i,
+    .sidebarr .profile-details .profile_name,
+    .sidebarr .profile-details .status{
+        display: none;
+    }
+    .sidebarr ~.home-section{
+      left: 60%;
+      width: calc(100% - 60%);
+    }
+    .sidebarr ~.home-section .fa-house{
+        margin-left: 20px;
+    }
+    .sidebarr ~.home-section .mari{
+      width: 180px ;
+      transition: all 1s ease;
+    }
+    .sidebarr ~.home-section .konten p{
+      font-size: 18px;
+      transition: all 0.5s ease;
+    }
+    .sidebarr ~.home-section figcaption,
+    .sidebarr ~.home-section p.sumber{
+        font-size: smaller;
+    }
+    .home-section .home-content .text{
+      font-size: 17px;
+    }
+    .home-section .home-content i{
+      font-size: 15px;
+    }
+  
+    .sidebarr.close ~.home-section .home-content .text{
+      font-size: 22px;
+    }
+    .sidebarr.close ~.home-section .home-content i{
+      font-size: 17px;
+    }
+    .sidebarr.close{
+      display: none;
+      transition: all 0.4s ease;
+    }
+    .sidebarr.close ~.home-section{
+      left: 0%;
+      width: calc(100% - 0%);
+    }
+    .sidebarr.close ~.home-section .konten{
+      border-radius: 0px;
+    }
+  
+    
+  } */
+  /* @media screen and (max-width: 500px){
+    .sidebarr ~.home-section  .sub-materi .table-responsive .mari{
+      width: 90px;
+    }
+    .sidebarr.close ~.home-section .sub-materi .table-responsive .mari{
+      width: 100px;
+    }
+    .gambar_modal {
+      overflow: auto;
+    }
+  
+  }
+  @media screen and (max-width: 400px){
+    .gambar_modal {
+      overflow: auto;
+    }
+    .modalContent {
+      margin: auto;
+    }
+    .modalImg{
+      background-color: white;
+      width: 100%;
+    }
+     .sidebarr .profile-details{
+       display: none;
+    }
+  
+    .sidebarr .logo-details i,
+    .sidebarr .nav-link li i{
+      min-width: 55px;
+    }
+  
+    .sidebarr.close ~.home-section .home-content .text,
+    .home-section .home-content .text{
+      font-size: 14px;
+    }
+    .sidebarr.close ~.home-section .home-content i{
+      font-size: 12px;
+    }
+  }
+   */
+  
+  

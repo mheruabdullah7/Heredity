@@ -1,0 +1,218 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Registrasi</title>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js" charset="UTF-8"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.1.1/crypto-js.min.js"></script>
+  
+  <!-- css -->
+  <link href="/css/index.css" rel="stylesheet">
+
+  <link rel="icon" type="image/png" href="/img/iconWebsite.svg">
+ 
+</head>
+<body class="row">
+
+    <div class="noKoneksi">
+        <div class="row">
+          <img src="/img/noKoneksi.svg" style="width: 35%;" alt="">
+          <div class="mt-3 fs-3 text-white fw-bold text-center">
+            Cek Koneksi Internet Anda...
+          </div>
+        </div>
+    </div>
+
+  
+    <div class="col">
+
+        <div class="mb-5 login-container position-absolute top-50 start-50 translate-middle">
+            <p class="judul">Registrasi Guru</p>
+            <div class="separator" style="margin-top: -20px;"></div>
+            <h6 class="welcome-message" style="margin-bottom: 10px;">Silahkan Lengkapi Data-Data Berikut:</h6>
+
+            <div class="form-controll">
+                <input class="regis" type="text" placeholder="Masukkan Nama" id="namaInp">
+            </div>
+
+            <div class="form-controll">
+                <input class="regis" type="text" placeholder="Masukkan NIP" id="NIPInp">
+            </div>
+
+            <div class="form-controll">
+                <input class="regis" type="password" placeholder="Masukkan Password" id="passInp">
+            </div>
+
+            <div class="form-controll">
+                <input class="regis" type="text" placeholder="Masukkan Token" id="tokenInp">
+            </div>
+            
+            
+            <button type="text" id="sub_btn" class="buttonn submitt">Daftar</button>
+            <a href="loginGuru.html" class="buatAKun " style="text-decoration: none; ">Sudah memiliki akun?</a href="#">
+            
+        </div>
+    </div>
+    
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+    <script>
+        $(document).ready(function() {
+         var statusElement = $('.noKoneksi');
+   
+         if (navigator.onLine) {
+           $('.noKoneksi').prop('hidden', true);
+         } else {
+           $('.noKoneksi').fadeIn('slow');
+         }
+   
+         $(window).on('online', function() {
+           $('.noKoneksi').fadeOut('slow');
+         });
+   
+         $(window).on('offline', function() {
+           $('.noKoneksi').fadeIn('slow');
+         });
+       });
+   
+     </script>
+
+    <script type="module">
+        // Import the functions you need from the SDKs you need
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/9.19.1/firebase-app.js";
+        import {  getDatabase, ref, child, set, get, update, remove, query, onValue  } from "https://www.gstatic.com/firebasejs/9.19.1/firebase-database.js";
+        // TODO: Add SDKs for Firebase products that you want to use
+        // https://firebase.google.com/docs/web/setup#available-libraries
+
+// For Firebase JS SDK v7.20.0 and later, measurementId is optional
+const firebaseConfig = {
+  apiKey: "AIzaSyADUmOEWb7NE5pWV-BwHfAt7pF-IV3PP2U",
+  authDomain: "heredity-86b90.firebaseapp.com",
+  databaseURL: "https://heredity-86b90-default-rtdb.firebaseio.com",
+  projectId: "heredity-86b90",
+  storageBucket: "heredity-86b90.appspot.com",
+  messagingSenderId: "61653132520",
+  appId: "1:61653132520:web:106995cc62a7be388a955d",
+  measurementId: "G-P991YR1DP8"
+};
+
+        // Initialize Firebase
+        const app = initializeApp(firebaseConfig);
+                
+
+        const db = getDatabase();
+    
+        // Mencek input kosong 
+        function isEmptyOrSpace(str){
+            return str == null || str.match(/^ *$/) !== null;
+        }
+
+        function Validation(){
+            var nameregex = /^[a-zA-Z\s]+$/; //cek nama hanya bisa diinput oleh huruf
+            var nisnregex = /^\d+$/; // cek nisn hanya bisa menginput angka
+
+
+            if(isEmptyOrSpace($('#namaInp').val())||isEmptyOrSpace($('#NIPInp').val())||isEmptyOrSpace($('#passInp').val())||isEmptyOrSpace($('#tokenInp').val())){
+                Swal.fire({
+                    icon: 'error',
+                    title: 'Data masih ada yang kosong',
+                    text: 'Mohon Cek Kembali Lagi',
+                })
+                return false;
+            }
+            if(!nameregex.test($('#namaInp').val())){
+                Swal.fire({
+                    icon: 'warning',
+                    title: 'Mohon Maaf',
+                    text: 'Nama hanya bisa memuat huruf saja',
+                })
+                return false;
+            }
+            if(!nisnregex.test($('#NIPInp').val())){
+                Swal.fire({
+                    icon: 'warning',
+                    title: 'Mohon Maaf',
+                    text: 'NIP hanya bisa memuat angka saja',
+                })
+                return false;
+            }
+            return true;
+        }
+
+        // Register user to firbase
+        function RegisterUser(){
+            if(!Validation()){
+                return;
+            }
+            // Get mengambil data di fire base
+            const dbRef = ref(db);
+            get(child(dbRef, "UserGuru/" + ($('#NIPInp').val()))).then((snapshot)=>{
+                // console.log(" suk")
+                if(snapshot.exists()){
+                    Swal.fire({
+                        icon: 'warning',
+                        title: 'Mohon Maaf',
+                        text: 'NIP Sudah Terdaftar Sebelumnya'
+                    })
+                }
+                else{
+                    onValue(ref(db, "tokenGuru"), (snapshot) => {
+                        if((snapshot.val()) == ($("#tokenInp").val())){
+                            // set Mengirim value baru ke firebase
+                            set(ref(db, "UserGuru/" + $('#NIPInp').val()),
+                            {
+                                nama : $('#namaInp').val(),
+                                nip: $('#NIPInp').val(),
+                                password: enchPass(),
+                               
+                            })
+                            .then(()=>{
+                                Swal.fire({
+                                    icon: 'success',
+                                    title: "Selamat Akun Berhasil dibuat",
+                                })
+                                .then(()=>{
+                                document.location.href  = "loginGuru.html";
+                                })
+                            })
+                            .catch((error)=>{
+                                alert("error" + error);
+                            })
+                        }else{
+                            Swal.fire({
+                                icon: 'warning',
+                                title: 'Mohon Maaf',
+                                text: 'Token Anda salah!',
+                            })
+                        }
+                    })
+          
+                }
+            });
+        
+        }
+
+        // Encription password
+        function enchPass(){
+            var pass12 = CryptoJS.AES.encrypt($('#passInp').val(), $('#passInp').val());
+            return pass12.toString()
+        }
+        // assign the events
+        $('#sub_btn').click(function(){
+            RegisterUser();
+        })
+
+    </script>
+  
+</body>
+</html>
+
