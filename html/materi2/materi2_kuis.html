@@ -4,14 +4,13 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Kuis 2</title>
+    
 
    <!-- ICON -->
    <link href="/fontawesome/css/fontawesome.css" rel="stylesheet">
    <link href="/fontawesome/css/brands.css" rel="stylesheet">
    <link href="/fontawesome/css/solid.css" rel="stylesheet">
    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-
 
 
    <!-- Jquery -->
@@ -26,12 +25,13 @@
    <link href="https://fonts.googleapis.com/css2?family=Boogaloo&family=Roboto+Flex:opsz,wght@8..144,500&family=Signika+Negative:wght@700&display=swap" rel="stylesheet">
 
    <!-- Mathjax -->
-   <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+
    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3.0.1/es5/tex-mml-chtml.js"></script>
 
     <!-- css -->
     <link href="/css/Materi/materiIndex.css" rel="stylesheet"> 
     <link href="/css/materiResponsive.css" rel="stylesheet">
+    <link href="/css/materi/hide_nomor_pilihan.css" rel="stylesheet">
 
     <link rel="icon" type="image/png" href="/img/iconWebsite.svg">
 </head>
@@ -48,14 +48,14 @@
         <ul class="nav-link">
             <!-- Penentuan Jenis Kelamin -->
             <li>
-                <div class="iconn-link ">
+                <div class="iconn-link aktif">
                     <a href="#" class="menubar">
                         <i class="fa-sharp fa-solid fa-book"></i>
                         <span class="link_nama">Hereditas Pada Manusia</span>
                     </a>
                     <i class="fa-sharp fa-solid fa-angle-down"></i>
                 </div>
-                <ul class="sub-menuu ">
+                <ul class="sub-menuu menuAktif">
                     <div class="boxSub-menuu ">
                         <li>
                             <a class="link_nama" href="#">
@@ -76,7 +76,7 @@
                         </li>
                         
                         <li>
-                            <a href="/html/materi1/materi1_kuis.html">
+                            <a href="/html/materi1/materi1_kuis.html" class="aktif2">
                                 Kuis
                             </a>
                         </li>
@@ -87,14 +87,14 @@
 
             <!--  Penyakit Keturunan -->
             <li>
-                <div class="iconn-link aktif">
+                <div class="iconn-link">
                     <a href="#">
                         <i class="fa-sharp fa-solid fa-book"></i>
                         <span class="link_nama">Penyakit Keturunan</span>
                     </a>
                     <i class="fa-sharp fa-solid fa-angle-down"></i>
                 </div>
-                <ul class="sub-menuu menuAktif">
+                <ul class="sub-menuu">
                     <div class="boxSub-menuu">
                         <li>
                             <a class="link_nama" href="#">
@@ -113,7 +113,7 @@
                             </a>
                         </li>
                         <li>
-                            <a href="/html/materi2/materi2_kuis.html" class="aktif2">
+                            <a href="/html/materi2/materi2_kuis.html">
                                 Kuis
                             </a>
                         </li>
@@ -206,12 +206,11 @@
     </div>
 
     <!-- section Utama -->
-    <!-- section Utama -->
     <section class="home-section">
 
         <div class="home-content">
             <i class="fa-sharp fa-solid fa-bars"></i>
-            <span class="text">Kuis 2</span>
+            <span class="text">kuis 2</span>
             <a href ="/html/profilSiswa.html">
                 <i class="fa-sharp fa-solid fa-id-card-clip"></i>
             </a>
@@ -223,7 +222,8 @@
                 <div class="mulai-kuis card align-middle mx-auto" style="border: 2px solid #005eff; width: 100%;">
                     
                 </div>
-                
+                <div class="nomor-soal"></div>
+                <div class="pilihan-ganda"></div>
 
             </div>
 
@@ -235,11 +235,11 @@
                             <ul class="pagination justify-content-center pagination-sm7">
                                
                                 <li class="page-item" id="btnsebelum">
-                                    <a class="page-link ml-1" id="mprev" href="/html/materi2/materi2_kuis.html">Materi sebelumnya</a>
+                                    <a class="page-link ml-1" id="mprev" href="/html/materi1/materi1_sub3.html">Materi sebelumnya</a>
                                 </li>
 
                                 <li class="page-item" id="btnselanjutnya">
-                                    <a class="page-link ml-1" id="mnext" href="/html/materi3/materi3_sub1.html">Materi Selanjutnya</a>
+                                    <a class="page-link ml-1" id="mnext" href="/html/materi2/materi2_sub1.html">Materi Selanjutnya</a>
                                 </li>
                             </ul>
                         </nav>
@@ -250,14 +250,11 @@
         
     </section>
 
-
     <!-- JS -Interaktif -->
     <script src="/js/materiIndex.js"></script>
     <script src="/js/db/dataSiswa.js"></script>
     <script type="module" src="/js/db/kuis2.js"></script>
-    <script src="/js/asset/tanggal.js"></script>
-    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js " > </script> 
+    <script src = " https://unpkg.com/sweetalert/dist/sweetalert.min.js " > </script> 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
- 
 </body>
 </html>

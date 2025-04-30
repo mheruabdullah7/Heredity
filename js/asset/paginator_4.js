@@ -1,10 +1,10 @@
-// Paginator
-window.onload = function awalMateri(){
+function awalMateri(){
     document.getElementById("satu").hidden = false;
     document.getElementById("dua").hidden = true;
     document.getElementById("tiga").hidden = true;
-      
- };
+}
+
+window.addEventListener('load', awalMateri);
  function satu(){
     document.getElementById("btnsebelum").classList.add('disabled'); 
     document.getElementById("btnselanjutnya").classList.remove('disabled'); 

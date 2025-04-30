@@ -1,74 +1,186 @@
 
+  .container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .right-box {
+    background-color: #353ba7;
+    color: white;
+    padding: 20px;
+    
+  }
+  .left-box {
+    min-width: 150px;
+    text-align: center;
+    background-color: white;
+    padding: 20px;
+    border: 1px solid #353ba7;
+    border-radius: 10px;
+    
+  }
+  .right-box {
+    background-color: #353ba7; /* biru muda */
+    color: white;
+    padding: 20px;
+    
+    clip-path: polygon(20px 0%, 100% 0%, 100% 100%, 20px 100%, 0% 50%);
+    -webkit-clip-path: polygon(20px 0%, 100% 0%, 100% 100%, 20px 100%, 0% 50%);
+    min-width: 300px;
+  }
+  .right-box h5 {
+    font-weight: bold;
+    text-decoration: underline;
+    margin-top: 0;
+  }
+  .right-box ul {
+    padding-left: 20px;
+    margin: 0;
+  }
+  
+  .title {
+    display: flex;
+    align-items: center;
+    font-weight: bold;
+    font-size: 18px;
+    margin-bottom: 10px;
+  }
 
-/* soal Pilihan pengolahan data */
-.pilihan {
-    width: 150px;
-    height: 30px;
-    background: #005eff;
-    border: none;
+  .title img {
+    width: 30px;
+    margin-right: 10px;
+  }
+
+  .question-box {
+    border: 2px solid #353ba7;
+    border-radius: 12px;
+    padding: 15px;
+    margin-bottom: 20px;
+  }
+
+  .formula-highlight {
+    background-color: #ffe082;
+    padding: 10px 15px;
     border-radius: 10px;
     display: inline-block;
-    color: black;
+    margin: 15px 0;
+    max-width: 400px; /* atau 300px jika ingin lebih pendek */
+    word-wrap: break-word;
+  }
+  
+
+  .formula-highlight b {
+    color: #000;
+  }
+
+  .formula-highlight sup {
+    font-size: smaller;
+    vertical-align: super;
+  }
+
+  .blue-box {
+    background-color: #353ba7;
+    color: white;
+    padding: 15px;
+    border-radius: 10px;
+    margin-top: 20px;
+    width: fit-content;
+  }
+
+  sup {
+    vertical-align: super;
+    font-size: smaller;
+  }
+
+  u {
+    text-decoration: underline;
+  }
+
+  .tab-container {
+    background: #ffffff;
+    border-radius: 5px;
+    box-shadow: 4px 4px 0 rgba(0, 0, 0, 0.1);
+    display: inline-block;
+    padding: 0;
+  }
+
+  .tab-buttons {
+    display: flex;
+    border-bottom: 2px solid #ccc;
+  }
+
+  .tab-button {
+    padding: 10px 20px;
+    background-color: #8fa9d3;
+    border: none;
+    cursor: pointer;
+    color: #ffffff;
+    font-weight: bold;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    margin-right: 2px;
+    transition: 0.2s ease-in-out;
+  }
+
+.tab-button.active {
+    background-color: #ffffff;
+    color: #2a3d9a;
+    border-bottom: none;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.4);
+    border: 2px solid #2a3d9a;
+    font-weight: bolder;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+  }
+  
+.tab-content.active {
+    display: block;
+    padding: 20px;
+    border-style: solid;
+    border-color: #2a3d9a;
+    border-width: 0 2px 2px 2px;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    background-color: #f9faff;
+  }
+
+  .tab-content {
+    padding: 20px;
+    display: none;
+  }
+
+  .tab-content.active {
+    display: block;
+  }
+
+  input[type="text"] {
+    width: 60px;
+    padding: 4px;
+    margin: 0 3px;
+    border-radius: 5px;
+    border: 1px solid #999;
     text-align: center;
-    margin-bottom: 15px;
-    margin-top: 15px;
+  }
+
+  .button-group {
+    margin-top: 20px;
+    text-align: center;
+  }
+
+  button {
+    background-color: #004aad;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    margin: 5px;
+    border-radius: 6px;
+    font-weight: bold;
     cursor: pointer;
   }
-  .pilihan:hover {
-    background-color: #e3a93597;
-    border: 2px solid #534371;
+
+  .result {
+    margin-top: 20px;
+    font-weight: bold;
+    text-align: center;
   }
-  .ulang{
-    background: #dc3545;
-    color: white;
-  }
-  .ulang:hover{
-    background: #a22632;
-    border: none;
-  }
-  .soalHilang{
-    display: none;
-  }
-  
-  .hilang {
-    display: none;
-  }
-  
-  #bnr1,
-  #bnr2,
-  #bnr3,
-  #bnr4,
-  #bnr5,
-  #bnr6,
-  #bnr7,
-  #bnr8,
-  #bnr9,
-  #bnr10 {
-    border: 1px solid #B081A4;
-    border-radius: 3px;
-    padding: 3px 10px;
-    box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.4);
-    width: 90%;
-    color: black;
-    margin-top: -30px;
-  }
-  
-  #slh1,
-  #slh2,
-  #slh3,
-  #slh4,
-  #slh5,
-  #slh6,
-  #slh7,
-  #slh8,
-  #slh9,
-  #slh10 {
-    border: 1px solid #B081A4;
-    border-radius: 3px;
-    padding: 3px 10px;
-    box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.4);
-    width: fit-content;
-    color: black;
-    margin-top: -30px;
-  }
-    

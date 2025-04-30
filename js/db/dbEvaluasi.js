@@ -1,12 +1,14 @@
 // Import the functions you need from the SDKs you need
-import { initializeApp } from "https://www.gstatic.com/firebasejs/9.19.1/firebase-app.js";
-import { getAnalytics } from "https://www.gstatic.com/firebasejs/9.19.1/firebase-analytics.js";
-import { getDatabase, ref, onValue, set, update } from "https://www.gstatic.com/firebasejs/9.19.1/firebase-database.js";
-import { getAuth, onAuthStateChanged } from "https://www.gstatic.com/firebasejs/9.19.1/firebase-auth.js";
+import { initializeApp } from "https://www.gstatic.com/firebasejs/11.6.0/firebase-app.js";
+import { getAnalytics } from "https://www.gstatic.com/firebasejs/11.6.0/firebase-analytics.js";
+// TODO: Add SDKs for Firebase products that you want to use
+import { getDatabase, ref, onValue, set, update } from "https://www.gstatic.com/firebasejs/11.6.0/firebase-database.js";
+import { getAuth, onAuthStateChanged } from "https://www.gstatic.com/firebasejs/11.6.0/firebase-auth.js";
 import {tanggalDefault, tampilanWaktu} from "../asset/tanggal.js";
 
 // TODO: Add SDKs for Firebase products that you want to use
 // https://firebase.google.com/docs/web/setup#available-libraries
+
 
 // Your web app's Firebase configuration
 const firebaseConfig = {
@@ -19,6 +21,7 @@ const firebaseConfig = {
   appId: "1:61653132520:web:106995cc62a7be388a955d",
   measurementId: "G-P991YR1DP8"
 };
+
 
 
 // Initialize Firebase
@@ -39,6 +42,16 @@ const kotakSoalEvaluasi = document.querySelectorAll(".kotak-soal-evaluasi");
 const mulaiKuis = document.querySelector('.mulai-kuis');
 const btnHome = document.querySelector('.home');
 
+if (nomorSoal === null) {
+  console.error("Element with class 'nomor-soal' not found.");
+}
+if (pilihanGanda === null) {
+  console.error("Element with class 'pilihan-ganda' not found.");
+}
+if (mulaiKuis === null) {
+  console.error("Element with class 'mulai-kuis' not found.");
+}
+
 
 let nama = localStorage.getItem('nama');
 let nisn = localStorage.getItem('nisns');
@@ -48,7 +61,6 @@ getUsername();
 hasil();
 
 // Functions
-
 function hasil(){
   onValue(ref(db,  `UserSiswa/${nisn}/evaluasi`), (snapshot) => {
     const data = snapshot.val();
@@ -59,94 +71,107 @@ function hasil(){
           <hr>
           <ol>
             <li class="mb-1 lh-lg">Evaluasi terdiri dari 20 soal berupa pilihan ganda.</li>
-            <li class="mb-1 lh-lg">Pengerjaan evaluasi hanya bisa <b>1 kali</b>.</li>
-            <li class="mb-1 lh-lg">Setiap soal memiliki bobot nilai sebesar 5.</li>
+            <li class="mb-1 lh-lg">Setiap soal memiliki bobot nilai sebesar 20.</li>
             <li class="mb-1 lh-lg">Tekan tombol "<b>Mulai</b>" untuk mulai mengerjakan kuis.</li>
             <li class="mb-1 lh-lg">Jawablah soal dengan menekan pilihan jawaban yang dianggap benar.</li>
-            <li class="mb-1 lh-lg">Waktu pengerjaan adalah 1 jam 30 menit. Jika waktu pengerjaan habis, maka tampilan akan beralih ke halaman hasil.</li>
+            <li class="mb-1 lh-lg">Waktu pengerjaan adalah 30 menit. Jika waktu pengerjaan habis, maka tampilan akan beralih ke halaman hasil.</li>
             <li class="mb-1 lh-lg">Setelah semua pertanyaan selesai dijawab, tekan tombol "Selesai" dan halaman hasil akan muncul.</li>
             <li class="lh-lg">Selesaikan semua soal sebelum waktu habis karena jika waktu habis maka secara otomatis kuis akan tertutup</li>
           </ol>
           <hr>
-          <a class="d-md-flex justify-content-md-end text-decoration-none " href="evaluasiSoal.html">
-              <button class="btn_cekJawaban" id="mulaiKuiss" ><b>Mulai</b></button>
-          </a>
-      </div>`
+      <a class="d-md-flex justify-content-md-end text-decoration-none " href="evaluasiSoal.html">
+          <button class="btn_cekJawaban" id="mulaiKuis"><b>Mulai</b></button>
+      </a>
+  </div>`
+  const btnMulaiKuis = document.getElementById("mulaiKuis");
+  if (btnMulaiKuis) {
+    btnMulaiKuis.addEventListener("click", ()=>{
       
-      const btnMulaiKuis = document.getElementById("mulaiKuiss");
-      btnMulaiKuis.addEventListener("click", ()=>{
-        update(ref(db, `UserSiswa/${nisn}`), {
-          "evaluasi": 
-          {
-            skor: "",
-            tanggal: "",
-            waktu:""
-          },
-        }).then(() => {
-          location.href = "evaluasiSoal.html";
-        });
+      update(ref(db, `UserSiswa/${nisn}`), {
+        "evaluasi": 
+        {
+          skor: "",
+          tanggal: "",
+          waktu:""
+        },
+      }).then(() => {
+        
+        location.href = "evaluasiSoal.html";
       });
-
-    }else if(data[`skor`] == 0 || data[`skor`] >= 0 ){
+    });
+  }
+  
+      
+    }else{
       mulaiKuis.innerHTML += `
       <div class="card-body">
-        <h3 class="text-center text-capitalize">Selamat ${nama} Telah Menyelesaikan Evaluasi</h3>
+        <h3 class="text-center">Hasil Evaluasi</h3>
         <hr>
+        
         <div id="ketLulus"></div>
-        <hr>
-        <div class="d-md-flex text-center ">
-            <div class="boxPenting mb-2" style="width: 150px;">
-                Jawaban Benar
-                <h1>${data[`skor`] / 5}</h1>
-                <hr>
+    
+        <div class="d-md-flex text-center mt-3">
+            <div class="boxPenting" style="width: 150px;">
                 Jawaban Salah
                 <h1 class="text-danger">${20 - (data[`skor`] / 5)}</h1>
-            </div>
 
+                <hr>
+
+                Jawaban Benar
+                <h1>${data[`skor`] / 5}</h1>
+            </div>
             <div class="boxPenting align-middle" style="width: 150px;">
                 Nilai
                 <h1>${data[`skor`]}</h1>
             </div>
 
-            <hr>
-            
         </div>
-        
+        <hr>
+
+        <div class="d-md-flex justify-content-md-center text-decoration-none tombol-hasil-kuis">
+          <a href="/html/materi.html" class="btn btn-secondary mx-2" tabindex="-1" role="button">Ulang Materi <i class="fas fa-undo-alt"></i></a>
+          <button href="evaluasiSoal.html" class="btn btn-danger mx-2" id="ulangi-kuis" >Ulang Kuis <i class="fas fa-undo-alt"></i></button>
+        </div>
       </div>`
 
       onValue(ref(db,  `kkm/evaluasi/`), (snapshot) => {
-
         const dataKKM = snapshot.val();
         const ketLulus = `<div class="card-body-ketLulus text-center">
         <h5>Selamat Nilai Kamu Sangat Bagus!</h5>
+        Mari Kita pelajari materi selanjutnya
         </div>`;
     
         const ketTDKLulus = `<div class="card-body-ketTDKLulus text-center">
-        <h5>Mohon Maaf Nilai Kamu di Bawah KKM (<span>${dataKKM.kkm}</span>)</h5>
+        <h5>Mohon Maaf Nilai Kamu di Bawah KKM (<span>${dataKKM ? dataKKM.kkm : 'N/A'}</span>)</h5>
         Silahkan belajar lagi dan tetap semangat!
         </div>`
-
-          if((data[`skor`])>=(dataKKM.kkm)){
+  
+          if(dataKKM && (data[`skor`]) >= (dataKKM.kkm)){
             $('#ketLulus').html(ketLulus)
           }else{
             $('#ketLulus').html(ketTDKLulus)
           }
       })
-
-      const ulangiKuis = document.getElementById("ulangi-kuis");
-      ulangiKuis.addEventListener("click", () => {
-        update(ref(db, `UserSiswa/${nisn}`), {
-          "evaluasi": 
-            {
-              skor: "",
-              tanggal: "",
-              waktu:""
-            }
-          ,
-        }).then(() => {
-          location.href = "evaluasiSoal.html";
-        });
+      
+const ulangiKuis = document.getElementById("ulangi-kuis");
+if (ulangiKuis) {
+  ulangiKuis.addEventListener("click", () => {
+    update(ref(db, `UserSiswa/${nisn}`), {
+      "evaluasi": 
+        {
+          skor: "",
+          tanggal: "",
+          waktu:""
+        }
+        ,
+      }).then(() => {
+        location.href = "evaluasiSoal.html";
+      
       });
+  });
+} else {
+  console.error("Element with id 'ulangi-kuis' not found when attaching event listener.");
+}
     }
   });
 }
@@ -158,9 +183,8 @@ function getUsername(){
     })
   }
   else{
-    
     onValue(ref(db, "Soal/Soal_Evaluasi"), (snapshot) => {
-        // const pilihanGanda = document.querySelector(".pilihan-ganda");
+      // const pilihanGanda = document.querySelector(".pilihan-ganda");
         const data = snapshot.val();
         // const kkm = snapshot.val().kkm;
       
@@ -168,7 +192,8 @@ function getUsername(){
         const dbjawaban = [];
         for (let i = 1; i <= 20; i++) {
           const tampilanSoal = i != 1 ? "d-none" : "";
-          pilihanGanda.innerHTML += `
+if (pilihanGanda) {
+  pilihanGanda.innerHTML += `
           <div class="div-soal ${tampilanSoal} px-2">
               <div ${data[`Soal_Evaluasi_${i}`].tmpl_img}>
                   <div class="imagessKuis"><img src="${data[`Soal_Evaluasi_${i}`].gambar}" class="rounded mx-auto d-block" width="20%"></div>
@@ -200,15 +225,17 @@ function getUsername(){
               </div>
           </div>
           `;
+}
           dbjawaban[i - 1] = data[`Soal_Evaluasi_${i}`].kuncijwb;
-
-          MathJax.typesetPromise($('.soalteks' )).catch((err) => console.log(err)); //agar mathjax berfungsi
-          MathJax.typesetPromise($('.pilihan-jawaban')).catch((err) => console.log(err)); //agar mathjax berfungsi
+          
          
+          
         }
         
         let soalKe = 1;
-        nomorSoal.innerHTML = `${soalKe}`;
+if (nomorSoal) {
+  nomorSoal.innerHTML = `${soalKe}`;
+}
         const divSoal = document.querySelectorAll(".div-soal");
     
         // Perulangan kotak soal saat mengklik jawaban
@@ -236,54 +263,61 @@ function getUsername(){
           const labelPilihanGanda = pilihanGanda.querySelectorAll(`.label-${i}`); //50
           let jawabanSiswa;
           for (let j = 0; j < labelPilihanGanda.length; j++) {
-            labelPilihanGanda[j].addEventListener("click", () => {
-              let pilihan = labelPilihanGanda[j].querySelector(`.radio-pilihan-ganda-${i}`).value;
-              jawabanSiswa = pilihan;
-              jawabanSiswaSemua[i] = pilihan;
-  
-              set(ref(db, `UserSiswa/${nisn}/evaluasi/nomor/${i}`), {
-                jawaban: pilihan,
+            ((index) => {
+              labelPilihanGanda[index].addEventListener("click", () => {
+                let pilihan = labelPilihanGanda[index].querySelector(`.radio-pilihan-ganda-${i}`).value;
+                jawabanSiswa = pilihan;
+                jawabanSiswaSemua[i] = pilihan;
+        
+                set(ref(db, `UserSiswa/${nisn}/evaluasi/nomor/${i}`), {
+                  jawaban: pilihan,
+                });
               });
-            });
+            })(j);
           }
         }
     
-        lanjutEvaluasi.addEventListener("click", function () {
-          if (soalKe == divSoal.length) {
-            soalKe = 1;
-          } else {
-            soalKe++;
-          }
-          gantiSoal(soalKe);
-          nomorSoal.innerHTML = `${soalKe}`;
-        });
-    
-        kembaliEvaluasi.addEventListener("click", function () {
-          if (soalKe == 1) {
-            soalKe = divSoal.length;
-          } else {
-            soalKe--;
-          }
-          gantiSoal(soalKe);
-          nomorSoal.innerHTML = `${soalKe}`;
-        });
-    
-          
-        btnHome.addEventListener("click", function(){
-          swal({
-            title: "Apakah Kamu sudah yakin ingin meninggalkan kuis",
-            icon: "warning",
-            teks: "Jika Kamu keluar maka pekerjaan Kamu tidak tersimpan",
-            buttons: true,
-            dangerMode: true,
-          })
-          .then((willDelete) => {
-            if (willDelete) {
-              location.href = "evaluasi.html";
-              sessionStorage.removeItem("waktu");
-            }
-          });
-        });
+if (lanjutEvaluasi) {
+  lanjutEvaluasi.addEventListener("click", function () {
+    if (soalKe == divSoal.length) {
+      soalKe = 1;
+    } else {
+      soalKe++;
+    }
+    gantiSoal(soalKe);
+    nomorSoal.innerHTML = `${soalKe}`;
+  });
+}
+
+if (kembaliEvaluasi) {
+  kembaliEvaluasi.addEventListener("click", function () {
+    if (soalKe == 1) {
+      soalKe = divSoal.length;
+    } else {
+      soalKe--;
+    }
+    gantiSoal(soalKe);
+    nomorSoal.innerHTML = `${soalKe}`;
+  });
+}
+
+if (btnHome) {
+  btnHome.addEventListener("click", function(){
+    swal({
+      title: "Apakah Kamu sudah yakin ingin meninggalkan kuis",
+      icon: "warning",
+      teks: "Jika Kamu keluar maka pekerjaan Kamu tidak tersimpan",
+      buttons: true,
+      dangerMode: true,
+    })
+    .then((willDelete) => {
+      if (willDelete) {
+        location.href = "evaluasi.html";
+        sessionStorage.removeItem("waktu");
+      }
+    });
+  });
+}
         //fungsi untuk ganti soal
         function gantiSoal(soalKe) {
           const kotakSoalEvaluasi = document.querySelectorAll(".kotak-soal-evaluasi");
@@ -322,44 +356,75 @@ function getUsername(){
             });
           }
 
-          // kirim jawaban dan skor
-          const submit = document.getElementById("submit-evaluasi");
-          submit.addEventListener("click", () => {
-            const sudahDijawab = document.querySelectorAll('.pilihan-jawaban-dipilih');
-            let benar = 0; 
-            const dbtanggal = tanggalDefault();
-            const dbwaktu = tampilanWaktu();
-    
-            if (sudahDijawab.length < 20) {
-              swal ( "Cek Kembali Jawaban Kamu" ,  "Masih ada soal yang belum terjawab" ,  "error" )
-              return;
-            } else {
-              swal({
-                title: "Apakah Kamu sudah yakin dengan jawabannya?",
-                icon: "warning",
-                buttons: true,
-                dangerMode: true,
-              })
-              .then((willDelete) => {
-                if (willDelete) {
-                  for(let j = 0; j < dbjawaban.length; j++){
-                    if (dbjawaban[j] == siswajwb[j]){
-                        benar += 1;
-                    }
-                  }
-  
-                  update(ref(db, `UserSiswa/${nisn}/evaluasi`), {
-                    selesai: true,
-                    skor: benar * 5,
-                    tanggal: dbtanggal,
-                    waktu: dbwaktu
-
-                  });
-                  location.href = "evaluasi.html";
+          // Fungsi pengecekan yang akan dijalankan setiap detik
+          function checkEverySecond() {
+            let siswaWaktu = sessionStorage.getItem("waktu");
+            // Lakukan tindakan pengecekan di sini
+            if(siswaWaktu == null){
+              clearInterval(interval);
+              let benar = 0;
+              const dbtanggal = tanggalDefault();
+              const dbwaktu = tampilanWaktu();
+              for(let j = 0; j < dbjawaban.length; j++){
+                if (dbjawaban[j] == siswajwb[j]){
+                    benar += 1;
                 }
+              }
+
+              update(ref(db, `UserSiswa/${nisn}/evaluasi`), {
+                selesai: true,
+                skor: benar * 5,
+                tanggal: dbtanggal,
+                waktu: dbwaktu
+
               });
             }
+          }
+          // Panggil fungsi checkEverySecond setiap detik
+          var interval = setInterval(checkEverySecond, 1000);
+
+
+          // kirim jawaban dan skor
+const submit = document.getElementById("submit-evaluasi");
+if (submit) {
+  submit.addEventListener("click", () => {
+    const sudahDijawab = document.querySelectorAll('.pilihan-jawaban-dipilih');
+    let benar = 0; 
+    const dbtanggal = tanggalDefault();
+    const dbwaktu = tampilanWaktu();
+
+    if (sudahDijawab.length < 20) {
+      swal ( "Cek Kembali Jawaban Kamu" ,  "Masih ada soal yang belum terjawab" ,  "error" )
+      return;
+    } else {
+      swal({
+        title: "Apakah Kamu sudah yakin dengan jawabannya?",
+        icon: "warning",
+        buttons: true,
+        dangerMode: true,
+      })
+      .then((willDelete) => {
+        if (willDelete) {
+          for(let j = 0; j < dbjawaban.length; j++){
+            if (dbjawaban[j] == siswajwb[j]){
+                benar += 1;
+            }
+          }
+
+          update(ref(db, `UserSiswa/${nisn}/evaluasi`), {
+            selesai: true,
+            skor: benar * 5,
+            tanggal: dbtanggal,
+            waktu: dbwaktu
+
           });
+          location.href = "evaluasi.html";
+          sessionStorage.removeItem("waktu");
+        }
+      });
+    }
+  });
+}
         });
 
        

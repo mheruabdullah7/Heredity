@@ -42,6 +42,16 @@ const kotakSoalEvaluasi = document.querySelectorAll(".kotak-soal-evaluasi");
 const mulaiKuis = document.querySelector('.mulai-kuis');
 const btnHome = document.querySelector('.home');
 
+if (nomorSoal === null) {
+  console.error("Element with class 'nomor-soal' not found.");
+}
+if (pilihanGanda === null) {
+  console.error("Element with class 'pilihan-ganda' not found.");
+}
+if (mulaiKuis === null) {
+  console.error("Element with class 'mulai-kuis' not found.");
+}
+
 
 let nama = localStorage.getItem('nama');
 let nisn = localStorage.getItem('nisns');
@@ -69,25 +79,28 @@ function hasil(){
             <li class="lh-lg">Selesaikan semua soal sebelum waktu habis karena jika waktu habis maka secara otomatis kuis akan tertutup</li>
           </ol>
           <hr>
-          <a class="d-md-flex justify-content-md-end text-decoration-none " href="kuis1.html">
-              <button class="btn_cekJawaban" id="mulaiKuiss"><b>Mulai</b></button>
-          </a>
-      </div>`
-      const btnMulaiKuis = document.getElementById("mulaiKuiss");
-      btnMulaiKuis.addEventListener("click", ()=>{
+      <a class="d-md-flex justify-content-md-end text-decoration-none " href="kuis1.html">
+          <button class="btn_cekJawaban" id="mulaiKuis"><b>Mulai</b></button>
+      </a>
+  </div>`
+  const btnMulaiKuis = document.getElementById("mulaiKuis");
+  if (btnMulaiKuis) {
+    btnMulaiKuis.addEventListener("click", ()=>{
+      
+      update(ref(db, `UserSiswa/${nisn}/kuis`), {
+        "kuis-1": 
+        {
+          skor: "",
+          tanggal: "",
+          waktu:""
+        },
+      }).then(() => {
         
-        update(ref(db, `UserSiswa/${nisn}/kuis`), {
-          "kuis-1": 
-          {
-            skor: "",
-            tanggal: "",
-            waktu:""
-          },
-        }).then(() => {
-          
-          location.href = "kuis1.html";
-        });
+        location.href = "kuis1.html";
       });
+    });
+  }
+  
       
     }else{
       mulaiKuis.innerHTML += `
@@ -129,32 +142,36 @@ function hasil(){
         </div>`;
     
         const ketTDKLulus = `<div class="card-body-ketTDKLulus text-center">
-        <h5>Mohon Maaf Nilai Kamu di Bawah KKM (<span>${dataKKM.kkm}</span>)</h5>
+        <h5>Mohon Maaf Nilai Kamu di Bawah KKM (<span>${dataKKM ? dataKKM.kkm : 'N/A'}</span>)</h5>
         Silahkan belajar lagi dan tetap semangat!
         </div>`
-
-          if((data[`skor`])>=(dataKKM.kkm)){
+  
+          if(dataKKM && (data[`skor`]) >= (dataKKM.kkm)){
             $('#ketLulus').html(ketLulus)
           }else{
             $('#ketLulus').html(ketTDKLulus)
           }
       })
       
-      const ulangiKuis = document.getElementById("ulangi-kuis");
-      ulangiKuis.addEventListener("click", () => {
-        update(ref(db, `UserSiswa/${nisn}/kuis`), {
-          "kuis-1": 
-            {
-              skor: "",
-              tanggal: "",
-              waktu:""
-            }
-            ,
-          }).then(() => {
-            location.href = "kuis1.html";
-          
-          });
+const ulangiKuis = document.getElementById("ulangi-kuis");
+if (ulangiKuis) {
+  ulangiKuis.addEventListener("click", () => {
+    update(ref(db, `UserSiswa/${nisn}/kuis`), {
+      "kuis-1": 
+        {
+          skor: "",
+          tanggal: "",
+          waktu:""
+        }
+        ,
+      }).then(() => {
+        location.href = "kuis1.html";
+      
       });
+  });
+} else {
+  console.error("Element with id 'ulangi-kuis' not found when attaching event listener.");
+}
     }
   });
 }
@@ -175,7 +192,8 @@ function getUsername(){
         const dbjawaban = [];
         for (let i = 1; i <= 10; i++) {
           const tampilanSoal = i != 1 ? "d-none" : "";
-          pilihanGanda.innerHTML += `
+if (pilihanGanda) {
+  pilihanGanda.innerHTML += `
           <div class="div-soal ${tampilanSoal} px-2">
               <div ${data[`Soal_Kuis_1_${i}`].tmpl_img}>
                   <div class="imagessKuis"><img src="${data[`Soal_Kuis_1_${i}`].gambar}" class="rounded mx-auto d-block" width="20%"></div>
@@ -207,15 +225,17 @@ function getUsername(){
               </div>
           </div>
           `;
+}
           dbjawaban[i - 1] = data[`Soal_Kuis_1_${i}`].kuncijwb;
           
-          MathJax.typesetPromise($('.soalteks' )).catch((err) => console.log(err)); //agar mathjax berfungsi
-          MathJax.typesetPromise($('.pilihan-jawaban')).catch((err) => console.log(err)); //agar mathjax berfungsi
+         
           
         }
         
         let soalKe = 1;
-        nomorSoal.innerHTML = `${soalKe}`;
+if (nomorSoal) {
+  nomorSoal.innerHTML = `${soalKe}`;
+}
         const divSoal = document.querySelectorAll(".div-soal");
     
         // Perulangan kotak soal saat mengklik jawaban
@@ -257,42 +277,47 @@ function getUsername(){
           }
         }
     
-        lanjutEvaluasi.addEventListener("click", function () {
-          if (soalKe == divSoal.length) {
-            soalKe = 1;
-          } else {
-            soalKe++;
-          }
-          gantiSoal(soalKe);
-          nomorSoal.innerHTML = `${soalKe}`;
-        });
-    
-        kembaliEvaluasi.addEventListener("click", function () {
-          if (soalKe == 1) {
-            soalKe = divSoal.length;
-          } else {
-            soalKe--;
-          }
-          gantiSoal(soalKe);
-          nomorSoal.innerHTML = `${soalKe}`;
-        });
-    
-          
-        btnHome.addEventListener("click", function(){
-          swal({
-            title: "Apakah Kamu sudah yakin ingin meninggalkan kuis",
-            icon: "warning",
-            teks: "Jika Kamu keluar maka pekerjaan Kamu tidak tersimpan",
-            buttons: true,
-            dangerMode: true,
-          })
-          .then((willDelete) => {
-            if (willDelete) {
-              location.href = "materi1_kuis.html";
-              sessionStorage.removeItem("waktu");
-            }
-          });
-        });
+if (lanjutEvaluasi) {
+  lanjutEvaluasi.addEventListener("click", function () {
+    if (soalKe == divSoal.length) {
+      soalKe = 1;
+    } else {
+      soalKe++;
+    }
+    gantiSoal(soalKe);
+    nomorSoal.innerHTML = `${soalKe}`;
+  });
+}
+
+if (kembaliEvaluasi) {
+  kembaliEvaluasi.addEventListener("click", function () {
+    if (soalKe == 1) {
+      soalKe = divSoal.length;
+    } else {
+      soalKe--;
+    }
+    gantiSoal(soalKe);
+    nomorSoal.innerHTML = `${soalKe}`;
+  });
+}
+
+if (btnHome) {
+  btnHome.addEventListener("click", function(){
+    swal({
+      title: "Apakah Kamu sudah yakin ingin meninggalkan kuis",
+      icon: "warning",
+      teks: "Jika Kamu keluar maka pekerjaan Kamu tidak tersimpan",
+      buttons: true,
+      dangerMode: true,
+    })
+    .then((willDelete) => {
+      if (willDelete) {
+        location.href = "materi1_kuis.html";
+        sessionStorage.removeItem("waktu");
+      }
+    });
+  });
+}
         //fungsi untuk ganti soal
         function gantiSoal(soalKe) {
           const kotakSoalEvaluasi = document.querySelectorAll(".kotak-soal-evaluasi");
@@ -360,44 +385,46 @@ function getUsername(){
 
 
           // kirim jawaban dan skor
-          const submit = document.getElementById("submit-evaluasi");
-          submit.addEventListener("click", () => {
-            const sudahDijawab = document.querySelectorAll('.pilihan-jawaban-dipilih');
-            let benar = 0; 
-            const dbtanggal = tanggalDefault();
-            const dbwaktu = tampilanWaktu();
-    
-            if (sudahDijawab.length < 10) {
-              swal ( "Cek Kembali Jawaban Kamu" ,  "Masih ada soal yang belum terjawab" ,  "error" )
-              return;
-            } else {
-              swal({
-                title: "Apakah Kamu sudah yakin dengan jawabannya?",
-                icon: "warning",
-                buttons: true,
-                dangerMode: true,
-              })
-              .then((willDelete) => {
-                if (willDelete) {
-                  for(let j = 0; j < dbjawaban.length; j++){
-                    if (dbjawaban[j] == siswajwb[j]){
-                        benar += 1;
-                    }
-                  }
-  
-                  update(ref(db, `UserSiswa/${nisn}/kuis/kuis-1`), {
-                    selesai: true,
-                    skor: benar * 10,
-                    tanggal: dbtanggal,
-                    waktu: dbwaktu
+const submit = document.getElementById("submit-evaluasi");
+if (submit) {
+  submit.addEventListener("click", () => {
+    const sudahDijawab = document.querySelectorAll('.pilihan-jawaban-dipilih');
+    let benar = 0; 
+    const dbtanggal = tanggalDefault();
+    const dbwaktu = tampilanWaktu();
 
-                  });
-                  location.href = "materi1_kuis.html";
-                  sessionStorage.removeItem("waktu");
-                }
-              });
+    if (sudahDijawab.length < 10) {
+      swal ( "Cek Kembali Jawaban Kamu" ,  "Masih ada soal yang belum terjawab" ,  "error" )
+      return;
+    } else {
+      swal({
+        title: "Apakah Kamu sudah yakin dengan jawabannya?",
+        icon: "warning",
+        buttons: true,
+        dangerMode: true,
+      })
+      .then((willDelete) => {
+        if (willDelete) {
+          for(let j = 0; j < dbjawaban.length; j++){
+            if (dbjawaban[j] == siswajwb[j]){
+                benar += 1;
             }
+          }
+
+          update(ref(db, `UserSiswa/${nisn}/kuis/kuis-1`), {
+            selesai: true,
+            skor: benar * 10,
+            tanggal: dbtanggal,
+            waktu: dbwaktu
+
           });
+          location.href = "materi1_kuis.html";
+          sessionStorage.removeItem("waktu");
+        }
+      });
+    }
+  });
+}
         });
 
        
