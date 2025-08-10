@@ -21,7 +21,7 @@
     height: 100%;
     width: 23%;
     background: 	#353ba7;
-    overflow: auto;
+    overflow: hidden;
     transition: all 0.5s ease;
 }
 .sidebarr.close{
@@ -270,18 +270,16 @@
 
 /* Profil */
 .sidebarr .profile-details{
+    display: flex;
     position: fixed;
     bottom: 0;
-    /* display: flex; */
-    align-items: center;
-    justify-content: space-between;
-    width: 20%;
-    background: #3a82ff;
+    left: 0;
+    width: 23%;
+    background: #31379b;
     padding: 6px 0;
     transition: all 0.5s ease;
-    /* justify-content: center; */
-    margin: auto;
     color: white;
+    box-sizing: border-box;
 }
 .sidebarr .profile-details .profile-content{
     display: flex;
@@ -359,7 +357,9 @@
 }
 .sidebarr.close .profile-details{
     background: none;
-    width: 6%;
+    width: 78px;
+    padding: 6px;
+    justify-content: center;
 }
 .sidebarr.close .profile-details img{
     padding: 10px;
@@ -617,6 +617,9 @@ input {
     font-size: 26px;
     font-weight: 600;
     color: #f8f9fe;
+    justify-content: center !important;
+    align-items: center;
+    align-self: center;
 }
 
 /* Mengubah warna icon home menjadi putih */
@@ -1101,9 +1104,7 @@ to {
     background-color: #f1f5f9;
   }
 
-  th:first-child, td:first-child {
-    border-left: 4px solid #2563eb;
-  }
+  
 
   @media (max-width: 768px) {
     th, td {

@@ -43,7 +43,7 @@ menampilkanIdentitas();
       text: 'Kamu Harus Login Terlebih dahulu!',
     })
     .then((result)=>{
-      document.location.href  = "../../../index.html";
+      document.location.href  = "../index.html";
     })
   }
   else{
@@ -69,7 +69,7 @@ function LogOut(){
         showConfirButton: false,
         Timer: 1500,
       }).then(function () {
-        location.href = "../../index.html";
+        location.href = "../index.html";
       sessionStorage.removeItem('nama');
       sessionStorage.removeItem('nip');
       // sessionStorage.removeItem('jeniskelamin');

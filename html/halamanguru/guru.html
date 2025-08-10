@@ -28,6 +28,7 @@
     <link href="/css/Materi/materiIndex.css" rel="stylesheet"> 
     <link href="/css/materiResponsive.css" rel="stylesheet">
     <link href="/css/HalamanGuru/tbGuru.css" rel="stylesheet">
+    <link href="/css/center-data-siswa.css" rel="stylesheet">
 
     <!--Datatable-->
     <link href="https://cdn.datatables.net/v/bs5/dt-1.13.4/datatables.min.css" rel="stylesheet"/>
@@ -61,20 +62,7 @@
                 </ul>
             </li>
 
-            <!--  Rekap Tugas -->
-            <li>
-                <div class="iconn-link">
-                    <a href="rekapTugas.html">
-                        <i class="fa-sharp fa-solid fa-list-check"></i>                        
-                        <span class="link_nama">Rekap Tugas</span>
-                    </a>
-                </div>
-                <ul class="sub-menuu blankk">
-                    <div class="boxSub-menuu">
-                        <li><a  href="rekapTugas.html" >Rekap Tugas</a></li>
-                    </div>
-                </ul>
-            </li>
+          
 
             <!-- Rekap Kuis -->
             <li>
@@ -136,6 +124,19 @@
                 </ul>
             </li>
             
+            <!-- Akun Profil -->
+            <li>
+                <div class="profile-details  ">
+                   
+                    <div class="name-job text-capitalize w-100 mx-3">
+                        <div class="profile_name">
+                            <!-- <span id="jenisKelamin"></span>  -->
+                            <span id="namaGuru"></span></div>
+                        <div class="status">NIP. <span id="nipGuru"></span></div>
+                    </div>
+                    <i class="fa-sharp fa-solid fa-right-from-bracket" onclick="LogOut()"></i>
+                </div>
+            </li>
             
 
             
@@ -148,60 +149,13 @@
     <section class="home-section">
 
         <div class="home-content">
-
-            
             <i class="fa-sharp fa-solid fa-bars"></i>
-            <span class="text">Data Siswa</span>
-           
-
-           <div class="dropdown ">
-                
-            <button class="btn btn-secondary dropdown-toggle"  type="button" data-bs-toggle="dropdown" aria-expanded="false">
-                <span class="profile_name" id="namaSiswa"></span>
-                <i class="fi fi-rr-user"></i>
-            </button>
-            <ul class="dropdown-menu">
-              <li><a class="dropdown-item" href="#">
-                <div class="split">
-                    <span>Halaman Profil</span>
-                    <i class="fi fi-rr-user"></i>
-                </div>
-              </a></li>
-              
-              <li><a class="dropdown-item" href="#" onclick="LogOut()">
-                <div class="split">
-                    <span>Keluar</span>
-                    <i class="fi fi-rs-sign-out-alt"></i>
-                </div>
-            </a>
-            </li>
-            </ul>
-          </div>
+            <div class="d-flex justify-content-center w-100">
+                <span class="text">Data Siswa</span>
+            </div>
         </div>
 
-        <div class="dropdown ">
-                
-                <button class="btn btn-secondary dropdown-toggle"  type="button" data-bs-toggle="dropdown" aria-expanded="false">
-                    <span class="profile_name" id="namaSiswa"></span>
-                    <i class="fi fi-rr-user"></i>
-                </button>
-                <ul class="dropdown-menu">
-                  <li><a class="dropdown-item" href="#">
-                    <div class="split">
-                        <span>Halaman Profil</span>
-                        <i class="fi fi-rr-user"></i>
-                    </div>
-                  </a></li>
-                  
-                  <li><a class="dropdown-item" href="#" onclick="LogOut()">
-                    <div class="split">
-                        <span>Keluar</span>
-                        <i class="fi fi-rs-sign-out-alt"></i>
-                    </div>
-                </a>
-                </li>
-                </ul>
-              </div>
+        
         
 
         <div class="konten">
@@ -225,7 +179,7 @@
                         <b class="px-2">Tambah Akun</b>
                     </div>
                 </div>
-                <div class="card mt-2" style="border: 2px solid #B081A4;">
+                <div class="card mt-2" style="border: 2px solid #353ba7;">
                     <div class="card-body">
                         <div class="table-responsive">
                             <table id="example" class="table-striped" style="width:100%">
