@@ -105,7 +105,7 @@
     display: flex;
     align-items: center;
     margin: 0px 10px 0px 10px;
-    /* border: solid 1px #3468C0; */
+    /* border: solid 1px #353ba7; */
     margin-top: 1px;
     
     
@@ -135,14 +135,10 @@
 }
 
 .sidebarr .nav-link li .sub-menuu{
-    
-    
     display: none;
-    
     margin-right: 10px;
-    
-    
-    
+    padding: 0;
+    width: 100%;
 }
 
 
@@ -160,30 +156,34 @@
 
 .sidebarr .nav-link li .sub-menuu a {
     font-weight: 700 !important;
-    color: 	#f8f9fe;
-    border : solid 1px 	#f8f9fe !important;
+    color: #f8f9fe;
+    border: solid 1px #f8f9fe !important;
     font-size: 15px;
-    /* white-space: nowrap; */
-    transition: all 0.3 ease;
+   
+    overflow: hidden;
+    text-overflow: ellipsis;
+    transition: all 0.3s ease;
     
+    display: flex;
+    padding: 8px 15px;
+    margin: 2px 0;
+    margin-left: 40px;
+    text-decoration: none;
     border-radius: 5px;
-    padding: 10px 10px 10px 15px;
-    
-    
 }
-.sidebarr .nav-link li .sub-menuu a:hover{
-    
-    background-color: 		#1c2b5b;
-    border-radius: 5px;
+
+.sidebarr .nav-link li .sub-menuu a:hover {
+    background-color: #1c2b5b;
     color: white;
-    
 }
 
 .active{
     border-left: solid 	#f8f9fe 5px !important;
 }
 
-
+.mt-4{
+    margin-top: 0.5rem !important;
+}
 
 
 .rotate{
@@ -495,7 +495,7 @@
 .isitahukahkalian {
     min-height: 5px;
     border-style: mixed;
-    border-color: #3468C0;
+    border-color: #353ba7;
     border-radius: 10px;
     background-color: #698ae8;
     padding: 20px;
@@ -572,7 +572,7 @@ input {
     background: #534371;
     height: 100%;
     width: 100%;
-    background-color: #3468C0;
+    background-color: #353ba7;
     transition: all 0.5s ease;
     /* overflow-y: auto; */
 }
@@ -617,6 +617,12 @@ input {
     font-size: 26px;
     font-weight: 600;
     color: #f8f9fe;
+}
+
+/* Mengubah warna icon home menjadi putih */
+.home-sectionKuis .home-contentKuis .home,
+.home-sectionKuis .home-contentKuis .fa-house {
+    color: white !important;
 }
 .home-section .home-content .fa-bars{
     
@@ -743,23 +749,23 @@ p.sumber{
 
 /* Cek jawaban btn */
 .btn_cekJawaban{
-    background-color: #3468C0;
+    background-color: #353ba7;
     border-radius: 10px;
     color: white;
-    border: 2px solid #3468C0;
+    border: 2px solid #353ba7;
     width: 150px;
     padding: 3px;
 }
 .btn_contoh{
-    background-color: #3468C0;
+    background-color: #353ba7;
     border-radius: 10px;
-    border: 2px dashed #3468C0;
+    border: 2px dashed #353ba7;
     color: white;
     width: fit-content;
     padding: 5px;
 }
 .boxKeterangnJWB{
-    border: 1px solid #3468C0;
+    border: 1px solid #353ba7;
     border-radius: 3px;
     padding: 3px 10px;
     box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.4);
@@ -768,7 +774,7 @@ p.sumber{
     margin-top: -30px;
 }
 .btn_cekJawaban:hover{
-    background-color: #3468C0;
+    background-color: #353ba7;
     transition: all 0.5s ease;
 }
 
@@ -781,7 +787,7 @@ p.sumber{
 }
 #boxHilang{
     margin: auto;
-    border: 1px solid #3468C0;
+    border: 1px solid #353ba7;
     border-radius: 3px;
     padding: 3px 10px;
     box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.4);
@@ -985,7 +991,7 @@ to {
 }
 
 .kode-sudah-dijawab {
-    background-color: #3468C0;
+    background-color: #353ba7;
     width: 40px;
     height: 40px;
     padding: 5px;
@@ -1009,7 +1015,7 @@ to {
 .btn-nomor-sudah-dijawab,
 .pilihan-jawaban-dipilih,
 .pilihan-jawaban:hover {
-  background-color: #3468C0 !important;
+  background-color: #353ba7 !important;
   color: white !important;
 }
 
@@ -1031,7 +1037,7 @@ to {
 }
  
 .table1 tr th{
-    background: #3468C0;
+    background: #353ba7;
     color: #fff;
     font-weight: normal;
 }
@@ -1061,4 +1067,47 @@ to {
     content: "";
     clear: both;
     display: table;
+  }
+
+  .table-container {
+    overflow-x: auto;
+    background-color: white;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    margin-top: 20px;
+    
+
+  }
+
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    min-width: 600px;
+    
+  }
+
+  thead {
+    background-color: #2563eb;
+    color: white;
+  }
+
+  th, td {
+    padding: 14px 16px;
+    text-align: left;
+    border-bottom: 1px solid #e5e7eb;
+  }
+
+  tbody tr:hover {
+    background-color: #f1f5f9;
+  }
+
+  th:first-child, td:first-child {
+    border-left: 4px solid #2563eb;
+  }
+
+  @media (max-width: 768px) {
+    th, td {
+      font-size: 14px;
+      padding: 10px;
+    }
   }
