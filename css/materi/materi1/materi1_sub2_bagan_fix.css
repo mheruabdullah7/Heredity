@@ -1,0 +1,133 @@
+/* CSS untuk memperbaiki alignment bagan-soal */
+.bagan-soal {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 20px;
+    background-color: #f8f9fa;
+    border: 1px solid #dee2e6;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    min-height: 60px;
+    width: 100%;
+}
+
+/* Fix untuk Text-persilangan agar sejajar */
+.Text-persilangan {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.Text-persilangan > div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.Text-persilangan p {
+    margin: 5px 0;
+    display: flex;
+    align-items: center;
+    height: 40px;
+}
+
+/* Fix untuk kolom drag-drop agar sejajar */
+.column {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 5px 0;
+}
+
+/* Container utama untuk drag and drop */
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+/* Styles for crossing table */
+.tabel-persilangan {
+    border-collapse: collapse;
+    width: auto;
+    margin: 20px auto;
+    background-color: white;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    overflow: hidden;
+    
+}
+
+.tabel-persilangan th,
+.tabel-persilangan td {
+    border: 2px solid #353ba7;
+    padding: 12px 15px;
+    text-align: center;
+    min-width: 80px;
+    height: 60px;
+    vertical-align: middle;
+}
+
+.tabel-persilangan th {
+    background-color: #353ba7;
+    color: white;
+    font-weight: bold;
+    font-size: 16px;
+}
+
+.tabel-persilangan th[scope="row"] {
+    background-color: #4a52c4;
+    color: white;
+}
+
+.tabel-persilangan td {
+    background-color: #f8f9fa;
+    transition: background-color 0.2s ease;
+}
+
+.tabel-persilangan td:hover {
+    background-color: #e9ecef;
+}
+
+.tabel-persilangan td p {
+    margin: 0;
+    font-weight: 500;
+    color: #495057;
+    text-align: center !important;
+}
+
+.tabel-persilangan .column {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    width: 100%;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .Text-persilangan {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .bagan-soal {
+        padding: 15px;
+        font-size: 14px;
+    }
+    
+    .tabel-persilangan th,
+    .tabel-persilangan td {
+        padding: 8px 10px;
+        min-width: 60px;
+        height: 50px;
+        font-size: 14px;
+    }
+}

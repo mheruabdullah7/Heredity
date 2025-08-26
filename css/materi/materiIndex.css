@@ -598,10 +598,10 @@ input {
 
 }
 .home-section .home-content .fa-bars,
-.home-section .home-content .text,
+.home-section .home-content .bab,
 .home-section .home-content i,
 .home-sectionKuis .home-contentKuis .fa-bars,
-.home-sectionKuis .home-contentKuis .text,
+.home-sectionKuis .home-contentKuis .bab,
 .home-sectionKuis .home-contentKuis i
 {
     
@@ -612,8 +612,8 @@ input {
 }
 
 
-.home-section .home-content .text,
-.home-sectionKuis .home-contentKuis .text{
+.home-section .home-content .bab,
+.home-sectionKuis .home-contentKuis .bab{
     font-size: 26px;
     font-weight: 600;
     color: #f8f9fe;

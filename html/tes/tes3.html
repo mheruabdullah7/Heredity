@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Drag and Drop Game</title>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <style>
       body {
         font-family: Arial, sans-serif;
@@ -408,8 +409,27 @@
           }
         });
 
-        const score = (correctCount / columns.length) * 100;
-        scoreText.textContent = `Skor: ${score}%`;
+        const score = Math.round((correctCount / columns.length) * 100);
+        scoreText.textContent = `Skor: ${score}`;
+
+        // SweetAlert untuk menampilkan hasil
+        let iconType = score >= 80 ? 'success' : score >= 50 ? 'warning' : 'error';
+        let titleText = score >= 80 ? 'Hebat!' : score >= 50 ? 'Cukup Baik!' : 'Perlu Latihan!';
+        
+        Swal.fire({
+          title: titleText,
+          text: `Jawaban telah diterima! Anda mendapatkan skor ${score}`,
+          icon: iconType,
+          confirmButtonText: 'OK',
+          confirmButtonColor: '#0056b3',
+          showCancelButton: true,
+          cancelButtonText: 'Ulangi',
+          cancelButtonColor: '#6c757d'
+        }).then((result) => {
+          if (result.dismiss === Swal.DismissReason.cancel) {
+            resetGame();
+          }
+        });
 
         cekButton.disabled = true; // Disable button after checking
         isChecked = true; // Mark the game as checked
@@ -425,7 +445,7 @@
           textContainers.appendChild(text);
         });
 
-        scoreText.textContent = "Skor: 0%";
+        scoreText.textContent = "Skor: 0";
 
         cekButton.disabled = false; // Enable the button again after reset
         isChecked = false; // Reset the checked state

@@ -1,0 +1,126 @@
+/* CSS Fix untuk Drag and Drop Alignment - Rata Kiri */
+
+/* Fix untuk teks draggable agar tidak berubah jadi rata kiri */
+.text {
+    text-align: center !important;
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+    margin: 0 auto !important;
+}
+
+/* Pastikan teks dalam kolom tetap center */
+.column .text {
+    text-align: center !important;
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+    
+}
+
+/* Override untuk semua konteks yang mungkin mengubah alignment */
+.dragndrop .text,
+.container .text,
+.container-text .text,
+.column .text {
+    text-align: center !important;
+    justify-content: center !important;
+    align-items: center !important;
+}
+
+
+
+
+
+/* Bagan soal rata kiri */
+.bagan-soal {
+    display: flex;
+    align-items: flex-start !important;
+    justify-content: flex-start !important;
+    text-align: left !important;
+    padding: 20px;
+    background-color: #f8f9fa;
+    border: 1px solid #dee2e6;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    max-width: 750px;
+    min-height: 60px;
+    width: 100%;
+}
+
+/* Text persilangan rata kiri */
+.Text-persilangan {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start !important;
+    justify-content: flex-start !important;
+    gap: 20px;
+    flex-wrap: wrap;
+    width: 100%;
+}
+
+.Text-persilangan > div {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start !important;
+    justify-content: flex-start !important;
+}
+
+.Text-persilangan p {
+    margin: 5px 0;
+    display: flex;
+    align-items: center;
+    height: 40px;
+    text-align: left !important;
+    justify-content: flex-start !important;
+}
+
+/* Ensure table elements maintain proper alignment */
+.tabel-persilangan th,
+.tabel-persilangan td {
+    text-align: center !important;
+    vertical-align: middle !important;
+}
+
+.tabel-persilangan th[scope="row"] {
+    text-align: center !important;
+}
+
+.tabel-persilangan .column {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    margin: 0 !important;
+}
+
+/* Specific fix untuk td dengan p Tt agar rata tengah sempurna */
+.tabel-persilangan td p {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    height: 100% !important;
+    width: 100% !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    text-align: center !important;
+}
+
+/* Target khusus untuk sel dengan teks genetik seperti Tt, TT, tt */
+.tabel-persilangan td[data-gen-type] {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+}
+
+.tabel-persilangan td[data-gen-type] p {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    width: 100% !important;
+    height: 100% !important;
+}
+
+
+

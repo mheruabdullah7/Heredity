@@ -1,0 +1,306 @@
+body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        background-color: #f4f4f4;
+      }
+      .dragndrop {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        width: 100%;
+        
+        margin: 0 auto;
+        
+        padding: 20px;
+      }
+      .container {
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+        justify-content: flex-start;
+        
+      }
+      .container-text {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        align-items: center;
+        width: 28%;
+        padding: 10px;
+        background-color: #f0f0f0;
+        border-radius: 8px;
+        overflow-y: auto; /* Enable vertical scrolling */
+        max-height: 500px; /* Set a maximum height to enable scrolling */
+        position: relative;
+        transition: all 0.3s ease;
+      }
+
+      /* Pin button styles */
+      .pin-button {
+        position: absolute;
+        top: 8px;
+        right: 8px;
+        background: none;
+        border: none;
+        cursor: pointer;
+        font-size: 16px;
+        color: #6c757d;
+        padding: 4px;
+        border-radius: 4px;
+        transition: all 0.2s ease;
+        z-index: 10;
+      }
+
+      .pin-button:hover {
+        color: #0056b3;
+        background-color: rgba(0, 86, 179, 0.1);
+      }
+
+      .pin-button.pinned {
+        color: #0056b3;
+      }
+
+      /* Pinned state styles */
+      .container-text.pinned {
+        position: fixed;
+        top: 100px;
+        right: 20px;
+        width: 300px;
+        max-height: 400px;
+        z-index: 1000;
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+        border: 2px solid #0056b3;
+      }
+
+      /* Responsive adjustments for pinned state */
+      @media (max-width: 768px) {
+        .container-text.pinned {
+          width: 250px;
+          right: 10px;
+          top: 80px;
+        }
+      }
+      .column {
+        width: 200px;
+        height: 40px;
+        border: 4px dashed gray;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: white;
+        transition: all 0.3s ease-in-out;
+        margin-bottom: 10px;
+        position: relative;
+      }
+.text {
+        width: 200px;
+        padding: 5px;
+        border: 2px solid gray;
+        border-radius: 5px;
+        background-color: white;
+        text-align: center !important;
+        cursor: pointer;
+        user-select: none;
+        transition: all 0.3s ease-in-out;
+        position: relative;
+        box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        /* Force center alignment in all contexts */
+        display: flex !important;
+        justify-content: center !important;
+        align-items: center !important;
+        margin: 0 auto !important;
+      }
+      .text.placeholder {
+        opacity: 0.5;
+        pointer-events: none;
+      }
+      .text:hover {
+        transform: scale(1.05);
+        background-color: #e3f2fd;
+        border-color: #0056b3;
+      }
+      .text.dragging {
+        opacity: 0.7;
+        transform: rotate(5deg);
+        box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+      }
+      
+      /* Enhanced color states */
+      .correct {
+        border-color: #28a745 !important;
+        background-color: #d4edda !important;
+        box-shadow: 0 0 15px rgba(40, 167, 69, 0.4);
+        position: relative;
+      }
+      .incorrect {
+        border-color: #dc3545 !important;
+        background-color: #f8d7da !important;
+        box-shadow: 0 0 15px rgba(220, 53, 69, 0.4);
+        position: relative;
+      }
+      
+      /* Color states for draggable elements */
+      .text.correct-answer {
+        border-color: #28a745;
+        background-color: #d4edda;
+        color: #155724;
+      }
+      .text.incorrect-answer {
+        border-color: #dc3545;
+        background-color: #f8d7da;
+        color: #721c24;
+      }
+      .text.pending {
+        border-color: #ffc107;
+        background-color: #fff3cd;
+        color: #856404;
+      }
+      
+      /* Enhanced animations */
+      .column.correct {
+        animation: pulseGreen 0.8s ease-in-out;
+      }
+      .column.incorrect {
+        animation: pulseRed 0.8s ease-in-out;
+      }
+      .text.correct-answer {
+        animation: bounceGreen 0.8s ease-in-out;
+      }
+      .text.incorrect-answer {
+        animation: shakeRed 0.8s ease-in-out;
+      }
+      
+      @keyframes pulseGreen {
+        0% { transform: scale(1); }
+        25% { transform: scale(1.1); background-color: #c3e6cb; }
+        50% { transform: scale(1.05); background-color: #d4edda; }
+        100% { transform: scale(1); background-color: #d4edda; }
+      }
+      
+      @keyframes pulseRed {
+        0% { transform: scale(1); }
+        25% { transform: scale(1.1); background-color: #f1b0b7; }
+        50% { transform: scale(1.05); background-color: #f8d7da; }
+        100% { transform: scale(1); background-color: #f8d7da; }
+      }
+      
+      @keyframes bounceGreen {
+        0%, 20%, 50%, 80%, 100% { transform: translateY(0); }
+        40% { transform: translateY(-10px); }
+        60% { transform: translateY(-5px); }
+      }
+      
+      @keyframes shakeRed {
+        0%, 100% { transform: translateX(0); }
+        10%, 30%, 50%, 70%, 90% { transform: translateX(-5px); }
+        20%, 40%, 60%, 80% { transform: translateX(5px); }
+      }
+      
+      /* Icons for feedback */
+      .correct::after,
+      .correct-answer::after {
+        content: '✓';
+        position: absolute;
+        top: -8px;
+        right: -8px;
+        background-color: #28a745;
+        color: white;
+        border-radius: 50%;
+        width: 20px;
+        height: 20px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 12px;
+        font-weight: bold;
+      }
+      
+      .incorrect::after,
+      .incorrect-answer::after {
+        content: '✗';
+        position: absolute;
+        top: -8px;
+        right: -8px;
+        background-color: #dc3545;
+        color: white;
+        border-radius: 50%;
+        width: 20px;
+        height: 20px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 12px;
+        font-weight: bold;
+      }
+      
+      .cek-button,
+      .reset-button {
+        padding: 12px 24px;
+        font-size: 16px;
+        font-weight: bold;
+        border: none;
+        border-radius: 8px;
+        cursor: pointer;
+        margin-right: 10px;
+        transition: all 0.3s ease;
+      }
+      
+      .cek-button {
+        background-color: #0056b3;
+        color: white;
+      }
+      
+      .cek-button:hover:not(:disabled) {
+        background-color: #0056b3;
+        transform: translateY(-2px);
+        box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+      }
+      
+      .reset-button {
+        background-color: #6c757d;
+        color: white;
+      }
+      
+      .reset-button:hover {
+        background-color: #545b62;
+        transform: translateY(-2px);
+        box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+      }
+      
+      .cek-button:disabled {
+        background-color: #6c757d;
+        cursor: not-allowed;
+        opacity: 0.6;
+      }
+      
+      .score-container {
+        display: flex;
+        align-items: center;
+        width: 100%;
+        margin-top: 20px;
+      }
+      
+      .score-text {
+        font-size: 18px;
+        font-weight: bold;
+        margin-left: 20px;
+        text-align: center;
+        flex-grow: 1;
+        padding: 10px;
+        border-radius: 8px;
+        background-color: #f8f9fa;
+        max-width: 700px;
+        border: 1px solid #dee2e6;
+      }
+      
+      .score-text.correct-score {
+        background-color: #d4edda;
+        color: #155724;
+        border-color: #c3e6cb;
+      }
+      
+      .score-text.incorrect-score {
+        background-color: #f8d7da;
+        color: #721c24;
+        border-color: #f1b0b7;
+      }
