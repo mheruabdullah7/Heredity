@@ -1,14 +1,9 @@
-# Fix Layout Shifting When Container-Text is Pinned
-
-## Steps to Complete:
-
-1. [ ] Update CSS to add placeholder functionality and fix pinned positioning
-2. [ ] Update JavaScript to create and manage placeholder element
-3. [ ] Test the pinned functionality to ensure layout stability
-4. [ ] Verify responsive behavior
-
-## Files to Modify:
-- css/materi/materi1/materi1_sub2_dragdrop.css
-- js/materi1/materi1_dragdrop.js
-
-## Current Status: Starting implementation
+- [ ] Update the problem description in .bagan-soal to dihybrid cross
+- [ ] Change parental descriptions to round yellow and wrinkled green
+- [ ] Update gametes to BK and bk
+- [ ] Change F1 to BbKk round yellow
+- [ ] Update P2 to round yellow x round yellow
+- [ ] Expand the Punnett square table to 4x4 for gametes BK, Bk, bK, bk
+- [ ] Update F2 phenotypes to 9:3:3:1 ratios
+- [ ] Adjust draggable texts in .container-text to match new genotypes and phenotypes
+- [ ] Update data-target and data-source attributes accordingly

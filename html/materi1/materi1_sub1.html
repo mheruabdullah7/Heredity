@@ -355,21 +355,267 @@
                             
                             <p><b>Petunjuk Pengerjaan :</b></p>
                             <li>1. Perhatikan daftar istilah pada kolom kiri dan pengertian pada kolom kanan.</li>
-                            <li>2. Tarik garis dari istilah ke pengertian yang paling sesuai.</li>
-                            <li>3. Setelah semua istilah dihubungkan, Klik finish, Anda dapat memilih untuk mencek jawaban atau mengirimkannya ke email guru Anda.</li>
+                            <li>2. Seret istilah dari kolom kiri ke kotak pengertian yang paling sesuai di kolom kanan.</li>
+                            <li>3. Setelah semua istilah ditempatkan, klik "Cek Jawaban" untuk memeriksa kebenaran.</li>
                             <li>4. Jika benar, kotak akan berubah menjadi hijau.</li>
                             <li>5. Jika salah, kotak akan berubah menjadi merah.</li>
-                            <li>6. Perbaiki jawaban yang salah sampai semua kotak berwarna hijau.</li>
+                            <li>6. Perbaiki jawaban yang salah atau klik "Reset Quiz" untuk memulai ulang.</li>
 
                         </div><br>
-                <div id="liveworksheet8200074" style="width:100%">
+                
+                    <h2 style="text-align: center;">Kuis Genetika – Cocokkan Istilah dengan Definisinya</h2>
+
+                    <div class="container" style="
+                        display: flex;
+                        gap: 40px;
+                        justify-content: center;
+                        margin-top: 30px;
+                    ">
+                        <!-- KOLOM ISTILAH -->
+                        <div class="left" style="width: 40%;">
+                            <div class="item" draggable="true" id="Dominan" style="
+                                padding: 10px;
+                                margin: 8px 0;
+                                border-radius: 8px;
+                                cursor: grab;
+                                background: #d0e6ff;
+                                border: 2px solid #5a8fd9;
+                            ">Dominan</div>
+                            <div class="item" draggable="true" id="Genotipe" style="
+                                padding: 10px;
+                                margin: 8px 0;
+                                border-radius: 8px;
+                                cursor: grab;
+                                background: #d0e6ff;
+                                border: 2px solid #5a8fd9;
+                            ">Genotipe</div>
+                            <div class="item" draggable="true" id="Gamet" style="
+                                padding: 10px;
+                                margin: 8px 0;
+                                border-radius: 8px;
+                                cursor: grab;
+                                background: #d0e6ff;
+                                border: 2px solid #5a8fd9;
+                            ">Gamet</div>
+                            <div class="item" draggable="true" id="Heterozigot" style="
+                                padding: 10px;
+                                margin: 8px 0;
+                                border-radius: 8px;
+                                cursor: grab;
+                                background: #d0e6ff;
+                                border: 2px solid #5a8fd9;
+                            ">Heterozigot</div>
+                            <div class="item" draggable="true" id="Parental" style="
+                                padding: 10px;
+                                margin: 8px 0;
+                                border-radius: 8px;
+                                cursor: grab;
+                                background: #d0e6ff;
+                                border: 2px solid #5a8fd9;
+                            ">Parental</div>
+                            <div class="item" draggable="true" id="Filial" style="
+                                padding: 10px;
+                                margin: 8px 0;
+                                border-radius: 8px;
+                                cursor: grab;
+                                background: #d0e6ff;
+                                border: 2px solid #5a8fd9;
+                            ">Filial</div>
+                            <div class="item" draggable="true" id="Resesif" style="
+                                padding: 10px;
+                                margin: 8px 0;
+                                border-radius: 8px;
+                                cursor: grab;
+                                background: #d0e6ff;
+                                border: 2px solid #5a8fd9;
+                            ">Resesif</div>
+                            <div class="item" draggable="true" id="Homozygot" style="
+                                padding: 10px;
+                                margin: 8px 0;
+                                border-radius: 8px;
+                                cursor: grab;
+                                background: #d0e6ff;
+                                border: 2px solid #5a8fd9;
+                            ">Homozygot</div>
+                            <div class="item" draggable="true" id="Fenotipe" style="
+                                padding: 10px;
+                                margin: 8px 0;
+                                border-radius: 8px;
+                                cursor: grab;
+                                background: #d0e6ff;
+                                border: 2px solid #5a8fd9;
+                            ">Fenotipe</div>
+                        </div>
+
+                        <!-- KOLOM DEFINISI -->
+                        <div class="right" style="
+                            width: 40%;
+                        ">
+                            <div class="dropzone" data-answer="Parental" style="
+                                min-height: 60px;
+                                background: #ffffff;
+                                border: 2px dashed #999;
+                                padding: 10px;
+                                margin: 8px 0;
+                                border-radius: 8px;
+                                cursor: default;
+                            ">Induk atau orang tua.</div>
+                            <div class="dropzone" data-answer="Filial" style="
+                                min-height: 60px;
+                                background: #ffffff;
+                                border: 2px dashed #999;
+                                padding: 10px;
+                                margin: 8px 0;
+                                border-radius: 8px;
+                                cursor: default;
+                            ">Keturunan.</div>
+                            <div class="dropzone" data-answer="Genotipe" style="
+                                min-height: 60px;
+                                background: #ffffff;
+                                border: 2px dashed #999;
+                                padding: 10px;
+                                margin: 8px 0;
+                                border-radius: 8px;
+                                cursor: default;
+                            ">Sifat menurun yang tidak tampak dari luar...</div>
+                            <div class="dropzone" data-answer="Gamet" style="
+                                min-height: 60px;
+                                background: #ffffff;
+                                border: 2px dashed #999;
+                                padding: 10px;
+                                margin: 8px 0;
+                                border-radius: 8px;
+                                cursor: default;
+                            ">Sel kelamin yang berasal dari genotipe...</div>
+                            <div class="dropzone" data-answer="Fenotipe" style="
+                                min-height: 60px;
+                                background: #ffffff;
+                                border: 2px dashed #999;
+                                padding: 10px;
+                                margin: 8px 0;
+                                border-radius: 8px;
+                                cursor: default;
+                            ">Sifat menurun yang tampak dari luar...</div>
+                            <div class="dropzone" data-answer="Dominan" style="
+                                min-height: 60px;
+                                background: #ffffff;
+                                border: 2px dashed #999;
+                                padding: 10px;
+                                margin: 8px 0;
+                                border-radius: 8px;
+                                cursor: default;
+                            ">Sifat gen yang memiliki ekspresi lebih kuat...</div>
+                            <div class="dropzone" data-answer="Resesif" style="
+                                min-height: 60px;
+                                background: #ffffff;
+                                border: 2px dashed #999;
+                                padding: 10px;
+                                margin: 8px 0;
+                                border-radius: 8px;
+                                cursor: default;
+                            ">Sifat gen yang tidak muncul karena dikalahkan...</div>
+                            <div class="dropzone" data-answer="Heterozigot" style="
+                                min-height: 60px;
+                                background: #ffffff;
+                                border: 2px dashed #999;
+                                padding: 10px;
+                                margin: 8px 0;
+                                border-radius: 8px;
+                                cursor: default;
+                            ">Pasangan gen yang tidak sama...</div>
+                            <div class="dropzone" data-answer="Homozygot" style="
+                                min-height: 60px;
+                                background: #ffffff;
+                                border: 2px dashed #999;
+                                padding: 10px;
+                                margin: 8px 0;
+                                border-radius: 8px;
+                                cursor: default;
+                            ">Pasangan gen yang sifatnya sama...</div>
+                        </div>
+                    </div>
+
+                    <button onclick="checkAnswers()" style="
+                        margin-top: 20px;
+                        padding: 12px 20px;
+                        font-size: 16px;
+                        cursor: pointer;
+                    ">Cek Jawaban</button>
+                    <button onclick="resetQuiz()" style="
+                        margin-top: 20px;
+                        padding: 12px 20px;
+                        font-size: 16px;
+                        cursor: pointer;
+                        background-color: #6c757d;
+                        color: white;
+                        border: none;
+                        border-radius: 6px;
+                    ">Reset Quiz</button>
                 </div>
+
+                <script>
+                // Simpan item yang sedang di-drag
+                let draggedItem = null;
+
+                // Store original definitions
+                const originalDefinitions = {};
+                document.querySelectorAll('.dropzone').forEach(zone => {
+                    originalDefinitions[zone.dataset.answer] = zone.innerHTML;
+                });
+
+                document.querySelectorAll('.item').forEach(item => {
+                    item.addEventListener("dragstart", () => {
+                        draggedItem = item;
+                    });
+                });
+
+                document.querySelectorAll('.dropzone').forEach(zone => {
+                    zone.addEventListener("dragover", e => e.preventDefault());
+
+                    zone.addEventListener("drop", () => {
+                        if (draggedItem) {
+                            zone.innerHTML = "";
+                            zone.appendChild(draggedItem);
+                        }
+                    });
+                });
+
+                function checkAnswers() {
+                    document.querySelectorAll('.dropzone').forEach(zone => {
+                        const correct = zone.dataset.answer;
+                        const child = zone.querySelector('.item');
+
+                        if (!child) {
+                            zone.classList.add("wrong");
+                            zone.classList.remove("correct");
+                            return;
+                        }
+
+                        if (child.id === correct) {
+                            zone.classList.add("correct");
+                            zone.classList.remove("wrong");
+                        } else {
+                            zone.classList.add("wrong");
+                            zone.classList.remove("correct");
+                        }
+                    });
+                }
+
+                function resetQuiz() {
+                    // Move all dragged items back to the left column
+                    const leftColumn = document.querySelector('.left');
+                    document.querySelectorAll('.dropzone .item').forEach(item => {
+                        leftColumn.appendChild(item);
+                    });
+
+                    // Restore original definitions in dropzones
+                    document.querySelectorAll('.dropzone').forEach(zone => {
+                        zone.innerHTML = originalDefinitions[zone.dataset.answer];
+                        zone.classList.remove("correct", "wrong");
+                    });
+                }
+                </script>
     </div>
-    <script src="https://www.liveworksheets.com/embed/embed.js?v=1"></script>
-    <script>
-    loadliveworksheet(8200074,'4jif',960,'www','new');
-    </script>
-              </div>  
 
 
               <!-- Pagination Buttons -->
@@ -420,8 +666,6 @@
     
     
     <!-- JS Interaktif -->
-<script type="module" src="/js/materi1/materi1_latihan1.js"></script>
-<script type="module" src="/js/materi1/materi1_latihan2.js"></script>
 
 <script>
   function adjustInputWidth(input) {

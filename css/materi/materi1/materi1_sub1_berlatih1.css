@@ -29,3 +29,18 @@
   background-color: #2a518c;
   box-shadow: 0 6px 8px rgba(42, 81, 140, 0.6);
 }
+
+/* Styles for drag-and-drop quiz feedback */
+.correct {
+  border-color: #28a745 !important;
+  background-color: #d4edda !important;
+  box-shadow: 0 0 15px rgba(40, 167, 69, 0.4);
+  position: relative;
+}
+
+.wrong {
+  border-color: #dc3545 !important;
+  background-color: #f8d7da !important;
+  box-shadow: 0 0 15px rgba(220, 53, 69, 0.4);
+  position: relative;
+}

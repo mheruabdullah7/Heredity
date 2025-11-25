@@ -45,6 +45,13 @@
     margin: 5px 0;
 }
 
+.column-span {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 5px 0;
+}
+
 /* Container utama untuk drag and drop */
 .container {
     display: flex;

@@ -230,18 +230,15 @@
       crossorigin="anonymous"
     ></script>
     <script src="/js/beranda.js"></script>
-    <script src="js/db/dataSiswa.js"></script>
+    <script type="module" src="js/db/dataSiswa.js"></script>
 
     <script>
       document.addEventListener("DOMContentLoaded", function () {
-        // Ambil data nama dari localStorage
+        // Check if user is logged in
         const nama = localStorage.getItem("nama");
+        const nisns = localStorage.getItem("nisns");
 
-        // Periksa apakah data nama ada
-        if (nama) {
-          const namaSpan = document.getElementById("user-nama");
-          namaSpan.textContent = nama; // Memasukkan nama ke dalam elemen span
-        } else {
+        if (!nama || !nisns) {
           // Tampilkan SweetAlert jika data tidak ditemukan
           Swal.fire({
             title: "Perhatian",
