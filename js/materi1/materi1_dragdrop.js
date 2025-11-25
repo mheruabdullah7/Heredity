@@ -16,7 +16,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // Initialize original texts
     window.onload = () => {
-        originalTexts = Array.from(textContainers.children);
+        originalTexts = Array.from(textContainers.querySelectorAll(".text"));
     };
 
     // Add mouse event listeners for custom drag implementation
