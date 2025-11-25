@@ -1,9 +1,9 @@
-- [ ] Update the problem description in .bagan-soal to dihybrid cross
-- [ ] Change parental descriptions to round yellow and wrinkled green
-- [ ] Update gametes to BK and bk
-- [ ] Change F1 to BbKk round yellow
-- [ ] Update P2 to round yellow x round yellow
-- [ ] Expand the Punnett square table to 4x4 for gametes BK, Bk, bK, bk
-- [ ] Update F2 phenotypes to 9:3:3:1 ratios
-- [ ] Adjust draggable texts in .container-text to match new genotypes and phenotypes
-- [ ] Update data-target and data-source attributes accordingly
+- Update the problem statement in .bagan-soal to refer to mice instead of pea plants.
+- Change parental descriptions: kapri berbatang tinggi (TT) to tikus jantan hitam (HH), kapri berbatang rendah (tt) to tikus betina putih (hh).
+- Modify P2 to be test cross: F1 (Hh) x recessive (tikus putih hh).
+- Update gametes: T to H, t to h.
+- Change table headers and content to H and h.
+- Update phenotype descriptions: kapri berbatang tinggi to tikus hitam, kapri berbatang rendah to tikus putih.
+- Change ratios: from 75% tinggi 25% rendah to 50% hitam 50% putih (1:1).
+- Update all draggable text elements: TT->HH, tt->hh, Tt->Hh, T->H, t->h, kapri berbatang tinggi->tikus hitam, kapri berbatang rendah->tikus putih.
+- Verify data-target and data-source alignments.
