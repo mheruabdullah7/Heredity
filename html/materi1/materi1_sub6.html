@@ -46,24 +46,22 @@
             border: 2px solid #353ba7;
             border-radius: 8px;
             padding: 10px;
-            margin: 10px 0;
+            margin: 20px 0;
             background-color: #f8f9fa;
         }
-        
-        .jawaban-soal-1::before {
-            content: "Jawaban Soal 1";
-            display: block;
+
+        .jawaban-soal-1 h4, .jawaban-soal-2 h4 {
             font-weight: bold;
-            margin-bottom: 5px;
+            margin-bottom: 10px;
             color: #353ba7;
+            border-bottom: 1px solid #353ba7;
+            padding-bottom: 5px;
         }
-        
-        .jawaban-soal-2::before {
-            content: "Jawaban Soal 2";
-            display: block;
-            font-weight: bold;
-            margin-bottom: 5px;
-            color: #353ba7;
+
+        .jawaban-soal-2 {
+            margin-top: 40px;
+            border-top: 2px solid #353ba7;
+            padding-top: 20px;
         }
     </style>
 
@@ -246,7 +244,7 @@
                         </div><br>
                 <div class="dragndrop">
         <div class="container" style="align-items: flex-start;">
-        <div class="bagan-soal" style="display: block;">
+        <!-- <div class="bagan-soal" style="display: block;">
           <p>Soal 1</p>
           <p>Tanaman mangga berasa manis (Aa) disilangkan dengan tanaman mangga berasa masam (aa). Berapa persen kemungkinan muncul tanaman mangga berasa manis dari keturunan persilangan tersebut?</p>
           <br>
@@ -312,9 +310,9 @@
               <p>%</p>
             </div>
           
-        </div>
+        </div> -->
 
-        <!-- Pembatas antar soal
+        <!-- Pembatas antar soal -->
         <div style="border-top: 2px dashed #353ba7; margin: 40px 0; padding: 20px 0;">
           <h4 style="text-align: center; color: #353ba7;">Soal Berikutnya</h4>
         </div>
@@ -427,7 +425,7 @@
             </div>
           
         </div>
-        </div> -->
+        </div>
 
         
 
@@ -446,7 +444,8 @@
           <h3>Panel Jawaban</h3>
           
           <!-- Jawaban untuk Soal 1 -->
-          <div class="jawaban-soal-1">
+          <!-- <div class="jawaban-soal-1">
+              <h4>Jawaban Soal 1</h4>
               <p class="text" draggable="true" data-source="1">Aa</p>
               <p class="text" draggable="true" data-source="2">aa</p>
               <p class="text" draggable="true" data-source="3">A</p>
@@ -464,10 +463,11 @@
               <p class="text" draggable="true" data-source="14">tanaman mangga berasa asam</p>
               <p class="text" draggable="true" data-source="15">Aa</p>
               <p class="text" draggable="true" data-source="16">aa</p>
-          </div>
-          
+          </div> -->
+
           <!-- Jawaban untuk Soal 2 -->
           <div class="jawaban-soal-2">
+              <h4>Jawaban Soal 2</h4>
               <p class="text" draggable="true" data-source="12">Mm</p>
               <p class="text" draggable="true" data-source="13">tanaman mangga berasa manis</p>
               <p class="text" draggable="true" data-source="14">tanaman mangga berasa masam</p>
@@ -571,10 +571,36 @@
     inputs.forEach(input => {
       adjustInputWidth(input);
     });
+
+    // Reorganize texts after reset to maintain section separation
+    const resetButton = document.querySelector('.reset-button');
+    if (resetButton) {
+      resetButton.addEventListener('click', () => {
+        setTimeout(() => {
+          const soal1Div = document.querySelector('.jawaban-soal-1');
+          const soal2Div = document.querySelector('.jawaban-soal-2');
+          const container = document.querySelector('.container-text');
+          const texts = container.querySelectorAll('.text');
+
+          // Define which texts belong to which section
+          const soal1Texts = ['Aa', 'aa', 'A', 'a', 'tanaman mangga berasa manis', 'tanaman mangga berasa masam', '50', 'AA', '25', '75', 'tanaman mangga berasa pahit', '100', '0', 'tanaman mangga berasa asam'];
+          const soal2Texts = ['Mm', 'tanaman mangga berasa manis', 'tanaman mangga berasa masam', 'mm', '50'];
+
+          texts.forEach(text => {
+            const textContent = text.textContent.trim();
+            if (soal1Texts.includes(textContent)) {
+              soal1Div.appendChild(text);
+            } else if (soal2Texts.includes(textContent)) {
+              soal2Div.appendChild(text);
+            }
+          });
+        }, 10);
+      });
+    }
   });
 
 
-  
+
 function toggle(id) {
     let elemen = document.getElementById(id);
     if (elemen.style.maxHeight === "0px" || elemen.style.maxHeight === "") {
