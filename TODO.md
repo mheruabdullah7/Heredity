@@ -1,9 +1,4 @@
-- Update the problem statement in .bagan-soal to refer to mice instead of pea plants.
-- Change parental descriptions: kapri berbatang tinggi (TT) to tikus jantan hitam (HH), kapri berbatang rendah (tt) to tikus betina putih (hh).
-- Modify P2 to be test cross: F1 (Hh) x recessive (tikus putih hh).
-- Update gametes: T to H, t to h.
-- Change table headers and content to H and h.
-- Update phenotype descriptions: kapri berbatang tinggi to tikus hitam, kapri berbatang rendah to tikus putih.
-- Change ratios: from 75% tinggi 25% rendah to 50% hitam 50% putih (1:1).
-- Update all draggable text elements: TT->HH, tt->hh, Tt->Hh, T->H, t->h, kapri berbatang tinggi->tikus hitam, kapri berbatang rendah->tikus putih.
-- Verify data-target and data-source alignments.
+- [ ] Add testcross section HTML after backcross div
+- [ ] Add new draggable texts for testcross elements
+- [ ] Add score-container after testcross
+- [ ] Test dragdrop functionality
