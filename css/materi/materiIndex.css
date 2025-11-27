@@ -397,6 +397,10 @@
     padding: 0px 15px 0px 0px;
 }
 
+.dropdown{
+    position: relative;
+}
+
 .dropdown .btn{
     background-color: 	#353ba7 !important;
     color: 	#f8f9fe;
@@ -404,7 +408,7 @@
     align-items: center;
     gap: 5px;
     border: solid 	#f8f9fe 1px;
-    
+
 }
 
 .dropdown .btn:active{
