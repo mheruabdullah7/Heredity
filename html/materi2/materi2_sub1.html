@@ -37,6 +37,10 @@
     <link href="/css/materiResponsive.css" rel="stylesheet">
     <link href="/css/Materi/Materi1/materi1_sub1_berlatih1.css" rel="stylesheet">
     <link href="/css/Materi/Materi1/materi1_sub1_berlatih2.css" rel="stylesheet">
+    <link href="/css/Materi/Materi1/materi1_sub2_dragdrop.css" rel="stylesheet">
+    <link href="/css/materi/materi1/materi1_sub2_bagan_fix.css" rel="stylesheet">
+    <link href="/css/materi/materi1/materi1_sub2_alignment_fix.css" rel="stylesheet">
+
 
     <link rel="icon" type="image/png" href="/img/iconWebsite.svg">
 </head>
@@ -70,19 +74,19 @@
             </li>
             <!-- Materi 1 -->
                 <li>
-                    <div class="iconn-link ">
+                    <div class="iconn-link aktif">
                         <a href="#" class="menubar">
                             <i class="fi fi-rr-book-bookmark"></i>
                             <span class="link_nama">Hukum Mendel </span>
                         </a>
                         <span class="fa-sharp fa-solid fa-angle-down"></span>
                     </div>
-                    <ul class="sub-menuu ">
+                    <ul class="sub-menuu menuAktif">
                         <div class="boxSub-menuu ">
                             
                             <!-- list sub menu -->
                             <li>
-                                <a href="/html/materi1/materi1_sub1.html" >
+                                <a href="/html/materi1/materi1_sub1.html" class="aktif2">
                                     Materi
                                 </a>
                             </li>
@@ -99,19 +103,19 @@
 
             <!--  Materi 2 -->
             <li>
-                <div class="iconn-link aktif">
+                <div class="iconn-link">
                     <a href="#" class="menubar">
                         <i class="fi fi-rr-book-bookmark"></i>
                         <span class="link_nama">Penyimpangan Semu Hukum Mendel</span>
                     </a>
                     <span class="fa-sharp fa-solid fa-angle-down"></span>
                 </div>
-                <ul class="sub-menuu menuAktif">
+                <ul class="sub-menuu">
                     <div class="boxSub-menuu">
                         
                         <!-- list sub menu -->
                         <li>
-                            <a href="/html/materi2/materi2_sub1.html" class="aktif2">
+                            <a href="/html/materi2/materi2_sub1.html">
                                Materi
                             </a>
                         </li>
@@ -124,7 +128,6 @@
                     </div>
                 </ul>
             </li>
-
 
             
             <!-- Evaluasi -->
@@ -144,8 +147,9 @@
     <!-- section Utama -->
     <section class="home-section">
         
-        <div class="home-content">
+        <div class="home-content" style="display: flex;">
             <i class="fa-sharp fa-solid fa-bars"></i>
+            
             <span class="bab">Hukum Mendel </span>
             <div class="dropdown ">
                 
@@ -187,8 +191,8 @@
                         <div class="accordion-body">
                         <ul>
                             <li>Siswa mampu menjelaskan bunyi Hukum Mendel 1 & 2</li>
-                            <li>Siswa mampu menentukan keturunan dan sifat keturunan dari persilangan Monohibrid & Dihibrid</li>
-                            
+                            <li>Siswa mampu menentukan keturunan dari persilangan Monohibrid & Dihibrid</li>
+                            <li>Siswa mampu menentukan sifat keturunan dari persilangan Monohibrid & Dihibrid</li>
 
                         </ul>
                         </div>
@@ -200,195 +204,429 @@
                 
                 <br>
                 <div class="header">
+                        Observasi
+                    </div>
+                    <div class="card" style="border: 2px solid #353ba7; ">
+
+<style>
+    .quiz-container {
+        display: flex;
+        gap: 15px;
+        justify-content: center;
+        margin-top: 20px;
+    }
+
+    .drop-box {
+        width: 200px;
+        background: white;
+        padding: 10px;
+        border-radius: 8px;
+        box-shadow: 0 0 5px rgba(0,0,0,0.2);
+        text-align: center;
+    }
+
+    .drop-area {
+        height: 40px;
+        margin-top: 8px;
+        border: 2px dashed #999;
+        border-radius: 5px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    img {
+        width: 100%;
+        border-radius: 5px;
+    }
+
+    .choices {
+        margin-top: 30px;
+        display: flex;
+        justify-content: center;
+        gap: 15px;
+        flex-wrap: wrap;
+    }
+
+    .drag-item {
+        background: #353ba7;
+        padding: 10px 15px;
+        color: white;
+        border-radius: 5px;
+        cursor: grab;
+        user-select: none;
+    }
+
+    .correct {
+        background: #4CAF50 !important;
+    }
+
+    .wrong {
+        background: #e84545 !important;
+    }
+</style>
+
+<p>Pernahkah Anda mengamati, ada berapa bentuk jengger (pial) pada ayam? Pial ayam diketahui memiliki empat variasi bentuk. Bentuk pial ayam tersebut merupakan salah satu contoh pewarisan sifat menurut penyimpangan semu hukum Mendel.</p>
+<br>
+
+<button type="button" class="btn btn-outline-secondary" data-bs-toggle="modal" data-bs-target="#instructionsModal">Petunjuk Pengerjaan</button>
+
+<!-- Modal -->
+<div class="modal fade" id="instructionsModal" tabindex="-1" aria-labelledby="instructionsModalLabel" aria-hidden="true" data-bs-backdrop="false" data-bs-keyboard="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="instructionsModalLabel">Petunjuk Pengerjaan</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <ul>
+            <li>Seret jawaban dari panel bawah ke kotak gambar yang sesuai.</li>
+            <li>Setiap jawaban hanya bisa digunakan sekali.</li>
+            <li>Jawaban akan berubah warna hijau jika benar, merah jika salah.</li>
+            <li>Gunakan tombol Reset untuk mengulang kuis.</li>
+        </ul>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Tutup</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="quiz-container">
+
+    <div class="drop-box" data-answer="Walnut">
+        <img src="/assets/pial walnut.jpg">
+        <div class="drop-area">Taruh di sini</div>
+    </div>
+
+    <div class="drop-box" data-answer="Ercis">
+        <img src="/assets/pial ercis.jpeg">
+        <div class="drop-area">Taruh di sini</div>
+    </div>
+
+    <div class="drop-box" data-answer="Mawar">
+        <img src="/assets/pial mawar.jpg">
+        <div class="drop-area">Taruh di sini</div>
+    </div>
+
+    <div class="drop-box" data-answer="Tunggal">
+        <img src="/assets/pial tunggal.jpeg">
+        <div class="drop-area">Taruh di sini</div>
+    </div>
+
+</div>
+
+<div class="choices">
+    <div class="drag-item" draggable="true" data-value="Walnut">Pial Walnut</div>
+    <div class="drag-item" draggable="true" data-value="Ercis">Pial Ercis</div>
+    <div class="drag-item" draggable="true" data-value="Mawar">Pial Mawar</div>
+    <div class="drag-item" draggable="true" data-value="Tunggal">Pial Tunggal</div>
+</div>
+<br><br>
+<button id="reset-btn" class="btn btn-secondary">Reset</button>
+
+<script>
+    const drags = document.querySelectorAll(".drag-item");
+    const drops = document.querySelectorAll(".drop-area");
+    const resetBtn = document.getElementById("reset-btn");
+
+    // Shuffle the choices
+    const choicesContainer = document.querySelector(".choices");
+    const dragItems = Array.from(choicesContainer.children);
+    dragItems.sort(() => Math.random() - 0.5);
+    dragItems.forEach(item => choicesContainer.appendChild(item));
+
+    drags.forEach(drag => {
+        drag.addEventListener("dragstart", e => {
+            e.dataTransfer.setData("text", e.target.dataset.value);
+        });
+    });
+
+    drops.forEach(drop => {
+        drop.addEventListener("dragover", e => e.preventDefault());
+        drop.addEventListener("drop", e => {
+            if (drop.innerHTML !== "Taruh di sini") return; // Prevent dropping if already filled
+            const value = e.dataTransfer.getData("text");
+            const correct = drop.parentElement.dataset.answer;
+
+            if(value === correct){
+                drop.innerHTML = `<span style="color:green;font-weight:bold">${value}</span>`;
+                drop.classList.add("correct");
+            } else {
+                drop.innerHTML = `<span style="color:red;font-weight:bold">${value}</span>`;
+                drop.classList.add("wrong");
+            }
+            // Remove the dragged item
+            const draggedItem = document.querySelector(`.drag-item[data-value="${value}"]`);
+            if (draggedItem) draggedItem.remove();
+        });
+    });
+
+    resetBtn.addEventListener("click", () => {
+        // Reset drop areas
+        drops.forEach(drop => {
+            drop.innerHTML = "Taruh di sini";
+            drop.classList.remove("correct", "wrong");
+        });
+        // Restore choices
+        const choices = ["Walnut", "Ercis", "Mawar", "Tunggal"];
+        choicesContainer.innerHTML = "";
+        choices.forEach(choice => {
+            const div = document.createElement("div");
+            div.className = "drag-item";
+            div.draggable = true;
+            div.dataset.value = choice;
+            div.textContent = `Pial ${choice}`;
+            choicesContainer.appendChild(div);
+        });
+        // Re-attach event listeners
+        const newDrags = document.querySelectorAll(".drag-item");
+        newDrags.forEach(drag => {
+            drag.addEventListener("dragstart", e => {
+                e.dataTransfer.setData("text", e.target.dataset.value);
+            });
+        });
+        // Shuffle again
+        const newDragItems = Array.from(choicesContainer.children);
+        newDragItems.sort(() => Math.random() - 0.5);
+        newDragItems.forEach(item => choicesContainer.appendChild(item));
+    });
+
+    // Ensure modal can be opened and closed
+    document.addEventListener('DOMContentLoaded', () => {
+        const modalElement = document.getElementById('instructionsModal');
+        const modal = new bootstrap.Modal(modalElement);
+        const modalButton = document.querySelector('[data-bs-target="#instructionsModal"]');
+        modalButton.addEventListener('click', () => {
+            modal.show();
+        });
+        document.querySelector('#instructionsModal .btn-close').addEventListener('click', () => {
+            modal.hide();
+        });
+        document.querySelector('#instructionsModal .btn-secondary').addEventListener('click', () => {
+            modal.hide();
+        });
+        modalElement.addEventListener('click', (e) => {
+            if (e.target === modalElement) {
+                modal.hide();
+            }
+        });
+    });
+</script>
+
+
+                    </div>
+<br><br>
+                <div class="header">
                         Ayo Membaca
                     </div>
                     <div class="card" style="border: 2px solid #353ba7; ">
-                      <div style="align-self: center;">
-                        <img src="/assets/pendahuluanGambar1.jpg" width="200px" >
-                      <img src="/assets/ChatGPT Image Aug 10, 2025, 04_04_25 PM.png" width="400px" style="margin: 0 0 10px 30px;" >
-                      </div>
-                      <p>Adakah ada di antara Anda yang mengenal siapa Mendel itu? Mendel atau nama lengkapnya Gregor Johann Mendel (1822-1884) merupakan seorang biarawan berkebangsaan Austria yang selama bertahun-tahun melakukan penelitian tentang pewarisan sifat-sifat pada tanaman kacang ercis/kapri (Pisum sativum). Mengapa Mendel menggunakan tanaman kacang kapri atau ercis (Pisum sativum), bukan tanaman lain? Alasannya, tanaman kacang kapri memiliki siklus hidup tidak lama, mudah disilangkan, memiliki bunga sempurna, serta memiliki tujuh sifat beda yang mencoloks. Melalui penelitiannya itu, Mendel dapat meletakkan dasar-dasar ilmu genetika dan menemukan hukum-hukum genetika yang dikenal sebagai hukum Mendel I dan hukum Mendel II. Berkat penelitiannya itu, Mendel mendapat gelar Bapak Genetika. Bagaimanakah isi hukum Mendel yang dikemukakan oleh G.J. Mendel itu?</p>
-                      <div style="display: flex; align-items: center; background-color: white; border-radius: 12px; padding: 20px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); max-width: 750px;">
-        
-        
-
-        <div style="margin-left: 20px;">
-            <div style="font-size: 24px; font-weight: bold; color: #353ba7; line-height: 1.4;">
-                Bunyi `Hukum I Mendel
-            </div>
-            <div style="font-size: 15px; font-style: italic; color: #333; margin-top: 10px; background-color: #f0f2ff; padding: 10px; border-left: 4px solid #353ba7; border-radius: 5px;">
-                “Alel-alel dari gen yang sama akan terpisah atau tersegregasi saat pembentukan gamet (sel kelamin).”
-            </div>
-        </div>
-
-    </div>
-                      <br><br><p>Hukum Mendel I dikenal juga dengan hukum segregasi atau pemisahan gen-gen yang sealel (segregation of allelic genes). Menurut hukum Mendel I, tiap organisme memiliki dua alel untuk setiap sifat. Selama pembentukan gamet, dua alel tersebut berpisah sehingga masing-masing gamet hanya mengandung satu alel untuk satu sifat. Jika dua gamet bertemu pada saat fertilisasi, keturunan yang terbentuk mengandung dua alel yang mengendalikan satu sifat. Hukum Mendel 1 tersebut sesuai dengan teori pewarisan sifat karena alel-alel individu diturunkan dari generasi ke generasi. Percampuran alel-alel tersebut menjelaskan mengapa terbentuk variasi dan mengapa keturunan-keturunan berbeda dari orang tuanya Hukum Mendel I dapat dibuktikan dengan persilangan monohibrid (persilangan dengan satu sifat beda).</p>
-            <br>
-            
-
-        <P>Dalam suatu persilangan perlu diketahui terlebih dahulu istilah-istilah yang digunakan. Istilah-istilah dalam persilangan dapat kita pahami pada uraian berikut :</P>
-
-            <ol style="padding-left:20px; list-style-type: decimal;">
-    <li style="margin-bottom:10px;">
-        <button onclick="toggle('p')" 
-            style="background-color:#353ba7;color:white;padding:8px 14px;border:none;border-radius:5px;cursor:pointer;">
-            Parental (P) <i style="font-size: 70%;">(Klik untuk membuka)</i>
-        </button>
-        <div id="p" style="max-height:0;overflow:hidden;margin:0;padding:0 10px;border-left:3px solid #353ba7;background-color:#f9f9f9;border-radius:5px;transition:max-height 0.4s ease,padding 0.4s ease,margin 0.4s ease;">
-            Induk atau orang tua.
-        </div>
-    </li>
-
-    <li style="margin-bottom:10px;">
-        <button onclick="toggle('f')" 
-            style="background-color:#353ba7;color:white;padding:8px 14px;border:none;border-radius:5px;cursor:pointer;">
-            Filial (F)
-        </button>
-        <div id="f" style="max-height:0;overflow:hidden;margin:0;padding:0 10px;border-left:3px solid #353ba7;background-color:#f9f9f9;border-radius:5px;transition:max-height 0.4s ease,padding 0.4s ease,margin 0.4s ease;">
-            Keturunan.
-        </div>
-    </li>
-
-    <li style="margin-bottom:10px;">
-        <button onclick="toggle('f1')" 
-            style="background-color:#353ba7;color:white;padding:8px 14px;border:none;border-radius:5px;cursor:pointer;">
-            Keturunan Pertama (F₁)
-        </button>
-        <div id="f1" style="max-height:0;overflow:hidden;margin:0;padding:0 10px;border-left:3px solid #353ba7;background-color:#f9f9f9;border-radius:5px;transition:max-height 0.4s ease,padding 0.4s ease,margin 0.4s ease;">
-            Anak.
-        </div>
-    </li>
-
-    <li style="margin-bottom:10px;">
-        <button onclick="toggle('f2')" 
-            style="background-color:#353ba7;color:white;padding:8px 14px;border:none;border-radius:5px;cursor:pointer;">
-            Keturunan Kedua (F₂)
-        </button>
-        <div id="f2" style="max-height:0;overflow:hidden;margin:0;padding:0 10px;border-left:3px solid #353ba7;background-color:#f9f9f9;border-radius:5px;transition:max-height 0.4s ease,padding 0.4s ease,margin 0.4s ease;">
-            Cucu.
-        </div>
-    </li>
-
-    <li style="margin-bottom:10px;">
-        <button onclick="toggle('genotype')" 
-            style="background-color:#353ba7;color:white;padding:8px 14px;border:none;border-radius:5px;cursor:pointer;">
-            Genotipe
-        </button>
-        <div id="genotype" style="max-height:0;overflow:hidden;margin:0;padding:0 10px;border-left:3px solid #353ba7;background-color:#f9f9f9;border-radius:5px;transition:max-height 0.4s ease,padding 0.4s ease,margin 0.4s ease;">
-            Sifat-sifat menurun yang tidak tampak dari luar, disimbolkan dengan pasangan huruf. 
-            Contoh: AA, Aa, aa, AABB, AaBB.
-        </div>
-    </li>
-
-    <li style="margin-bottom:10px;">
-        <button onclick="toggle('gamet')" 
-            style="background-color:#353ba7;color:white;padding:8px 14px;border:none;border-radius:5px;cursor:pointer;">
-            Gamet
-        </button>
-        <div id="gamet" style="max-height:0;overflow:hidden;margin:0;padding:0 10px;border-left:3px solid #353ba7;background-color:#f9f9f9;border-radius:5px;transition:max-height 0.4s ease,padding 0.4s ease,margin 0.4s ease;">
-            Sel kelamin yang berasal dari genotipe, disimbolkan dengan satu huruf. 
-            Contoh: genotipe Aa, gametnya A dan a.
-        </div>
-    </li>
-
-    <li style="margin-bottom:10px;">
-        <button onclick="toggle('fenotipe')" 
-            style="background-color:#353ba7;color:white;padding:8px 14px;border:none;border-radius:5px;cursor:pointer;">
-            Fenotipe
-        </button>
-        <div id="fenotipe" style="max-height:0;overflow:hidden;margin:0;padding:0 10px;border-left:3px solid #353ba7;background-color:#f9f9f9;border-radius:5px;transition:max-height 0.4s ease,padding 0.4s ease,margin 0.4s ease;">
-            Sifat menurun yang tampak dari luar. Contoh: buah besar, buah kecil, rasa manis, rasa asam, batang tinggi, batang pendek.
-        </div>
-    </li>
-
-    <li style="margin-bottom:10px;">
-        <button onclick="toggle('dominan')" 
-            style="background-color:#353ba7;color:white;padding:8px 14px;border:none;border-radius:5px;cursor:pointer;">
-            Dominan
-        </button>
-        <div id="dominan" style="max-height:0;overflow:hidden;margin:0;padding:0 10px;border-left:3px solid #353ba7;background-color:#f9f9f9;border-radius:5px;transition:max-height 0.4s ease,padding 0.4s ease,margin 0.4s ease;">
-            Sifat-sifat gen yang memiliki ekspresi lebih kuat dan menutupi sifat gen alel-nya, 
-            disimbolkan dengan huruf besar. Contoh: AA, BB, CC.
-        </div>
-    </li>
-
-    <li style="margin-bottom:10px;">
-        <button onclick="toggle('resesif')" 
-            style="background-color:#353ba7;color:white;padding:8px 14px;border:none;border-radius:5px;cursor:pointer;">
-            Resesif
-        </button>
-        <div id="resesif" style="max-height:0;overflow:hidden;margin:0;padding:0 10px;border-left:3px solid #353ba7;background-color:#f9f9f9;border-radius:5px;transition:max-height 0.4s ease,padding 0.4s ease,margin 0.4s ease;">
-            Sifat-sifat gen yang tidak muncul (tertutup) karena dikalahkan oleh sifat pasangannya, 
-            akan muncul apabila bersama-sama gen resesif lainnya, disimbolkan dengan huruf kecil. 
-            Contoh: aa, bb, cc.
-        </div>
-    </li>
-
-    <li style="margin-bottom:10px;">
-        <button onclick="toggle('homozigot')" 
-            style="background-color:#353ba7;color:white;padding:8px 14px;border:none;border-radius:5px;cursor:pointer;">
-            Homozigot
-        </button>
-        <div id="homozigot" style="max-height:0;overflow:hidden;margin:0;padding:0 10px;border-left:3px solid #353ba7;background-color:#f9f9f9;border-radius:5px;transition:max-height 0.4s ease,padding 0.4s ease,margin 0.4s ease;">
-            Pasangan gen yang sifatnya sama. Contoh: AA, aa, BB, bb, CC, cc.
-        </div>
-    </li>
-
-    <li style="margin-bottom:10px;">
-        <button onclick="toggle('heterozigot')" 
-            style="background-color:#353ba7;color:white;padding:8px 14px;border:none;border-radius:5px;cursor:pointer;">
-            Heterozigot
-        </button>
-        <div id="heterozigot" style="max-height:0;overflow:hidden;margin:0;padding:0 10px;border-left:3px solid #353ba7;background-color:#f9f9f9;border-radius:5px;transition:max-height 0.4s ease,padding 0.4s ease,margin 0.4s ease;">
-            Pasangan gen yang tidak sama. Contoh: Aa, Bb, Cc.
-        </div>
-    </li>
-</ol>
-
-    </div>        
-<br>
-        <div class="header">
+                      
+                      
+                        <h5 style="color: #353ba7;">Persilangan Monohibrid</h5>
+                        <br>
+                        <img src="/assets/ChatGPT Image Aug 17, 2025, 05_32_55 PM.png" width="400px" style="align-self: center;">
+                        <p>Mendel memperoleh hukum segregasi dengan melakukan persilangan monohibrid. Mendel menyilangkan tanaman kapri galur murni berbatang tinggi dengan tanaman kapri berbatang rendah. Hasil persilangan tersebut menunjukkan bahwa semua tanaman kapri keturunan pertama (F1) memiliki sifat yang sama dengan sifat salah satu induknya, yaitu semuanya berbatang tinggi. Mendel kemudian menyilangkan sesama tanaman F1 tersebut dan hasilnya, tanaman kapri keturunan kedua (F2) menunjukkan perbandingan fenotipe tanaman berbatang tinggi tanaman berbatang rendah = 3 : 1. Bagaimana hal itu dapat dijelaskan?</p>
+                        <p>Pada persilangan dominansi penuh seperti tersebut di depan, tanaman berbatang tinggi memiliki gen T dan bergenotipe TT (homozigot dominan), sedangkan tanaman berbatang rendah memiliki gen t serta bergenotipe tt (homozigot resesif). Pada keturunan pertama (F1), semua tanaman bergenotipe Tt (heterozigot) sehingga memiliki batang tinggi karena batang tinggi bersifat dominan terhadap batang rendah. Jika tanaman F1, ini membentuk gamet, gamet yang terbentuk ada dua, yaitu gamet dengan gen T dan t. Pada saat pembentukan gamet ini, kedua alel terse-but (T dan alelnya t) akan mengalami segregasi atau pemisahan yang dikenal dengan hukum Mendel I. Akibatnya, jika sesama tanaman F1, disilangkan, akan terbentuk individu yang bergenotipe TT, Tt, Tt, dan tt. Rasio fenotipenya adalah 3 tanaman berbatang tinggi dan 1 tanaman berbatang rendah.</p>
+    
+                    </div>
+<br><br>
+                    <div class="header">
             Ayo Mencoba
             </div>
             <div class="card" style="border: 2px solid #353ba7; ">
-                <div class="card w-100 shadow m-2 ms-0" style="background-color: #eee9da;">
+                        <div class="card w-100 shadow m-2 ms-0" style="background-color: #eee9da;">
+                            
                             
                             <p><b>Petunjuk Pengerjaan :</b></p>
-                            <li>1. Perhatikan daftar istilah pada kolom kiri dan pengertian pada kolom kanan.</li>
-                            <li>2. Tarik garis dari istilah ke pengertian yang paling sesuai.</li>
-                            <li>3. Setelah semua istilah dihubungkan, Klik finish, Anda dapat memilih untuk mencek jawaban atau mengirimkannya ke email guru Anda.</li>
-                            <li>4. Jika benar, kotak akan berubah menjadi hijau.</li>
-                            <li>5. Jika salah, kotak akan berubah menjadi merah.</li>
-                            <li>6. Perbaiki jawaban yang salah sampai semua kotak berwarna hijau.</li>
-
+                            <li>Bacalah setiap soal dengan cermat.</li>
+                            <li>Drag (seret) jawaban yang tepat dari panel kanan ke kotak-kotak kosong yang sesuai.</li>
+                            <li>Setelah semua kotak terisi, klik tombol "Cek Jawaban" untuk memeriksa kebenaran jawaban.</li>
+                            <li>Gunakan tombol "Ulang" untuk mengulang latihan dari awal.</li>
+                            <li>Gunakan tombol pin untuk mengunci panel jawaban di posisi tetap.</li>
+                          
                         </div><br>
-                <div id="liveworksheet8200074" style="width:100%">
-                </div>
+                <div class="dragndrop">
+      <div class="container" style="align-items: flex-start;">
+        <div class="bagan-soal" style="display: block;">
+          <p>Mari kita mencoba melakukan persilangan yang dilakukan Mendel terhadapl tanaman kapri berbatang tinggi dan tanaman kapri berbatang rendah seperti narasi di atas!</p>
+          <br>
+          <p>Diketahui : kapri berbatang tinggi : (TT), kapri berbatang rendah : (tt)</p>
+          <p>Ditanya : F₂?</p>
+          <p>Jawab :</p>
+        </div>
+        <div class="Text-persilangan" style="display: flex; flex-direction: row; align-items: flex-start;">
+          <div style="width: 150px;display: flex; flex-direction: column;">
+            <p style=" height: 40px; display: flex; align-items: center; margin: 3px 0 50px 0;">Parental (P) :</p>
+            <p style=" height: 40px; display: flex; align-items: center; margin: 0 0 10px 0;">Gamet (G) :</p>
+            <p style="height: 40px; display: flex; align-items: center; margin: 0 0 10px 0;">Filial₁ :</p>
+          </div>
+          
+          <div style="display: flex; flex-direction: column;">
+            <div style="display: flex; flex-direction: row; gap: 40px; align-items: center;">
+              <div class="column-span">kapri berbatang tinggi</div>
+              <p style="margin: 0;">X</p>
+              <div class="column-span">kapri berbatang rendah</div>
+            </div>
+            
+            <div style="display: flex; flex-direction: row; gap: 40px; align-items: center;">
+              
+              <div class="column" data-target="TT"></div>
+              <p style="margin: 0;">X</p>
+              <div class="column" data-target="tt"></div>
+            </div>
+            <div style="display: flex; flex-direction: row; gap: 40px; align-items: center;">
+              <div class="column" data-target="T"></div>
+              <p style="margin: 0;">X</p>
+              <div class="column" data-target="t"></div>
+            </div>
+            <div style="display: flex; flex-direction: row; gap: 40px; align-items: center;">
+              <div class="column" data-target="Tt"></div>
+              <!-- <p style="margin: 0;">X</p>
+              <div class="column" data-target="6"></div> -->
+            </div>
+            
+          </div>
+          
+        </div>
+        <div style="display: flex; flex-direction: row; gap: 40px; align-items: center;">
+              <p>fenotipe keturunan pertama yang didapatkan yaitu 100% </p>
+              <div class="column" data-target="kapri berbatang tinggi"></div>
+              <!-- <p>dan</p>
+              <div class="column" data-target="8"></div> -->
+            </div>
+        
+        <div class="Text-persilangan" style="display: flex; flex-direction: row; align-items: flex-start;">
+          <div style="width: 150px;display: flex; flex-direction: column;">
+            <p style=" height: 40px; display: flex; align-items: center; margin: 0 0 60px 0;">P₂ :</p>
+            <p style=" height: 40px; display: flex; align-items: center; margin: 0 0 80px 0;">G :</p>
+            <p style="height: 40px; display: flex; align-items: center; margin: 0 0 10px 0;">F₂ :</p>
+          </div>
+          <div style="display: flex; flex-direction: column;">
+            <div style="display: flex; flex-direction: row; gap: 40px; align-items: center;">
+              <div class="column-span">kapri berbatang tinggi</div>
+              <p style="margin: 0;">X</p>
+              <div class="column" data-target="kapri berbatang tinggi"></div>
+            </div>
+            <div style="display: flex; flex-direction: row; gap: 40px; align-items: center;">
+              <div class="column" data-target="Tt"></div>
+              <p style="margin: 0;">X</p>
+              <div class="column-span">Tt</div>
+            </div>
+            <div style="display: flex; flex-direction: row; gap: 40px; align-items: center;">
+              <div class="column-span" >T</div>
+              <p style="margin: 0;">X</p>
+              <div class="column-span" >T</div>
+            </div>
+            <div style="display: flex; flex-direction: row; gap: 40px; align-items: center;">
+              <div class="column-span" >t</div>
+              <p style="margin: 0;">X</p>
+              <div class="column-span" >t</div>
+            </div>
+            
+        
+            
+            
+          </div>
+          <br>
+          <div>
+            <table class="tabel-persilangan" style="border: 1px solid #353ba7">
+                  
+                  <tbody>
+                    <tr>
+                    <th scope="row"></th>
+                      <td><p>T</p></td>
+                      <td><p>t</p></td>
+                    </tr>
+                    <tr>
+                      <th scope="row">T</th>
+                      <td><div class="column" data-target="TT"></div></td>
+                      <td><div class="column" data-target="Tt"></div></td>
+                      
+                      
+                      
+                    </tr>
+                    <tr>
+                      <th scope="row">t</th>
+                      <td><div class="column" data-target="Tt"></div></td>
+                      <td><div class="column" data-target="tt"></div></td>
+                      
+                    </tr>
+                    
+              </tbody>
+          </table>
+          </div>
+                  <div style="display: contents; ">
+              <p>fenotipe keturunan kedua yang didapatkan yaitu 75% </p>
+              <div class="column" data-target="kapri berbatang tinggi"></div>
+              <p>dan 25%</p>
+              <div class="column" data-target="kapri berbatang rendah"></div>
+            </div>
+          
+        </div>
+
+        
+
+        <div class="score-container">
+          <button class="cek-button">Cek Jawaban</button>
+          <button class="reset-button">Ulang</button>
+          <span class="score-text">Nilai :</span>
+        </div>
+      </div>
+        <div class="container-text">
+          <button class="pin-button" title="Pin/Unpin container">
+            <i class="fi fi-rr-marker"></i>
+          </button>
+          <p class="text" draggable="true" data-source="TT">TT</p>
+          <p class="text" draggable="true" data-source="TT">TT</p>
+          <p class="text" draggable="true" data-source="TT">TT</p>
+          <p class="text" draggable="true" data-source="tt">tt</p>
+          <p class="text" draggable="true" data-source="tt">tt</p>
+          <p class="text" draggable="true" data-source="tt">tt</p>
+          <p class="text" draggable="true" data-source="Tt">Tt</p>
+          <p class="text" draggable="true" data-source="Tt">Tt</p>
+          <p class="text" draggable="true" data-source="Tt">Tt</p>
+          <p class="text" draggable="true" data-source="Tt">Tt</p>
+          <p class="text" draggable="true" data-source="Tt">Tt</p>
+          <p class="text" draggable="true" data-source="T">T</p>
+          <p class="text" draggable="true" data-source="T">T</p>
+          <p class="text" draggable="true" data-source="t">t</p>
+          <p class="text" draggable="true" data-source="t">t</p>
+          <p class="text" draggable="true" data-source="kapri berbatang tinggi">kapri berbatang tinggi</p>
+          <p class="text" draggable="true" data-source="kapri berbatang tinggi">kapri berbatang tinggi</p>
+          <p class="text" draggable="true" data-source="kapri berbatang tinggi">kapri berbatang tinggi</p>
+          <p class="text" draggable="true" data-source="kapri berbatang rendah">kapri berbatang rendah</p>
+          <p class="text" draggable="true" data-source="kapri berbatang rendah">kapri berbatang rendah</p>
+          <p class="text" draggable="true" data-source="kapri berbatang rendah">kapri berbatang rendah</p>
+          <p class="text" draggable="true" data-source="3:1">3:1</p>
+          <p class="text" draggable="true" data-source="1:2:1">1:2:1</p>
+          <p class="text" draggable="true" data-source="100%">100%</p>
+          <p class="text" draggable="true" data-source="0%">0%</p>
+          <p class="text" draggable="true" data-source="25%">25%</p>
+          <p class="text" draggable="true" data-source="50%">50%</p>
+          <p class="text" draggable="true" data-source="75%">75%</p>
+        </div>
     </div>
-    <script src="https://www.liveworksheets.com/embed/embed.js?v=1"></script>
-    <script>
-    loadliveworksheet(8200074,'4jif',960,'www','new');
-    </script>
-              </div>  
-
-
-              <!-- Pagination Buttons -->
+            </div>
+              
+</div>
+<!-- Pagination Buttons -->
         <nav aria-label="Page navigation example" class="mt-4">
           <ul class="pagination justify-content-center">
-            <!-- <li class="page-item">
-              <a class="page-link" href="/html/pendahuluan.html" tabindex="-1" aria-disabled="true">Sebelumnya</a>
-            </li> -->
-            <li class="page-item active" aria-current="page"><a class="page-link pageAktif" href="#">1</a></li>
-            <li class="page-item"><a class="page-link" href="/html/materi1/materi1_sub2.html">2</a></li>
+            <li class="page-item">
+              <a class="page-link" href="/html/materi1/materi1_sub1.html" tabindex="-1" aria-disabled="true">Sebelumnya</a>
+            </li>
+
+            <li class="page-item"><a class="page-link" href="/html/materi1/materi1_sub1.html">1</a></li>
+            <li class="page-item active" aria-current="page"><a class="page-link pageAktif" href="#">2</a></li>
             <li class="page-item"><a class="page-link" href="/html/materi1/materi1_sub3.html">3</a></li>
             <li class="page-item"><a class="page-link" href="/html/materi1/materi1_sub4.html">4</a></li>
             <li class="page-item"><a class="page-link" href="/html/materi1/materi1_sub5.html">5</a></li>
             <li class="page-item"><a class="page-link" href="/html/materi1/materi1_sub6.html">6</a></li>
-            <li class="page-item"><a class="page-link" href="/html/materi1/materi1_sub7.html">7</a></li>
-            <li class="page-item"><a class="page-link" href="/html/materi1/materi1_sub8.html">8</a></li>
-            <li class="page-item"><a class="page-link" href="/html/materi1/materi1_sub9.html">9</a></li>
             <li class="page-item">
-              <a class="page-link" href="/html/materi1/materi1_sub2.html">Selanjutnya</a>
+              <a class="page-link" href="/html/materi1/materi1_sub3.html">Selanjutnya</a>
             </li>
           </ul>
         </nav>
@@ -416,18 +654,19 @@
     </script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js" charset="UTF-8"></script>
     <!-- JS -->
-
+    
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 
     <!-- JS -->
     <script src="/js/materiIndex.js"></script>
     <script type="module" src="../../js/db/dataSiswa.js"></script>
-    <script src="/js/asset/paginator_4.js"></script>
+
     
     
     <!-- JS Interaktif -->
 <script type="module" src="/js/materi1/materi1_latihan1.js"></script>
 <script type="module" src="/js/materi1/materi1_latihan2.js"></script>
+<script src="/js/materi1/materi1_dragdrop.js"></script>
 
 <script>
   function adjustInputWidth(input) {
