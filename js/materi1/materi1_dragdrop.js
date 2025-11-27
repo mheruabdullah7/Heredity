@@ -9,14 +9,19 @@ document.addEventListener('DOMContentLoaded', function() {
     const pinButton = document.querySelector(".pin-button");
 
     let originalTexts = [];
+    let originalPositions = new Map();
     let isChecked = false;
     let draggedElement = null;
     let isDragging = false;
     let lastMouseY = 0;
 
-    // Initialize original texts
+    // Initialize original texts and positions
     window.onload = () => {
         originalTexts = Array.from(textContainers.querySelectorAll(".text"));
+        const texts = document.querySelectorAll(".text");
+        texts.forEach(text => {
+            originalPositions.set(text, text.parentElement);
+        });
     };
 
     // Add mouse event listeners for custom drag implementation
@@ -205,8 +210,14 @@ document.addEventListener('DOMContentLoaded', function() {
             column.classList.remove("correct", "incorrect");
         });
 
+        // Restore texts to their original positions
         originalTexts.forEach((text) => {
-            textContainers.appendChild(text);
+            const originalParent = originalPositions.get(text);
+            if (originalParent) {
+                originalParent.appendChild(text);
+            } else {
+                textContainers.appendChild(text);
+            }
         });
 
         scoreText.textContent = "Nilai: 0";

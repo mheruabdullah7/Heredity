@@ -42,7 +42,7 @@
     <link href="/css/materi/materi1/materi1_sub2_alignment_fix.css" rel="stylesheet">
 
     <style>
-        .jawaban-soal-1, .jawaban-soal-2 {
+        .jawaban-soal-1, .jawaban-soal-2, .jawaban-soal-3 {
             border: 2px solid #353ba7;
             border-radius: 8px;
             padding: 10px;
@@ -50,7 +50,7 @@
             background-color: #f8f9fa;
         }
 
-        .jawaban-soal-1 h4, .jawaban-soal-2 h4 {
+        .jawaban-soal-1 h4, .jawaban-soal-2 h4, .jawaban-soal-3 h4 {
             font-weight: bold;
             margin-bottom: 10px;
             color: #353ba7;
@@ -59,6 +59,12 @@
         }
 
         .jawaban-soal-2 {
+            margin-top: 40px;
+            border-top: 2px solid #353ba7;
+            padding-top: 20px;
+        }
+
+        .jawaban-soal-3 {
             margin-top: 40px;
             border-top: 2px solid #353ba7;
             padding-top: 20px;
@@ -244,7 +250,7 @@
                         </div><br>
                 <div class="dragndrop">
         <div class="container" style="align-items: flex-start;">
-        <!-- <div class="bagan-soal" style="display: block;">
+        <div class="bagan-soal" style="display: block;">
           <p>Soal 1</p>
           <p>Tanaman mangga berasa manis (Aa) disilangkan dengan tanaman mangga berasa masam (aa). Berapa persen kemungkinan muncul tanaman mangga berasa manis dari keturunan persilangan tersebut?</p>
           <br>
@@ -310,7 +316,7 @@
               <p>%</p>
             </div>
           
-        </div> -->
+        </div>
 
         <!-- Pembatas antar soal -->
         <div style="border-top: 2px dashed #353ba7; margin: 40px 0; padding: 20px 0;">
@@ -417,17 +423,155 @@
           </table>
           </div>
                   <div style="display: flex; flex-direction: row; gap: 40px; align-items: center;">
-              <p>perbandingan fenotipe berbunga merah : berbunga putih yaitu</p> <div class="column" data-target="9"></div> 
-              
-              
+              <p>perbandingan fenotipe berbunga merah : berbunga putih yaitu</p> <div class="column" data-target="9"></div>
+
+
             </div>
-          
+
         </div>
         </div>
 
-        
 
-        
+
+        <!-- Pembatas antar soal -->
+        <div style="border-top: 2px dashed #353ba7; margin: 40px 0; padding: 20px 0;">
+          <h4 style="text-align: center; color: #353ba7;">Soal Berikutnya</h4>
+        </div>
+
+        <div class="container" style="align-items: flex-start;">
+        <div class="bagan-soal" style="display: block;">
+          <p>Soal 3</p>
+          <p>Tanaman berbatang tinggi dan berbuah manis (TTMM) disilangkan dengan tanaman berbatang rendah serta berbuah masam (ttmm). Berapa persen tanaman berbatang tinggi dan berbuah masam apabila persilangan sampai F₂?</p>
+          <br>
+          <p>Diketahui : tanaman berbatang tinggi dan berbuah manis : (TTMM), tanaman berbatang rendah serta berbuah masam : (ttmm)</p>
+          <p>Ditanya : Berapa persen tanaman berbatang tinggi dan berbuah masam?</p>
+          <p>Jawab :</p>
+        </div>
+        <div class="Text-persilangan" style="display: flex; flex-direction: row; align-items: flex-start;">
+          <div style="width: 150px;display: flex; flex-direction: column;">
+            <p style=" height: 40px; display: flex; align-items: center; margin: 3px 0 50px 0;">Parental (P) :</p>
+            <p style=" height: 40px; display: flex; align-items: center; margin: 0 0 10px 0;">Gamet (G) :</p>
+            <p style="height: 40px; display: flex; align-items: center; margin: 0 0 10px 0;">Filial₁ :</p>
+          </div>
+
+          <div style="display: flex; flex-direction: column;">
+            <div style="display: flex; flex-direction: row; gap: 40px; align-items: center;">
+              <div class="column-span">tanaman berbatang tinggi dan berbuah manis</div>
+              <p style="margin: 0;">X</p>
+              <div class="column-span">tanaman berbatang rendah serta berbuah masam</div>
+            </div>
+
+            <div style="display: flex; flex-direction: row; gap: 40px; align-items: center;">
+              <div class="column" data-target="TTMM"></div>
+              <p style="margin: 0;">X</p>
+              <div class="column" data-target="ttmm"></div>
+            </div>
+            <div style="display: flex; flex-direction: row; gap: 40px; align-items: center;">
+              <div class="column" data-target="TM"></div>
+              <p style="margin: 0;">X</p>
+              <div class="column" data-target="tm"></div>
+            </div>
+            <div style="display: flex; flex-direction: row; gap: 40px; align-items: center;">
+              <div class="column" data-target="TtMm"></div>
+            </div>
+
+          </div>
+
+        </div>
+        <div class="Text-persilangan" style="display: flex; flex-direction: row; align-items: flex-start;">
+          <div style="width: 150px;display: flex; flex-direction: column;">
+            <p style=" height: 40px; display: flex; align-items: center; margin: 0 0 60px 0;">P :</p>
+            <p style=" height: 40px; display: flex; align-items: center; margin: 0 0 80px 0;">G :</p>
+            <p style="height: 40px; display: flex; align-items: center; margin: 0 0 10px 0;">F :</p>
+          </div>
+          <div style="display: flex; flex-direction: column;">
+            <div style="display: flex; flex-direction: row; gap: 40px; align-items: center;">
+              <div class="column-span">F₁</div>
+              <p style="margin: 0;">X</p>
+              <div class="column-span">F₁</div>
+            </div>
+            <div style="display: flex; flex-direction: row; gap: 40px; align-items: center;">
+              <div class="column" data-target="TtMm"></div>
+              <p style="margin: 0;">X</p>
+              <div class="column" data-target="TtMm"></div>
+            </div>
+            <div style="display: flex; flex-direction: row; gap: 40px; align-items: center;">
+              <div class="column-span">TM</div>
+              <p style="margin: 0;">X</p>
+              <div class="column-span">TM</div>
+            </div>
+            <div style="display: flex; flex-direction: row; gap: 40px; align-items: center;">
+              <div class="column-span">Tm</div>
+              <p style="margin: 0;">X</p>
+              <div class="column-span">Tm</div>
+            </div>
+            <div style="display: flex; flex-direction: row; gap: 40px; align-items: center;">
+              <div class="column-span">tM</div>
+              <p style="margin: 0;">X</p>
+              <div class="column-span">tM</div>
+            </div>
+            <div style="display: flex; flex-direction: row; gap: 40px; align-items: center;">
+              <div class="column-span">tm</div>
+              <p style="margin: 0;">X</p>
+              <div class="column-span">tm</div>
+            </div>
+
+          </div>
+          <br>
+          <div>
+            <table class="tabel-persilangan" style="border: 1px solid #353ba7">
+
+                  <tbody>
+                    <tr>
+                    <th scope="row"></th>
+                      <td><p>TM</p></td>
+                      <td><p>Tm</p></td>
+                      <td><p>tM</p></td>
+                      <td><p>tm</p></td>
+                    </tr>
+                    <tr>
+                      <th scope="row">TM</th>
+                      <td><div class="column" data-target="TTMM"></div></td>
+                      <td><div class="column" data-target="TTMm"></div></td>
+                      <td><div class="column" data-target="TtMM"></div></td>
+                      <td><div class="column" data-target="TtMm"></div></td>
+                    </tr>
+                    <tr>
+                      <th scope="row">Tm</th>
+                      <td><div class="column" data-target="TTMm"></div></td>
+                      <td><div class="column" data-target="TTmm"></div></td>
+                      <td><div class="column" data-target="TtMm"></div></td>
+                      <td><div class="column" data-target="Ttmm"></div></td>
+                    </tr>
+                    <tr>
+                      <th scope="row">tM</th>
+                      <td><div class="column" data-target="TtMM"></div></td>
+                      <td><div class="column" data-target="TtMm"></div></td>
+                      <td><div class="column" data-target="ttMM"></div></td>
+                      <td><div class="column" data-target="ttMm"></div></td>
+                    </tr>
+                    <tr>
+                      <th scope="row">tm</th>
+                      <td><div class="column" data-target="TtMm"></div></td>
+                      <td><div class="column" data-target="Ttmm"></div></td>
+                      <td><div class="column" data-target="ttMm"></div></td>
+                      <td><div class="column" data-target="ttmm"></div></td>
+                    </tr>
+
+              </tbody>
+          </table>
+          </div>
+                  <div style="display: flex; flex-direction: row; gap: 40px; align-items: center;">
+              <p>persentase tanaman berbatang tinggi dan berbuah masam yaitu</p>
+              <div class="column" data-target="25"></div>
+              <p>%</p>
+            </div>
+
+        </div>
+        </div>
+
+
+
 
         <div class="score-container">
           <button class="cek-button">Cek Jawaban</button>
@@ -442,7 +586,7 @@
           <h3>Panel Jawaban</h3>
           
           <!-- Jawaban untuk Soal 1 -->
-          <!-- <div class="jawaban-soal-1">
+          <div class="jawaban-soal-1">
               <h4>Jawaban Soal 1</h4>
               <p class="text" draggable="true" data-source="1">Aa</p>
               <p class="text" draggable="true" data-source="2">aa</p>
@@ -461,7 +605,7 @@
               <p class="text" draggable="true" data-source="14">tanaman mangga berasa asam</p>
               <p class="text" draggable="true" data-source="15">Aa</p>
               <p class="text" draggable="true" data-source="16">aa</p>
-          </div> -->
+          </div>
 
           <!-- Jawaban untuk Soal 2 -->
           <div class="jawaban-soal-2">
@@ -492,11 +636,66 @@
               <p class="text" draggable="true" data-source="12">0%</p>
               <p class="text" draggable="true" data-source="13">25%</p>
               <p class="text" draggable="true" data-source="14">75%</p>
-                
+
+
+
+          </div>
+
+          <!-- Jawaban untuk Soal 3 -->
+          <div class="jawaban-soal-3">
+              <h4>Jawaban Soal 3</h4>
+              
+              <p class="text" draggable="true" data-source="TM">TM</p>
+              <p class="text" draggable="true" data-source="TM">TM</p>
+              <p class="text" draggable="true" data-source="TM">TM</p>
+              <p class="text" draggable="true" data-source="tm">tm</p>
+              <p class="text" draggable="true" data-source="tm">tm</p>
+              <p class="text" draggable="true" data-source="tm">tm</p>
+              <p class="text" draggable="true" data-source="TTMM">TTMM</p>
+              <p class="text" draggable="true" data-source="TTMM">TTMM</p>
+              <p class="text" draggable="true" data-source="ttmm">ttmm</p>
+              <p class="text" draggable="true" data-source="ttmm">ttmm</p>
+              <p class="text" draggable="true" data-source="TtMm">TtMm</p>
+              <p class="text" draggable="true" data-source="TtMm">TtMm</p>
+              <p class="text" draggable="true" data-source="TtMm">TtMm</p>
+              <p class="text" draggable="true" data-source="TtMm">TtMm</p>
+              <p class="text" draggable="true" data-source="TtMm">TtMm</p>
+              <p class="text" draggable="true" data-source="TtMm">TtMm</p>
+              <p class="text" draggable="true" data-source="TtMm">TtMm</p>
+              <p class="text" draggable="true" data-source="TtMm">TtMm</p>
+              <p class="text" draggable="true" data-source="TtMm">TtMm</p>
+              <p class="text" draggable="true" data-source="TtMm">TtMm</p>
+              <p class="text" draggable="true" data-source="TtMm">TtMm</p>
+              <p class="text" draggable="true" data-source="TtMm">TtMm</p>
+              <p class="text" draggable="true" data-source="TtMm">TtMm</p>
+              <p class="text" draggable="true" data-source="TtMm">TtMm</p>
+              <p class="text" draggable="true" data-source="TTMm">TTMm</p>
+              <p class="text" draggable="true" data-source="TTMm">TTMm</p>
+              <p class="text" draggable="true" data-source="TTMm">TTMm</p>
+              <p class="text" draggable="true" data-source="TTMm">TTMm</p>
+              <p class="text" draggable="true" data-source="TtMM">TtMM</p>
+              <p class="text" draggable="true" data-source="TtMM">TtMM</p>
+              <p class="text" draggable="true" data-source="TtMM">TtMM</p>
+              <p class="text" draggable="true" data-source="TtMM">TtMM</p>
+              <p class="text" draggable="true" data-source="TTmm">TTmm</p>
+              <p class="text" draggable="true" data-source="ttMM">ttMM</p>
+              <p class="text" draggable="true" data-source="ttMm">ttMm</p>
+              <p class="text" draggable="true" data-source="ttMm">ttMm</p>
+              <p class="text" draggable="true" data-source="ttMm">ttMm</p>
+              <p class="text" draggable="true" data-source="ttMm">ttMm</p>
+              <p class="text" draggable="true" data-source="Ttmm">Ttmm</p>
+              <p class="text" draggable="true" data-source="Ttmm">Ttmm</p>
+              <p class="text" draggable="true" data-source="Ttmm">Ttmm</p>
+              <p class="text" draggable="true" data-source="Ttmm">Ttmm</p>
+              <p class="text" draggable="true" data-source="25">0</p>
+              <p class="text" draggable="true" data-source="25">25</p>
+              <p class="text" draggable="true" data-source="25">50</p>
+              <p class="text" draggable="true" data-source="25">75</p>
+              <p class="text" draggable="true" data-source="25">100</p>
               
           </div>
-          
-          
+
+
         </div>
     </div>
             </div>
