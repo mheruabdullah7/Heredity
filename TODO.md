@@ -1,13 +1,20 @@
-# TODO: Update Tujuan Pembelajaran in Materi 1 Subpages
-
-## Tasks
-- [x] Update tujuan pembelajaran in html/materi1/materi1_sub2.html to match the provided list
-- [x] Update tujuan pembelajaran in html/materi1/materi1_sub3.html to match the provided list
-- [x] Update tujuan pembelajaran in html/materi1/materi1_sub4.html to match the provided list
-- [x] Update tujuan pembelajaran in html/materi1/materi1_sub5.html to match the provided list
-- [x] Update tujuan pembelajaran in html/materi1/materi1_sub6.html to match the provided list
-
-## Provided List
-<li>Siswa mampu menjelaskan bunyi Hukum Mendel 1 & 2</li>
-<li>Siswa mampu menentukan keturunan dari persilangan Monohibrid & Dihibrid</li>
-<li>Siswa mampu menentukan sifat keturunan dari persilangan Monohibrid & Dihibrid</li>
+- [ ] Replace data-source="1" with data-source="HH"
+- [ ] Replace data-source="2" with data-source="hh"
+- [ ] Replace data-source="5" with data-source="Hh"
+- [ ] Replace data-source="3" with data-source="H"
+- [ ] Replace data-source="4" with data-source="h"
+- [ ] Replace data-source="6" with data-source="tikus hitam"
+- [ ] Replace data-source="0" with data-source="tikus putih"
+- [ ] Replace data-source="7" with data-source="0%"
+- [ ] Replace data-source="8" with data-source="25%"
+- [ ] Replace data-source="9" with data-source="50%"
+- [ ] Replace data-source="10" with data-source="75%"
+- [ ] Replace data-source="11" with data-source="100%"
+- [ ] Replace data-target="1" with data-target="HH"
+- [ ] Replace data-target="2" with data-target="hh"
+- [ ] Replace data-target="3" with data-target="Hh"
+- [ ] Replace data-target="4" with data-target="Hh"
+- [ ] Replace data-target="5" with data-target="Hh"
+- [ ] Replace data-target="6" with data-target="tikus hitam"
+- [ ] Replace data-target="0" with data-target="tikus putih"
+- [ ] Replace data-target="9" with data-target="50%"
