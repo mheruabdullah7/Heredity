@@ -1,0 +1,500 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Heredity</title>
+
+    <!-- ICON -->
+   <link href="/fontawesome/css/fontawesome.css" rel="stylesheet">
+   <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/2.0.0/uicons-regular-rounded/css/uicons-regular-rounded.css'>   
+   <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/2.0.0/uicons-thin-rounded/css/uicons-thin-rounded.css'>
+   <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/2.0.0/uicons-regular-straight/css/uicons-regular-straight.css'>
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+   <link href="/fontawesome/css/brands.css" rel="stylesheet">
+   <link href="/fontawesome/css/solid.css" rel="stylesheet">
+
+
+   <!-- Jquery -->
+   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js" charset="UTF-8"></script>
+
+   <!-- Boostrap -->
+   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+   
+   <!-- font -->
+   <link rel="preconnect" href="https://fonts.googleapis.com">
+   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+   <link href="https://fonts.googleapis.com/css2?family=Boogaloo&family=Roboto+Flex:opsz,wght@8..144,500&family=Signika+Negative:wght@700&display=swap" rel="stylesheet">
+
+   <!-- Mathjax -->
+   <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+   <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3.0.1/es5/tex-mml-chtml.js"></script>
+
+    <!-- css -->
+    <link href="/css/Materi/materiIndex.css" rel="stylesheet"> 
+    <link href="/css/materiResponsive.css" rel="stylesheet">
+    <link href="/css/Materi/Materi1/materi1_sub1_berlatih1.css" rel="stylesheet">
+    <link href="/css/Materi/Materi1/materi1_sub1_berlatih2.css" rel="stylesheet">
+    <link href="/css/Materi/Materi1/materi1_sub2_dragdrop.css" rel="stylesheet">
+    <link href="/css/materi/materi1/materi1_sub2_bagan_fix.css" rel="stylesheet">
+    <link href="/css/materi/materi1/materi1_sub2_alignment_fix.css" rel="stylesheet">
+
+
+    <link rel="icon" type="image/png" href="/img/iconWebsite.svg">
+</head>
+<body>
+    
+    <!-- Header -->
+    <div class="sidebarr">
+        <div class="logo-details">
+
+            <img src="/assets/White logo - no background.png" alt="">
+        </div>
+
+        <ul class="nav-link">
+            <!-- Beranda -->
+            <li>
+                <a class="iconn-link" href="/html/beranda.html">
+                    <div class="menubar">
+                        <i class="fi fi-rr-home"></i>
+                        <span class="link_nama" > Beranda</span>
+                    </div>
+                </a>
+            </li>
+            <!-- Pendahuluan -->
+            <li>
+                <a class="iconn-link" href="/html/pendahuluan.html">
+                    <div class="menubar">
+                        <i class="fi fi-rr-book-bookmark"></i>
+                        <span class="link_nama" >Pendahuluan</span>
+                    </div>
+                </a>
+            </li>
+            <!-- Materi 1 -->
+                <li>
+                    <div class="iconn-link aktif">
+                        <a href="#" class="menubar">
+                            <i class="fi fi-rr-book-bookmark"></i>
+                            <span class="link_nama">Hukum Mendel </span>
+                        </a>
+                        <span class="fa-sharp fa-solid fa-angle-down"></span>
+                    </div>
+                    <ul class="sub-menuu menuAktif">
+                        <div class="boxSub-menuu ">
+                            
+                            <!-- list sub menu -->
+                            <li>
+                                <a href="/html/materi1/materi1_sub1.html" class="aktif2">
+                                    Materi
+                                </a>
+                            </li>
+                            
+                            
+                                <a href="/html/materi1/materi1_kuis.html">
+                                    Kuis
+                                </a>
+                            </li>
+
+                        </div>
+                    </ul>
+                </li>
+
+            <!--  Materi 2 -->
+            <li>
+                <div class="iconn-link">
+                    <a href="#" class="menubar">
+                        <i class="fi fi-rr-book-bookmark"></i>
+                        <span class="link_nama">Penyimpangan Semu Hukum Mendel</span>
+                    </a>
+                    <span class="fa-sharp fa-solid fa-angle-down"></span>
+                </div>
+                <ul class="sub-menuu">
+                    <div class="boxSub-menuu">
+                        
+                        <!-- list sub menu -->
+                        <li>
+                            <a href="/html/materi2/materi2_sub1.html">
+                               Materi
+                            </a>
+                        </li>
+                        
+                        <li>
+                            <a href="/html/materi2/materi2_kuis.html">
+                                Kuis
+                            </a>
+                        </li>
+                    </div>
+                </ul>
+            </li>
+
+            
+            <!-- Evaluasi -->
+            <li>
+                <a class="iconn-link" href="/html/evaluasi.html">
+                    <div class="menubar">
+                        <i class="fi fi-rr-test"></i>
+                        <span class="link_nama" >Evaluasi</span>
+                    </div>
+                </a>
+            </li>
+                      
+            
+        </ul>
+    </div>
+
+    <!-- section Utama -->
+    <section class="home-section">
+        
+        <div class="home-content" style="display: flex;">
+            <i class="fa-sharp fa-solid fa-bars"></i>
+            
+            <span class="bab">Hukum Mendel </span>
+            <div class="dropdown ">
+                
+                <button class="btn btn-secondary dropdown-toggle"  type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    <span class="profile_name" id="namaSiswa"></span>
+                    <i class="fi fi-rr-user"></i>
+                </button>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="/html/profil.html">
+                    <div class="split">
+                        <span>Halaman Profil</span>
+                        <i class="fi fi-rr-user"></i>
+                    </div>
+                  </a></li>
+                  
+                  <li><a class="dropdown-item" href="#" onclick="LogOut()">
+                    <div class="split">
+                        <span>Keluar</span>
+                        <i class="fi fi-rs-sign-out-alt"></i>
+                    </div>
+                </a>
+                </li>
+                </ul>
+              </div>
+                
+        </div>
+
+        
+        <div class="konten">
+            
+            <div class="materi">
+                <!-- tujuan -->
+                <div class="accordion" id="accordionExample">
+                    <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingOne">
+                        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">Tujuan Pembelajaran (klik di sini)</button>
+                    </h2>
+                    <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+                        <div class="accordion-body">
+                        <ul>
+                            <li>Siswa mampu menjelaskan bunyi Hukum Mendel 1 & 2</li>
+                            <li>Siswa mampu menentukan keturunan dari persilangan Monohibrid & Dihibrid</li>
+                            <li>Siswa mampu menentukan sifat keturunan dari persilangan Monohibrid & Dihibrid</li>
+
+                        </ul>
+                        </div>
+                    </div>
+                    </div>
+                </div>
+                
+                <!-- akhir tujuan -->
+                
+                <br>
+                <div class="header">
+                        Ayo Membaca
+                    </div>
+                    <div class="card" style="border: 2px solid #353ba7; ">
+                      
+                      
+                        <h5 style="color: #353ba7;">Persilangan Monohibrid</h5>
+                        <br>
+                        <img src="/assets/ChatGPT Image Aug 17, 2025, 05_32_55 PM.png" width="400px" style="align-self: center;">
+                        <p>Mendel memperoleh hukum segregasi dengan melakukan persilangan monohibrid. Mendel menyilangkan tanaman kapri galur murni berbatang tinggi dengan tanaman kapri berbatang rendah. Hasil persilangan tersebut menunjukkan bahwa semua tanaman kapri keturunan pertama (F1) memiliki sifat yang sama dengan sifat salah satu induknya, yaitu semuanya berbatang tinggi. Mendel kemudian menyilangkan sesama tanaman F1 tersebut dan hasilnya, tanaman kapri keturunan kedua (F2) menunjukkan perbandingan fenotipe tanaman berbatang tinggi tanaman berbatang rendah = 3 : 1. Bagaimana hal itu dapat dijelaskan?</p>
+                        <p>Pada persilangan dominansi penuh seperti tersebut di depan, tanaman berbatang tinggi memiliki gen T dan bergenotipe TT (homozigot dominan), sedangkan tanaman berbatang rendah memiliki gen t serta bergenotipe tt (homozigot resesif). Pada keturunan pertama (F1), semua tanaman bergenotipe Tt (heterozigot) sehingga memiliki batang tinggi karena batang tinggi bersifat dominan terhadap batang rendah. Jika tanaman F1, ini membentuk gamet, gamet yang terbentuk ada dua, yaitu gamet dengan gen T dan t. Pada saat pembentukan gamet ini, kedua alel terse-but (T dan alelnya t) akan mengalami segregasi atau pemisahan yang dikenal dengan hukum Mendel I. Akibatnya, jika sesama tanaman F1, disilangkan, akan terbentuk individu yang bergenotipe TT, Tt, Tt, dan tt. Rasio fenotipenya adalah 3 tanaman berbatang tinggi dan 1 tanaman berbatang rendah.</p>
+    
+                    </div>
+<br><br>
+                    <div class="header">
+            Ayo Mencoba
+            </div>
+            <div class="card" style="border: 2px solid #353ba7; ">
+                        <div class="card w-100 shadow m-2 ms-0" style="background-color: #eee9da;">
+                            
+                            
+                            <p><b>Petunjuk Pengerjaan :</b></p>
+                            <li>Bacalah setiap soal dengan cermat.</li>
+                            <li>Drag (seret) jawaban yang tepat dari panel kanan ke kotak-kotak kosong yang sesuai.</li>
+                            <li>Setelah semua kotak terisi, klik tombol "Cek Jawaban" untuk memeriksa kebenaran jawaban.</li>
+                            <li>Gunakan tombol "Ulang" untuk mengulang latihan dari awal.</li>
+                            <li>Gunakan tombol pin untuk mengunci panel jawaban di posisi tetap.</li>
+                          
+                        </div><br>
+                <div class="dragndrop">
+      <div class="container" style="align-items: flex-start;">
+        <div class="bagan-soal" style="display: block;">
+          <p>Mari kita mencoba melakukan persilangan yang dilakukan Mendel terhadapl tanaman kapri berbatang tinggi dan tanaman kapri berbatang rendah seperti narasi di atas!</p>
+          <br>
+          <p>Diketahui : kapri berbatang tinggi : (TT), kapri berbatang rendah : (tt)</p>
+          <p>Ditanya : F₂?</p>
+          <p>Jawab :</p>
+        </div>
+        <div class="Text-persilangan" style="display: flex; flex-direction: row; align-items: flex-start;">
+          <div style="width: 150px;display: flex; flex-direction: column;">
+            <p style=" height: 40px; display: flex; align-items: center; margin: 3px 0 50px 0;">Parental (P) :</p>
+            <p style=" height: 40px; display: flex; align-items: center; margin: 0 0 10px 0;">Gamet (G) :</p>
+            <p style="height: 40px; display: flex; align-items: center; margin: 0 0 10px 0;">Filial₁ :</p>
+          </div>
+          
+          <div style="display: flex; flex-direction: column;">
+            <div style="display: flex; flex-direction: row; gap: 40px; align-items: center;">
+              <div class="column-span">kapri berbatang tinggi</div>
+              <p style="margin: 0;">X</p>
+              <div class="column-span">kapri berbatang rendah</div>
+            </div>
+            
+            <div style="display: flex; flex-direction: row; gap: 40px; align-items: center;">
+              
+              <div class="column" data-target="TT"></div>
+              <p style="margin: 0;">X</p>
+              <div class="column" data-target="tt"></div>
+            </div>
+            <div style="display: flex; flex-direction: row; gap: 40px; align-items: center;">
+              <div class="column" data-target="T"></div>
+              <p style="margin: 0;">X</p>
+              <div class="column" data-target="t"></div>
+            </div>
+            <div style="display: flex; flex-direction: row; gap: 40px; align-items: center;">
+              <div class="column" data-target="Tt"></div>
+              <!-- <p style="margin: 0;">X</p>
+              <div class="column" data-target="6"></div> -->
+            </div>
+            
+          </div>
+          
+        </div>
+        <div style="display: flex; flex-direction: row; gap: 40px; align-items: center;">
+              <p>fenotipe keturunan pertama yang didapatkan yaitu 100% </p>
+              <div class="column" data-target="kapri berbatang tinggi"></div>
+              <!-- <p>dan</p>
+              <div class="column" data-target="8"></div> -->
+            </div>
+        
+        <div class="Text-persilangan" style="display: flex; flex-direction: row; align-items: flex-start;">
+          <div style="width: 150px;display: flex; flex-direction: column;">
+            <p style=" height: 40px; display: flex; align-items: center; margin: 0 0 60px 0;">P₂ :</p>
+            <p style=" height: 40px; display: flex; align-items: center; margin: 0 0 80px 0;">G :</p>
+            <p style="height: 40px; display: flex; align-items: center; margin: 0 0 10px 0;">F₂ :</p>
+          </div>
+          <div style="display: flex; flex-direction: column;">
+            <div style="display: flex; flex-direction: row; gap: 40px; align-items: center;">
+              <div class="column-span">kapri berbatang tinggi</div>
+              <p style="margin: 0;">X</p>
+              <div class="column" data-target="kapri berbatang tinggi"></div>
+            </div>
+            <div style="display: flex; flex-direction: row; gap: 40px; align-items: center;">
+              <div class="column" data-target="Tt"></div>
+              <p style="margin: 0;">X</p>
+              <div class="column-span">Tt</div>
+            </div>
+            <div style="display: flex; flex-direction: row; gap: 40px; align-items: center;">
+              <div class="column-span" >T</div>
+              <p style="margin: 0;">X</p>
+              <div class="column-span" >T</div>
+            </div>
+            <div style="display: flex; flex-direction: row; gap: 40px; align-items: center;">
+              <div class="column-span" >t</div>
+              <p style="margin: 0;">X</p>
+              <div class="column-span" >t</div>
+            </div>
+            
+        
+            
+            
+          </div>
+          <br>
+          <div>
+            <table class="tabel-persilangan" style="border: 1px solid #353ba7">
+                  
+                  <tbody>
+                    <tr>
+                    <th scope="row"></th>
+                      <td><p>T</p></td>
+                      <td><p>t</p></td>
+                    </tr>
+                    <tr>
+                      <th scope="row">T</th>
+                      <td><div class="column" data-target="TT"></div></td>
+                      <td><div class="column" data-target="Tt"></div></td>
+                      
+                      
+                      
+                    </tr>
+                    <tr>
+                      <th scope="row">t</th>
+                      <td><div class="column" data-target="Tt"></div></td>
+                      <td><div class="column" data-target="tt"></div></td>
+                      
+                    </tr>
+                    
+              </tbody>
+          </table>
+          </div>
+                  <div style="display: contents; ">
+              <p>fenotipe keturunan kedua yang didapatkan yaitu 75% </p>
+              <div class="column" data-target="kapri berbatang tinggi"></div>
+              <p>dan 25%</p>
+              <div class="column" data-target="kapri berbatang rendah"></div>
+            </div>
+          
+        </div>
+
+        
+
+        <div class="score-container">
+          <button class="cek-button">Cek Jawaban</button>
+          <button class="reset-button">Ulang</button>
+          <span class="score-text">Nilai :</span>
+        </div>
+      </div>
+        <div class="container-text">
+          <button class="pin-button" title="Pin/Unpin container">
+            <i class="fi fi-rr-marker"></i>
+          </button>
+          <p class="text" draggable="true" data-source="TT">TT</p>
+          <p class="text" draggable="true" data-source="TT">TT</p>
+          <p class="text" draggable="true" data-source="TT">TT</p>
+          <p class="text" draggable="true" data-source="tt">tt</p>
+          <p class="text" draggable="true" data-source="tt">tt</p>
+          <p class="text" draggable="true" data-source="tt">tt</p>
+          <p class="text" draggable="true" data-source="Tt">Tt</p>
+          <p class="text" draggable="true" data-source="Tt">Tt</p>
+          <p class="text" draggable="true" data-source="Tt">Tt</p>
+          <p class="text" draggable="true" data-source="Tt">Tt</p>
+          <p class="text" draggable="true" data-source="Tt">Tt</p>
+          <p class="text" draggable="true" data-source="T">T</p>
+          <p class="text" draggable="true" data-source="T">T</p>
+          <p class="text" draggable="true" data-source="t">t</p>
+          <p class="text" draggable="true" data-source="t">t</p>
+          <p class="text" draggable="true" data-source="kapri berbatang tinggi">kapri berbatang tinggi</p>
+          <p class="text" draggable="true" data-source="kapri berbatang tinggi">kapri berbatang tinggi</p>
+          <p class="text" draggable="true" data-source="kapri berbatang tinggi">kapri berbatang tinggi</p>
+          <p class="text" draggable="true" data-source="kapri berbatang rendah">kapri berbatang rendah</p>
+          <p class="text" draggable="true" data-source="kapri berbatang rendah">kapri berbatang rendah</p>
+          <p class="text" draggable="true" data-source="kapri berbatang rendah">kapri berbatang rendah</p>
+          <p class="text" draggable="true" data-source="3:1">3:1</p>
+          <p class="text" draggable="true" data-source="1:2:1">1:2:1</p>
+          <p class="text" draggable="true" data-source="100%">100%</p>
+          <p class="text" draggable="true" data-source="0%">0%</p>
+          <p class="text" draggable="true" data-source="25%">25%</p>
+          <p class="text" draggable="true" data-source="50%">50%</p>
+          <p class="text" draggable="true" data-source="75%">75%</p>
+        </div>
+    </div>
+            </div>
+              
+</div>
+<!-- Pagination Buttons -->
+        <nav aria-label="Page navigation example" class="mt-4">
+          <ul class="pagination justify-content-center">
+            <li class="page-item">
+              <a class="page-link" href="/html/materi1/materi1_sub1.html" tabindex="-1" aria-disabled="true">Sebelumnya</a>
+            </li>
+
+            <li class="page-item"><a class="page-link" href="/html/materi1/materi1_sub1.html">1</a></li>
+            <li class="page-item active" aria-current="page"><a class="page-link pageAktif" href="#">2</a></li>
+            <li class="page-item"><a class="page-link" href="/html/materi1/materi1_sub3.html">3</a></li>
+            <li class="page-item"><a class="page-link" href="/html/materi1/materi1_sub4.html">4</a></li>
+            <li class="page-item"><a class="page-link" href="/html/materi1/materi1_sub5.html">5</a></li>
+            <li class="page-item"><a class="page-link" href="/html/materi1/materi1_sub6.html">6</a></li>
+            <li class="page-item">
+              <a class="page-link" href="/html/materi1/materi1_sub3.html">Selanjutnya</a>
+            </li>
+          </ul>
+        </nav>
+        </div>
+        
+        
+
+    </section>
+
+    
+
+     <!-- Modal zoom gambar -->
+    <div class="gambar_modal">
+        <div class="tutup d-flex px-3">
+            <span class="modalTxt position-absolute top-50 start-50 translate-middle text-dark text-center "></span>
+            <i class="fas fa-times position-absolute top-50 end-0 translate-middle-y mx-3 "></i>
+        </div>
+        <div class="modalContent">
+            <img src="" class="modalImg img-fluid" />
+        </div>
+    </div>
+
+    <!-- MathJax -->
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    </script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js" charset="UTF-8"></script>
+    <!-- JS -->
+    
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+    <!-- JS -->
+    <script src="/js/materiIndex.js"></script>
+    <script type="module" src="../../js/db/dataSiswa.js"></script>
+
+    
+    
+    <!-- JS Interaktif -->
+<script type="module" src="/js/materi1/materi1_latihan1.js"></script>
+<script type="module" src="/js/materi1/materi1_latihan2.js"></script>
+<script src="/js/materi1/materi1_dragdrop.js"></script>
+
+<script>
+  function adjustInputWidth(input) {
+    const minWidth = 30; // minimum width in pixels
+    const maxWidth = 800; // maximum width in pixels
+    const tempSpan = document.createElement('span');
+    tempSpan.style.visibility = 'hidden';
+    tempSpan.style.whiteSpace = 'pre';
+    tempSpan.style.font = window.getComputedStyle(input).font;
+    document.body.appendChild(tempSpan);
+
+    function updateWidth() {
+      tempSpan.textContent = input.value || input.placeholder || '';
+      let newWidth = tempSpan.offsetWidth + 10; // add some padding
+      if (newWidth < minWidth) newWidth = minWidth;
+      if (newWidth > maxWidth) newWidth = maxWidth;
+      input.style.width = newWidth + 'px';
+    }
+
+    input.addEventListener('input', updateWidth);
+    updateWidth();
+  }
+
+  document.addEventListener('DOMContentLoaded', () => {
+    const inputs = document.querySelectorAll('input[id^="isian"]');
+    inputs.forEach(input => {
+      adjustInputWidth(input);
+    });
+  });
+
+
+  
+function toggle(id) {
+    let elemen = document.getElementById(id);
+    if (elemen.style.maxHeight === "0px" || elemen.style.maxHeight === "") {
+        elemen.style.maxHeight = "200px";
+        elemen.style.margin = "5px 0 15px";
+        elemen.style.padding = "10px";
+    } else {
+        elemen.style.maxHeight = "0px";
+        elemen.style.margin = "0";
+        elemen.style.padding = "0 10px";
+    }
+}
+
+</script>
+
