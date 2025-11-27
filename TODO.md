@@ -1,5 +1,8 @@
-- [ ] Add instructions div above quiz-container
-- [ ] Shuffle drag items in JS
-- [ ] Modify drop event to remove item and prevent re-drop
-- [ ] Add reset button below choices
-- [ ] Add reset function to restore choices and clear drops
+- [x] Update the introductory text in .bagan-soal to reference chicken comb atavism.
+- [x] Change known info to ayam berpial ercis (PPrr) and ayam berpial mawar (ppRR).
+- [x] Update parental phenotypes, genotypes, gametes, and F1 to match.
+- [ ] Update P2 to pial walnut x pial walnut, with genotypes PpRr x PpRr.
+- [ ] Update F2 gametes to PR, Pr, pR, pr.
+- [ ] Update the Punnett square table headers and cells accordingly.
+- [ ] Change F2 phenotype description to 100% pial walnut.
+- [ ] Update the .container-text p elements' data-source to new values.

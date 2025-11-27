@@ -453,10 +453,10 @@
                 <div class="dragndrop">
       <div class="container" style="align-items: flex-start;">
         <div class="bagan-soal" style="display: block;">
-          <p>Mari kita mencoba melakukan persilangan yang dilakukan Mendel terhadapl tanaman kapri berbatang tinggi dan tanaman kapri berbatang rendah seperti narasi di atas!</p>
+          <p>Mari kita mencoba melakukan persilangan pial ayam seperti narasi atavisme di atasnya!</p>
           <br>
-          <p>Diketahui : kapri berbatang tinggi : (TT), kapri berbatang rendah : (tt)</p>
-          <p>Ditanya : F₂?</p>
+          <p>Diketahui : ayam berpial ercis : (PPrr), ayam berpial mawar : (ppRR)</p>
+          <p>Ditanya : bagaimana perbandingan dari keturunan f2 yang dihasilkan?</p>
           <p>Jawab :</p>
         </div>
         <div class="Text-persilangan" style="display: flex; flex-direction: row; align-items: flex-start;">
@@ -468,24 +468,24 @@
           
           <div style="display: flex; flex-direction: column;">
             <div style="display: flex; flex-direction: row; gap: 40px; align-items: center;">
-              <div class="column-span">kapri berbatang tinggi</div>
+              <div class="column-span">ayam berpial ercis</div>
               <p style="margin: 0;">X</p>
-              <div class="column-span">kapri berbatang rendah</div>
+              <div class="column-span">ayam berpial mawar</div>
             </div>
-            
+
             <div style="display: flex; flex-direction: row; gap: 40px; align-items: center;">
-              
-              <div class="column" data-target="TT"></div>
+
+              <div class="column" data-target="PPrr"></div>
               <p style="margin: 0;">X</p>
-              <div class="column" data-target="tt"></div>
-            </div>
-            <div style="display: flex; flex-direction: row; gap: 40px; align-items: center;">
-              <div class="column" data-target="T"></div>
-              <p style="margin: 0;">X</p>
-              <div class="column" data-target="t"></div>
+              <div class="column" data-target="ppRR"></div>
             </div>
             <div style="display: flex; flex-direction: row; gap: 40px; align-items: center;">
-              <div class="column" data-target="Tt"></div>
+              <div class="column" data-target="Pr"></div>
+              <p style="margin: 0;">X</p>
+              <div class="column" data-target="pR"></div>
+            </div>
+            <div style="display: flex; flex-direction: row; gap: 40px; align-items: center;">
+              <div class="column" data-target="PpRr"></div>
               <!-- <p style="margin: 0;">X</p>
               <div class="column" data-target="6"></div> -->
             </div>
@@ -495,7 +495,7 @@
         </div>
         <div style="display: flex; flex-direction: row; gap: 40px; align-items: center;">
               <p>fenotipe keturunan pertama yang didapatkan yaitu 100% </p>
-              <div class="column" data-target="kapri berbatang tinggi"></div>
+              <div class="column" data-target="pial walnut"></div>
               <!-- <p>dan</p>
               <div class="column" data-target="8"></div> -->
             </div>
@@ -508,24 +508,34 @@
           </div>
           <div style="display: flex; flex-direction: column;">
             <div style="display: flex; flex-direction: row; gap: 40px; align-items: center;">
-              <div class="column-span">kapri berbatang tinggi</div>
+              <div class="column-span">pial walnut</div>
               <p style="margin: 0;">X</p>
-              <div class="column" data-target="kapri berbatang tinggi"></div>
+              <div class="column" data-target="pial walnut"></div>
             </div>
             <div style="display: flex; flex-direction: row; gap: 40px; align-items: center;">
-              <div class="column" data-target="Tt"></div>
+              <div class="column" data-target="PpRr"></div>
               <p style="margin: 0;">X</p>
-              <div class="column-span">Tt</div>
+              <div class="column-span">PpRr</div>
             </div>
             <div style="display: flex; flex-direction: row; gap: 40px; align-items: center;">
-              <div class="column-span" >T</div>
+              <div class="column-span" >PR</div>
               <p style="margin: 0;">X</p>
-              <div class="column-span" >T</div>
+              <div class="column-span" >PR</div>
             </div>
             <div style="display: flex; flex-direction: row; gap: 40px; align-items: center;">
-              <div class="column-span" >t</div>
+              <div class="column-span" >Pr</div>
               <p style="margin: 0;">X</p>
-              <div class="column-span" >t</div>
+              <div class="column-span" >Pr</div>
+            </div>
+            <div style="display: flex; flex-direction: row; gap: 40px; align-items: center;">
+              <div class="column-span" >pR</div>
+              <p style="margin: 0;">X</p>
+              <div class="column-span" >pR</div>
+            </div>
+            <div style="display: flex; flex-direction: row; gap: 40px; align-items: center;">
+              <div class="column-span" >pr</div>
+              <p style="margin: 0;">X</p>
+              <div class="column-span" >pr</div>
             </div>
             
         
@@ -539,32 +549,45 @@
                   <tbody>
                     <tr>
                     <th scope="row"></th>
-                      <td><p>T</p></td>
-                      <td><p>t</p></td>
+                      <td><p>PR</p></td>
+                      <td><p>Pr</p></td>
+                      <td><p>pR</p></td>
+                      <td><p>pr</p></td>
                     </tr>
                     <tr>
-                      <th scope="row">T</th>
-                      <td><div class="column" data-target="TT"></div></td>
-                      <td><div class="column" data-target="Tt"></div></td>
-                      
-                      
-                      
+                      <th scope="row">PR</th>
+                      <td><div class="column" data-target="PPRR"></div></td>
+                      <td><div class="column" data-target="PPRr"></div></td>
+                      <td><div class="column" data-target="PpRR"></div></td>
+                      <td><div class="column" data-target="PpRr"></div></td>
                     </tr>
                     <tr>
-                      <th scope="row">t</th>
-                      <td><div class="column" data-target="Tt"></div></td>
-                      <td><div class="column" data-target="tt"></div></td>
-                      
+                      <th scope="row">Pr</th>
+                      <td><div class="column" data-target="PPRr"></div></td>
+                      <td><div class="column" data-target="PPRr"></div></td>
+                      <td><div class="column" data-target="PpRr"></div></td>
+                      <td><div class="column" data-target="PpRr"></div></td>
                     </tr>
-                    
+                    <tr>
+                      <th scope="row">pR</th>
+                      <td><div class="column" data-target="PpRR"></div></td>
+                      <td><div class="column" data-target="PpRr"></div></td>
+                      <td><div class="column" data-target="PpRR"></div></td>
+                      <td><div class="column" data-target="PpRr"></div></td>
+                    </tr>
+                    <tr>
+                      <th scope="row">pr</th>
+                      <td><div class="column" data-target="PpRr"></div></td>
+                      <td><div class="column" data-target="PpRr"></div></td>
+                      <td><div class="column" data-target="PpRr"></div></td>
+                      <td><div class="column" data-target="PpRr"></div></td>
+                    </tr>
               </tbody>
           </table>
           </div>
                   <div style="display: contents; ">
-              <p>fenotipe keturunan kedua yang didapatkan yaitu 75% </p>
-              <div class="column" data-target="kapri berbatang tinggi"></div>
-              <p>dan 25%</p>
-              <div class="column" data-target="kapri berbatang rendah"></div>
+              <p>perbandingan keturunan f2 berupa pial walnut : pial mawar : pial ercis : pial tunggal yaitu </p>
+              <div class="column" data-target="9:3:3:1"></div>
             </div>
           
         </div>
@@ -581,34 +604,82 @@
           <button class="pin-button" title="Pin/Unpin container">
             <i class="fi fi-rr-marker"></i>
           </button>
-          <p class="text" draggable="true" data-source="TT">TT</p>
-          <p class="text" draggable="true" data-source="TT">TT</p>
-          <p class="text" draggable="true" data-source="TT">TT</p>
-          <p class="text" draggable="true" data-source="tt">tt</p>
-          <p class="text" draggable="true" data-source="tt">tt</p>
-          <p class="text" draggable="true" data-source="tt">tt</p>
-          <p class="text" draggable="true" data-source="Tt">Tt</p>
-          <p class="text" draggable="true" data-source="Tt">Tt</p>
-          <p class="text" draggable="true" data-source="Tt">Tt</p>
-          <p class="text" draggable="true" data-source="Tt">Tt</p>
-          <p class="text" draggable="true" data-source="Tt">Tt</p>
-          <p class="text" draggable="true" data-source="T">T</p>
-          <p class="text" draggable="true" data-source="T">T</p>
-          <p class="text" draggable="true" data-source="t">t</p>
-          <p class="text" draggable="true" data-source="t">t</p>
-          <p class="text" draggable="true" data-source="kapri berbatang tinggi">kapri berbatang tinggi</p>
-          <p class="text" draggable="true" data-source="kapri berbatang tinggi">kapri berbatang tinggi</p>
-          <p class="text" draggable="true" data-source="kapri berbatang tinggi">kapri berbatang tinggi</p>
-          <p class="text" draggable="true" data-source="kapri berbatang rendah">kapri berbatang rendah</p>
-          <p class="text" draggable="true" data-source="kapri berbatang rendah">kapri berbatang rendah</p>
-          <p class="text" draggable="true" data-source="kapri berbatang rendah">kapri berbatang rendah</p>
-          <p class="text" draggable="true" data-source="3:1">3:1</p>
-          <p class="text" draggable="true" data-source="1:2:1">1:2:1</p>
+          <p class="text" draggable="true" data-source="Pr">Pr</p>
+          <p class="text" draggable="true" data-source="Pr">Pr</p>
+          <p class="text" draggable="true" data-source="pR">pR</p>
+          <p class="text" draggable="true" data-source="pR">pR</p>
+          <p class="text" draggable="true" data-source="PR">PR</p>
+          <p class="text" draggable="true" data-source="PR">PR</p>
+          <p class="text" draggable="true" data-source="Pr">Pr</p>
+          <p class="text" draggable="true" data-source="Pr">Pr</p>
+          <p class="text" draggable="true" data-source="pR">pR</p>
+          <p class="text" draggable="true" data-source="pR">pR</p>
+          <p class="text" draggable="true" data-source="pr">pr</p>
+          <p class="text" draggable="true" data-source="pr">pr</p>
+          <p class="text" draggable="true" data-source="PPRR">PPRR</p>
+          <p class="text" draggable="true" data-source="PPRR">PPRR</p>
+          <p class="text" draggable="true" data-source="PPRR">PPRR</p>
+          <p class="text" draggable="true" data-source="PPrr">PPrr</p>
+          <p class="text" draggable="true" data-source="PPrr">PPrr</p>
+          <p class="text" draggable="true" data-source="PPrr">PPrr</p>
+          <p class="text" draggable="true" data-source="PPRr">PPRr</p>
+          <p class="text" draggable="true" data-source="PPRr">PPRr</p>
+          <p class="text" draggable="true" data-source="PPRr">PPRr</p>
+          <p class="text" draggable="true" data-source="ppRr">ppRr</p>
+          <p class="text" draggable="true" data-source="ppRr">ppRr</p>
+          <p class="text" draggable="true" data-source="ppRr">ppRr</p>
+          <p class="text" draggable="true" data-source="PpRr">PpRR</p>
+          <p class="text" draggable="true" data-source="PpRr">PpRR</p>
+          <p class="text" draggable="true" data-source="PpRr">PpRR</p>
+          <p class="text" draggable="true" data-source="Pprr">Pprr</p>
+          <p class="text" draggable="true" data-source="Pprr">Pprr</p>
+          <p class="text" draggable="true" data-source="Pprr">Pprr</p>
+          <p class="text" draggable="true" data-source="ppRR">ppRR</p>
+          <p class="text" draggable="true" data-source="ppRR">ppRR</p>
+          <p class="text" draggable="true" data-source="ppRR">ppRR</p>
+          <p class="text" draggable="true" data-source="pprr">pprr</p>
+          <p class="text" draggable="true" data-source="pprr">pprr</p>
+          <p class="text" draggable="true" data-source="pprr">pprr</p>
+          <p class="text" draggable="true" data-source="PpRr">PpRr</p>
+          <p class="text" draggable="true" data-source="PpRr">PpRr</p>
+          <p class="text" draggable="true" data-source="PpRr">PpRr</p>
+          <p class="text" draggable="true" data-source="PpRr">PpRr</p>
+          <p class="text" draggable="true" data-source="PpRr">PpRr</p>
+          <p class="text" draggable="true" data-source="PpRr">PpRr</p>
+          <p class="text" draggable="true" data-source="PpRr">PpRr</p>
+          <p class="text" draggable="true" data-source="PpRr">PpRr</p>
+          
+          <p class="text" draggable="true" data-source="PpRr">PpRr</p>
+          
+          
           <p class="text" draggable="true" data-source="100%">100%</p>
           <p class="text" draggable="true" data-source="0%">0%</p>
-          <p class="text" draggable="true" data-source="25%">25%</p>
           <p class="text" draggable="true" data-source="50%">50%</p>
           <p class="text" draggable="true" data-source="75%">75%</p>
+          
+        
+          <p class="text" draggable="true" data-source="pial walnut">pial walnut</p>
+          <p class="text" draggable="true" data-source="pial walnut">pial walnut</p>
+          <p class="text" draggable="true" data-source="pial walnut">pial walnut</p>
+          <p class="text" draggable="true" data-source="pial ercis">pial ercis</p>
+          <p class="text" draggable="true" data-source="pial ercis">pial ercis</p>
+          <p class="text" draggable="true" data-source="pial ercis">pial ercis</p>
+          <p class="text" draggable="true" data-source="pial mawar">pial mawar</p>
+          <p class="text" draggable="true" data-source="pial mawar">pial mawar</p>
+          <p class="text" draggable="true" data-source="pial mawar">pial mawar</p>
+          <p class="text" draggable="true" data-source="pial tunggal">pial tunggal</p>
+          <p class="text" draggable="true" data-source="pial tunggal">pial tunggal</p>
+          <p class="text" draggable="true" data-source="pial tunggal">pial tunggal</p>
+          <p class="text" draggable="true" data-source="16:0:0:0">16:0:0:0</p>
+          <p class="text" draggable="true" data-source="12:3:1">12:3:1</p>
+          <p class="text" draggable="true" data-source="13:3">13:3</p>
+          <p class="text" draggable="true" data-source="9:3:3:1">9:3:3:1</p>
+          <p class="text" draggable="true" data-source="15:1">15:1</p>
+          <p class="text" draggable="true" data-source="9:6:1">9:6:1</p>
+          <p class="text" draggable="true" data-source="9:7">9:7</p>
+          <p class="text" draggable="true" data-source="9:4:3">9:4:3</p>
+          <p class="text" draggable="true" data-source="9:3:4">9:3:4</p>
+          
         </div>
     </div>
             </div>
@@ -623,7 +694,7 @@
 
             <li class="page-item"><a class="page-link" href="/html/materi1/materi1_sub1.html">1</a></li>
             <li class="page-item active" aria-current="page"><a class="page-link pageAktif" href="#">2</a></li>
-            <li class="page-item"><a class="page-link" href="/html/materi1/materi1_sub3.html">3</a></li>
+            <li class="page-item"><a class="page-link" href="/html/materi2/materi2_sub2.html">3</a></li>
             <li class="page-item"><a class="page-link" href="/html/materi1/materi1_sub4.html">4</a></li>
             <li class="page-item"><a class="page-link" href="/html/materi1/materi1_sub5.html">5</a></li>
             <li class="page-item"><a class="page-link" href="/html/materi1/materi1_sub6.html">6</a></li>
