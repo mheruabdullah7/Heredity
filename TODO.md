@@ -1,13 +1,13 @@
-# TODO: Perbaiki Tampilan Header Kuis 1 dan 2
+# TODO: Update Tujuan Pembelajaran in Materi 1 Subpages
 
-## Tugas Utama
-- Perbaiki tampilan header di halaman kuis 1 dan 2 dengan mengubah kelas teks dari "text" ke "bab" agar warna putih sesuai background biru.
+## Tasks
+- [x] Update tujuan pembelajaran in html/materi1/materi1_sub2.html to match the provided list
+- [x] Update tujuan pembelajaran in html/materi1/materi1_sub3.html to match the provided list
+- [x] Update tujuan pembelajaran in html/materi1/materi1_sub4.html to match the provided list
+- [x] Update tujuan pembelajaran in html/materi1/materi1_sub5.html to match the provided list
+- [x] Update tujuan pembelajaran in html/materi1/materi1_sub6.html to match the provided list
 
-## Langkah-langkah
-- [x] Edit html/materi1/kuis1.html: Ubah class="text" menjadi class="bab" di span judul kuis.
-- [x] Edit html/materi2/kuis2.html: Ubah class="text" menjadi class="bab" di span judul kuis.
-- [x] Verifikasi perubahan dengan melihat file atau menjalankan browser jika diperlukan.
-
-## Status
-- Plan disetujui user.
-- Mulai eksekusi.
+## Provided List
+<li>Siswa mampu menjelaskan bunyi Hukum Mendel 1 & 2</li>
+<li>Siswa mampu menentukan keturunan dari persilangan Monohibrid & Dihibrid</li>
+<li>Siswa mampu menentukan sifat keturunan dari persilangan Monohibrid & Dihibrid</li>
