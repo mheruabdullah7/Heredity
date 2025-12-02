@@ -1,10 +1,15 @@
-- [x] Update the problem description in .bagan-soal to Polymeri for wheat grain color
-- [x] Change diketahui to gandum biji merah (M₁M₁ M₂M₂), gandum biji putih (m₁m₁ m₂m₂)
-- [x] Update Parental (P) section to gandum biji merah X gandum biji putih
-- [x] Update Gametes (G) to M₁M₂ X m₁m₂
-- [x] Update Filial₁ to M₁m₁ M₂m₂
-- [x] Update P₂ to F₁ X F₁ (M₁m₁ M₂m₂ X M₁m₁ M₂m₂)
-- [x] Update G for F₂ to M₁M₂, M₁m₂, m₁M₂, m₁m₂
-- [x] Expand the Punnett square table to 4x4 with appropriate genotypes
-- [x] Update phenotype description to 93.75% biji merah dan 6.25% biji putih
-- [x] Update drag-and-drop options to include new genotypes, phenotypes, and ratios
+# TODO: Update Materi2 Learning Objectives and Pagination
+
+## Tasks
+- [ ] Update learning objectives in html/materi2/materi2_sub1.html
+- [ ] Fix pagination in html/materi2/materi2_sub1.html
+- [ ] Update learning objectives in html/materi2/materi2_sub2.html
+- [ ] Fix pagination in html/materi2/materi2_sub2.html
+- [ ] Update learning objectives in html/materi2/materi2_sub3.html
+- [ ] Fix pagination in html/materi2/materi2_sub3.html
+- [ ] Update learning objectives in html/materi2/materi2_sub4.html
+- [ ] Fix pagination in html/materi2/materi2_sub4.html
+- [ ] Update learning objectives in html/materi2/materi2_sub5.html
+- [ ] Fix pagination in html/materi2/materi2_sub5.html
+- [ ] Update learning objectives in html/materi2/materi2_sub6.html
+- [ ] Fix pagination in html/materi2/materi2_sub6.html
