@@ -74,7 +74,7 @@ function hasil(){
             <li class="mb-1 lh-lg">Setiap soal memiliki bobot nilai sebesar 20.</li>
             <li class="mb-1 lh-lg">Tekan tombol "<b>Mulai</b>" untuk mulai mengerjakan kuis.</li>
             <li class="mb-1 lh-lg">Jawablah soal dengan menekan pilihan jawaban yang dianggap benar.</li>
-            <li class="mb-1 lh-lg">Waktu pengerjaan adalah 30 menit. Jika waktu pengerjaan habis, maka tampilan akan beralih ke halaman hasil.</li>
+            <li class="mb-1 lh-lg">Waktu pengerjaan adalah 60 menit. Jika waktu pengerjaan habis, maka tampilan akan beralih ke halaman hasil.</li>
             <li class="mb-1 lh-lg">Setelah semua pertanyaan selesai dijawab, tekan tombol "Selesai" dan halaman hasil akan muncul.</li>
             <li class="lh-lg">Selesaikan semua soal sebelum waktu habis karena jika waktu habis maka secara otomatis kuis akan tertutup</li>
           </ol>

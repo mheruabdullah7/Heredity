@@ -1,8 +1,10 @@
-- [x] Update the introductory text in .bagan-soal to reference chicken comb atavism.
-- [x] Change known info to ayam berpial ercis (PPrr) and ayam berpial mawar (ppRR).
-- [x] Update parental phenotypes, genotypes, gametes, and F1 to match.
-- [ ] Update P2 to pial walnut x pial walnut, with genotypes PpRr x PpRr.
-- [ ] Update F2 gametes to PR, Pr, pR, pr.
-- [ ] Update the Punnett square table headers and cells accordingly.
-- [ ] Change F2 phenotype description to 100% pial walnut.
-- [ ] Update the .container-text p elements' data-source to new values.
+- [x] Update the problem description in .bagan-soal to Polymeri for wheat grain color
+- [x] Change diketahui to gandum biji merah (M₁M₁ M₂M₂), gandum biji putih (m₁m₁ m₂m₂)
+- [x] Update Parental (P) section to gandum biji merah X gandum biji putih
+- [x] Update Gametes (G) to M₁M₂ X m₁m₂
+- [x] Update Filial₁ to M₁m₁ M₂m₂
+- [x] Update P₂ to F₁ X F₁ (M₁m₁ M₂m₂ X M₁m₁ M₂m₂)
+- [x] Update G for F₂ to M₁M₂, M₁m₂, m₁M₂, m₁m₂
+- [x] Expand the Punnett square table to 4x4 with appropriate genotypes
+- [x] Update phenotype description to 93.75% biji merah dan 6.25% biji putih
+- [x] Update drag-and-drop options to include new genotypes, phenotypes, and ratios
