@@ -22,114 +22,124 @@ const db = getDatabase();
 const rawData = {
   "soal": [
     {
-      "no": 1,
-      "pertanyaan": "Penyimpangan semu Hukum Mendel adalah peristiwa ketika...",
-      "pilihan": [
-        "Gen tidak mengikuti prinsip segregasi sama sekali",
-        "Fenotipe F2 tidak memperlihatkan nisbah Mendel karena adanya interaksi antargen",
-        "Gen mengalami mutasi secara spontan",
-        "Setiap alel selalu dominan sempurna"
-      ],
-      "jawaban": "Fenotipe F2 tidak memperlihatkan nisbah Mendel karena adanya interaksi antargen"
+      "id": 1,
+      "tipe": "definisi",
+      "pertanyaan": "Penyimpangan semu Hukum Mendel adalah…",
+      "pilihan": {
+        "a": "Penyimpangan yang terjadi karena mutasi gen",
+        "b": "Penyimpangan pola fenotipe F2 akibat interaksi antargen",
+        "c": "Penyimpangan karena kromosom gagal berpisah",
+        "d": "Penyimpangan karena gen berubah posisi"
+      },
+      "jawaban": "b"
     },
     {
-      "no": 2,
-      "pertanyaan": "Atavisme dalam genetika ditandai dengan...",
-      "pilihan": [
-        "Munculnya sifat baru yang tidak ada pada induk",
-        "Munculnya sifat nenek moyang yang tidak tampak pada generasi sebelumnya",
-        "Fenomena dua gen saling menutupi",
-        "Gen dominan menutupi gen resesif"
-      ],
-      "jawaban": "Munculnya sifat nenek moyang yang tidak tampak pada generasi sebelumnya"
+      "id": 2,
+      "tipe": "persilangan",
+      "pertanyaan": "Gen A bersifat epistatik dominan terhadap gen B. Persilangan AaBb × AaBb menghasilkan rasio fenotipe F2…",
+      "pilihan": {
+        "a": "9:3:3:1",
+        "b": "12:3:1",
+        "c": "9:7",
+        "d": "15:1"
+      },
+      "jawaban": "b"
     },
     {
-      "no": 3,
-      "pertanyaan": "Kriptomeri terjadi ketika...",
-      "pilihan": [
-        "Gen dominan tidak tampak jika tidak didampingi gen lain",
-        "Dua gen sama-sama kuat sehingga menghasilkan sifat campuran",
-        "Gen resesif menutupi gen dominan",
-        "Gen homozigot menghasilkan sifat baru"
-      ],
-      "jawaban": "Gen dominan tidak tampak jika tidak didampingi gen lain"
+      "id": 3,
+      "tipe": "definisi",
+      "pertanyaan": "Kriptomeri adalah peristiwa ketika…",
+      "pilihan": {
+        "a": "Gen resesif menutupi gen dominan",
+        "b": "Gen dominan tidak dapat mengekspresikan sifat tanpa gen pendamping",
+        "c": "Dua gen harus hadir bersama untuk hasilkan sifat",
+        "d": "Dua gen berbeda menutupi satu sama lain"
+      },
+      "jawaban": "b"
     },
     {
-      "no": 4,
-      "pertanyaan": "Epistasis adalah peristiwa ketika...",
-      "pilihan": [
-        "Dua gen sama-sama muncul bersamaan",
-        "Satu gen menutupi ekspresi gen lain yang tidak sealel",
-        "Gen dominan berubah menjadi resesif",
-        "Sifat yang muncul berasal dari dua gen dominan"
-      ],
-      "jawaban": "Satu gen menutupi ekspresi gen lain yang tidak sealel"
+      "id": 4,
+      "tipe": "persilangan",
+      "pertanyaan": "Gen A dan B komplementer. Fenotipe normal hanya muncul jika A–B–. Persilangan AaBb × AaBb menghasilkan fenotipe normal sebanyak…",
+      "pilihan": {
+        "a": "7/16",
+        "b": "9/16",
+        "c": "3/16",
+        "d": "1/16"
+      },
+      "jawaban": "b"
     },
     {
-      "no": 5,
-      "pertanyaan": "Gen yang ekspresinya tertutup oleh gen epistatik disebut...",
-      "pilihan": [
-        "Kodominan",
-        "Homozigot",
-        "Hipostatik",
-        "Letal"
-      ],
-      "jawaban": "Hipostatik"
+      "id": 5,
+      "tipe": "definisi",
+      "pertanyaan": "Epistasis adalah interaksi ketika…",
+      "pilihan": {
+        "a": "Alel dominan dan resesif muncul bersamaan",
+        "b": "Satu gen menutupi ekspresi gen lain",
+        "c": "Dua gen saling membantu mengekspresikan sifat",
+        "d": "Banyak gen memberi efek aditif"
+      },
+      "jawaban": "b"
     },
     {
-      "no": 6,
-      "pertanyaan": "Pola komplementer terjadi ketika...",
-      "pilihan": [
-        "Dua gen harus bekerja bersama untuk menghasilkan fenotipe tertentu",
-        "Dua gen saling menutupi",
-        "Gen dominan tidak muncul tanpa gen penghambat",
-        "Fenotipe merupakan perpaduan dua gen dominan"
-      ],
-      "jawaban": "Dua gen harus bekerja bersama untuk menghasilkan fenotipe tertentu"
+      "id": 6,
+      "tipe": "persilangan",
+      "pertanyaan": "Warna bunga ungu muncul jika terdapat A dan B. Genotipe A–bb dan aaB– berwarna putih. Persilangan AaBb × Aabb menghasilkan keturunan berwarna ungu sebanyak…",
+      "pilihan": {
+        "a": "1/4",
+        "b": "3/8",
+        "c": "1/2",
+        "d": "5/8"
+      },
+      "jawaban": "b"
     },
     {
-      "no": 7,
-      "pertanyaan": "Ciri utama polimeri adalah...",
-      "pilihan": [
-        "Sifat hanya dipengaruhi satu gen",
-        "Gen memiliki pengaruh saling meniadakan",
-        "Banyak gen memberikan pengaruh kecil yang bersifat aditif",
-        "Sifat muncul karena gen resesif ganda"
-      ],
-      "jawaban": "Banyak gen memberikan pengaruh kecil yang bersifat aditif"
+      "id": 7,
+      "tipe": "definisi",
+      "pertanyaan": "Polimeri adalah pola pewarisan sifat ketika…",
+      "pilihan": {
+        "a": "Satu alel menghambat alel lain",
+        "b": "Dua gen muncul bersama untuk sifat tertentu",
+        "c": "Banyak gen memberi pengaruh kecil yang bersifat aditif",
+        "d": "Gen resesif memunculkan sifat baru"
+      },
+      "jawaban": "c"
     },
     {
-      "no": 8,
-      "pertanyaan": "Dalam epistasis dominan (misal 12:3:1), fenotipe dengan jumlah terbesar disebabkan oleh...",
-      "pilihan": [
-        "Alel epistatik resesif",
-        "Alel epistatik dominan",
-        "Interaksi komplementer",
-        "Polimeri"
-      ],
-      "jawaban": "Alel epistatik dominan"
+      "id": 8,
+      "tipe": "persilangan",
+      "pertanyaan": "Tinggi tanaman dipengaruhi dua gen polimeri A dan B. Semakin banyak alel dominan → semakin tinggi. Persilangan AaBb × AaBb menghasilkan keturunan dengan genotipe AABB sebanyak…",
+      "pilihan": {
+        "a": "1/16",
+        "b": "2/16",
+        "c": "3/16",
+        "d": "4/16"
+      },
+      "jawaban": "a"
     },
     {
-      "no": 9,
-      "pertanyaan": "Jika dua gen komplementer menyusun fenotipe dengan nisbah 9:7, maka fenotipe '7' muncul ketika...",
-      "pilihan": [
-        "Kedua gen dominan hadir",
-        "Salah satu gen dominan tidak hadir",
-        "Kedua gen resesif dominan",
-        "Kedua gen mengalami mutasi"
-      ],
-      "jawaban": "Salah satu gen dominan tidak hadir"
+      "id": 9,
+      "tipe": "definisi",
+      "pertanyaan": "Atavisme adalah munculnya kembali sifat…",
+      "pilihan": {
+        "a": "Baru akibat rekombinasi",
+        "b": "Yang ada pada nenek moyang tetapi tidak muncul di generasi sebelumnya",
+        "c": "Yang dipengaruhi gen resesif ganda",
+        "d": "Yang timbul dari mutasi spontan"
+      },
+      "jawaban": "b"
     },
     {
-      "no": 10,
-      "pertanyaan": "Sifat tinggi badan pada manusia dipengaruhi banyak gen, semakin banyak alel dominan menghasilkan tinggi lebih besar. Pola ini merupakan contoh...",
-      "pilihan": [
-        "Epistasis",
-        "Komplementer",
-        "Kodominansi",
-        "Polimeri"
-      ],
-      "jawaban": "Polimeri"
+      "id": 10,
+      "tipe": "persilangan",
+      "pertanyaan": "Gen aa bersifat epistatik resesif terhadap gen B. Persilangan AaBb × AaBb menghasilkan fenotipe epistatik (aaB– atau aabb) sebanyak…",
+      "pilihan": {
+        "a": "1/16",
+        "b": "3/16",
+        "c": "4/16",
+        "d": "7/16"
+      },
+      "jawaban": "c"
     }
   ]
 };
@@ -137,19 +147,11 @@ const rawData = {
 // Transform the data
 const questionsData = {};
 rawData.soal.forEach(item => {
-  const key = item.no.toString();
-  const pilihan = item.pilihan;
-  const jawabanIndex = pilihan.indexOf(item.jawaban);
-  const jawabanLetter = String.fromCharCode(97 + jawabanIndex); // 97 is 'a'
+  const key = item.id.toString();
   questionsData[key] = {
     pertanyaan: item.pertanyaan,
-    opsi: {
-      a: pilihan[0],
-      b: pilihan[1],
-      c: pilihan[2],
-      d: pilihan[3]
-    },
-    jawaban: jawabanLetter
+    opsi: item.pilihan,
+    jawaban: item.jawaban
   };
 });
 

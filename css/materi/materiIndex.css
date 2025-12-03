@@ -644,9 +644,7 @@ input {
 
 /* Bagian Bawah/Navbar */
 .home-section .konten .bawah{
-    position: fixed;
-
-    width: calc(100% - 23%);
+    
     padding: 5px;
     overflow-x: auto;
     white-space: nowrap;
