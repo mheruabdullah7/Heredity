@@ -38,6 +38,186 @@
     <link href="/css/Materi/Materi1/materi1_sub1_berlatih1.css" rel="stylesheet">
     <link href="/css/Materi/Materi1/materi1_sub1_berlatih2.css" rel="stylesheet">
 
+    <style>
+    .penentuangamet {
+       border: solid 2px #353ba7;
+        padding: 0;
+        border-radius: 5px;
+        display: block;
+    }
+
+    .penentuangamet .container {
+        max-width: 900px;
+        display: block;
+        margin: 0 auto;
+        padding: 30px;
+    }
+
+    .penentuangamet .title {
+        font-size: 42px;
+        font-weight: 800;
+        color: rgb(0, 0, 0);
+        margin-bottom: 30px;
+    }
+
+  
+
+    .penentuangamet .card {
+        background: white;
+        border-radius: 12px;
+        padding: 25px;
+        margin-bottom: 30px;
+        box-shadow: 0 6px 15px rgba(0,0,0,0.15);
+        position: relative;
+    }
+
+    .penentuangamet .number {
+        position: absolute;
+        top: -20px;
+        left: -20px;
+        background: #9c27b0;
+        color: white;
+        font-size: 28px;
+        font-weight: bold;
+        width: 55px;
+        height: 55px;
+        border-radius: 10px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .penentuangamet .number.yellow {
+        background: #ffb300;
+        color: black;
+    }
+
+    .penentuangamet .card h2 {
+        margin-top: 0;
+        color: #0d47a1;
+    }
+
+    .penentuangamet .card p {
+        margin: 10px 0;
+        line-height: 1.6;
+    }
+
+    .penentuangamet ul {
+        margin-top: 10px;
+        padding-left: 20px;
+    }
+
+    .penentuangamet li {
+        margin-bottom: 8px;
+    }
+
+    .penentuangamet .formula {
+        background: #f5f5f5;
+        padding: 10px 15px;
+        border-left: 5px solid #2196f3;
+        margin: 15px 0;
+        font-weight: 500;
+    }
+
+    .istilah_persilangan {
+        padding: 40px 0;
+        display: block;
+    }
+
+    .istilah_persilangan .container {
+        max-width: 900px;
+        display: block;
+        margin: 0 auto;
+        padding: 30px;
+    }
+
+    .istilah_persilangan .title {
+        font-size: 42px;
+        font-weight: 800;
+        color: rgb(0, 0, 0);
+        margin-bottom: 30px;
+    }
+
+    .istilah_persilangan .card {
+        background: white;
+        border-radius: 12px;
+        padding: 25px;
+        margin-bottom: 30px;
+        box-shadow: 0 6px 15px rgba(0,0,0,0.15);
+        position: relative;
+    }
+
+    .terms-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 20px;
+        margin-top: 20px;
+    }
+
+    .flip-card {
+        background-color: transparent;
+        perspective: 1000px;
+        cursor: pointer;
+    }
+
+    .flip-card-inner {
+        position: relative;
+        width: 100%;
+        height: 200px;
+        text-align: center;
+        transition: transform 0.6s;
+        transform-style: preserve-3d;
+    }
+
+    .flip-card.flipped .flip-card-inner {
+        transform: rotateY(180deg);
+    }
+
+    .flip-card-front, .flip-card-back {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        -webkit-backface-visibility: hidden;
+        backface-visibility: hidden;
+        border-radius: 15px;
+        box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 20px;
+    }
+
+    .flip-card-front {
+        background: linear-gradient(135deg, #353ba7 0%, #4a4fb7 100%);
+        color: white;
+    }
+
+    .flip-card-front i {
+        font-size: 40px;
+        margin-bottom: 10px;
+    }
+
+    .flip-card-front h3 {
+        font-size: 18px;
+        font-weight: bold;
+        margin: 0;
+    }
+
+    .flip-card-back {
+        background: #f8f9fa;
+        color: #333;
+        transform: rotateY(180deg);
+        border: 2px solid #353ba7;
+    }
+
+    .flip-card-back p {
+        font-size: 14px;
+        line-height: 1.4;
+        margin: 0;
+    }
+    </style>
+
     <link rel="icon" type="image/png" href="/img/iconWebsite.svg">
 </head>
 <body>
@@ -203,9 +383,14 @@
                         Ayo Membaca
                     </div>
                     <div class="card" style="border: 2px solid #353ba7; ">
-                      <div style="align-self: center;">
-                        <img src="/assets/pendahuluanGambar1.jpg" width="200px" >
-                      <img src="/assets/ChatGPT Image Aug 10, 2025, 04_04_25 PM.png" width="400px" style="margin: 0 0 10px 30px;" >
+                      <div style="text-align: center;">
+                        <div style="display: inline-block; vertical-align: middle; margin: 0 15px;">
+                          <img src="/assets/pendahuluanGambar1.jpg" width="200px" style="margin-top: 100px ;">
+                        </div>
+                        <div style="display: inline-block; vertical-align: top; margin: 0 15px;">
+                          <img src="/assets/ChatGPT Image Aug 10, 2025, 04_04_25 PM.png" width="400px" >
+                        </div>
+                        <p style="text-align: center; font-size: small; margin-top: 10px;">Gregor Johann Mendel (1822-1884) & Ilustrasi tanaman kacang ercis (Pisum sativum)</p>
                       </div>
                       <p>Adakah ada di antara Anda yang mengenal siapa Mendel itu? Mendel atau nama lengkapnya Gregor Johann Mendel (1822-1884) merupakan seorang biarawan berkebangsaan Austria yang selama bertahun-tahun melakukan penelitian tentang pewarisan sifat-sifat pada tanaman kacang ercis/kapri (Pisum sativum). Mengapa Mendel menggunakan tanaman kacang kapri atau ercis (Pisum sativum), bukan tanaman lain? Alasannya, tanaman kacang kapri memiliki siklus hidup tidak lama, mudah disilangkan, memiliki bunga sempurna, serta memiliki tujuh sifat beda yang mencoloks. Melalui penelitiannya itu, Mendel dapat meletakkan dasar-dasar ilmu genetika dan menemukan hukum-hukum genetika yang dikenal sebagai hukum Mendel I dan hukum Mendel II. Berkat penelitiannya itu, Mendel mendapat gelar Bapak Genetika. Bagaimanakah isi hukum Mendel yang dikemukakan oleh G.J. Mendel itu?</p>
                       <div style="display: flex; align-items: center; background-color: white; border-radius: 12px; padding: 20px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); max-width: 750px;">
@@ -225,125 +410,191 @@
                       <br><br><p>Hukum Mendel I dikenal juga dengan hukum segregasi atau pemisahan gen-gen yang sealel (segregation of allelic genes). Menurut hukum Mendel I, tiap organisme memiliki dua alel untuk setiap sifat. Selama pembentukan gamet, dua alel tersebut berpisah sehingga masing-masing gamet hanya mengandung satu alel untuk satu sifat. Jika dua gamet bertemu pada saat fertilisasi, keturunan yang terbentuk mengandung dua alel yang mengendalikan satu sifat. Hukum Mendel 1 tersebut sesuai dengan teori pewarisan sifat karena alel-alel individu diturunkan dari generasi ke generasi. Percampuran alel-alel tersebut menjelaskan mengapa terbentuk variasi dan mengapa keturunan-keturunan berbeda dari orang tuanya Hukum Mendel I dapat dibuktikan dengan persilangan monohibrid (persilangan dengan satu sifat beda).</p>
             <br>
             
+<div class="istilah_persilangan" style="border: solid 2px #353ba7;">
+<div class="container">
+    <div class="title">Istilah dalam Persilangan</div>
 
+    <div class="card">
         <P>Dalam suatu persilangan perlu diketahui terlebih dahulu istilah-istilah yang digunakan. Istilah-istilah dalam persilangan dapat kita pahami pada uraian berikut :</P>
 
-            <ol style="padding-left:20px; list-style-type: decimal;">
-    <li style="margin-bottom:10px;">
-        <button onclick="toggle('p')" 
-            style="background-color:#353ba7;color:white;padding:8px 14px;border:none;border-radius:5px;cursor:pointer;">
-            Parental (P) <i style="font-size: 70%;">(Klik untuk membuka)</i>
-        </button>
-        <div id="p" style="max-height:0;overflow:hidden;margin:0;padding:0 10px;border-left:3px solid #353ba7;background-color:#f9f9f9;border-radius:5px;transition:max-height 0.4s ease,padding 0.4s ease,margin 0.4s ease;">
-            Induk atau orang tua.
-        </div>
-    </li>
+        <p style="text-align: center; font-weight: bold; color: #353ba7; margin: 15px 0;">Klik pada kartu untuk melihat definisi istilah genetika</p>
 
-    <li style="margin-bottom:10px;">
-        <button onclick="toggle('f')" 
-            style="background-color:#353ba7;color:white;padding:8px 14px;border:none;border-radius:5px;cursor:pointer;">
-            Filial (F)
-        </button>
-        <div id="f" style="max-height:0;overflow:hidden;margin:0;padding:0 10px;border-left:3px solid #353ba7;background-color:#f9f9f9;border-radius:5px;transition:max-height 0.4s ease,padding 0.4s ease,margin 0.4s ease;">
-            Keturunan.
+<div class="terms-grid">
+    <div class="flip-card" onclick="flipCard(this)">
+        <div class="flip-card-inner">
+            <div class="flip-card-front">
+                <i class="fas fa-user"></i>
+                <h3>Parental (P)</h3>
+            </div>
+            <div class="flip-card-back">
+                <p>Induk atau orang tua.</p>
+            </div>
         </div>
-    </li>
+    </div>
 
-    <li style="margin-bottom:10px;">
-        <button onclick="toggle('f1')" 
-            style="background-color:#353ba7;color:white;padding:8px 14px;border:none;border-radius:5px;cursor:pointer;">
-            Keturunan Pertama (F₁)
-        </button>
-        <div id="f1" style="max-height:0;overflow:hidden;margin:0;padding:0 10px;border-left:3px solid #353ba7;background-color:#f9f9f9;border-radius:5px;transition:max-height 0.4s ease,padding 0.4s ease,margin 0.4s ease;">
-            Anak.
+    <div class="flip-card" onclick="flipCard(this)">
+        <div class="flip-card-inner">
+            <div class="flip-card-front">
+                <i class="fas fa-users"></i>
+                <h3>Filial (F)</h3>
+            </div>
+            <div class="flip-card-back">
+                <p>Keturunan.</p>
+            </div>
         </div>
-    </li>
+    </div>
 
-    <li style="margin-bottom:10px;">
-        <button onclick="toggle('f2')" 
-            style="background-color:#353ba7;color:white;padding:8px 14px;border:none;border-radius:5px;cursor:pointer;">
-            Keturunan Kedua (F₂)
-        </button>
-        <div id="f2" style="max-height:0;overflow:hidden;margin:0;padding:0 10px;border-left:3px solid #353ba7;background-color:#f9f9f9;border-radius:5px;transition:max-height 0.4s ease,padding 0.4s ease,margin 0.4s ease;">
-            Cucu.
+    <div class="flip-card" onclick="flipCard(this)">
+        <div class="flip-card-inner">
+            <div class="flip-card-front">
+                <i class="fas fa-child"></i>
+                <h3>Keturunan Pertama (F₁)</h3>
+            </div>
+            <div class="flip-card-back">
+                <p>Anak.</p>
+            </div>
         </div>
-    </li>
+    </div>
 
-    <li style="margin-bottom:10px;">
-        <button onclick="toggle('genotype')" 
-            style="background-color:#353ba7;color:white;padding:8px 14px;border:none;border-radius:5px;cursor:pointer;">
-            Genotipe
-        </button>
-        <div id="genotype" style="max-height:0;overflow:hidden;margin:0;padding:0 10px;border-left:3px solid #353ba7;background-color:#f9f9f9;border-radius:5px;transition:max-height 0.4s ease,padding 0.4s ease,margin 0.4s ease;">
-            Sifat-sifat menurun yang tidak tampak dari luar, disimbolkan dengan pasangan huruf. 
-            Contoh: AA, Aa, aa, AABB, AaBB.
+    <div class="flip-card" onclick="flipCard(this)">
+        <div class="flip-card-inner">
+            <div class="flip-card-front">
+                <i class="fas fa-user-friends"></i>
+                <h3>Keturunan Kedua (F₂)</h3>
+            </div>
+            <div class="flip-card-back">
+                <p>Cucu.</p>
+            </div>
         </div>
-    </li>
+    </div>
 
-    <li style="margin-bottom:10px;">
-        <button onclick="toggle('gamet')" 
-            style="background-color:#353ba7;color:white;padding:8px 14px;border:none;border-radius:5px;cursor:pointer;">
-            Gamet
-        </button>
-        <div id="gamet" style="max-height:0;overflow:hidden;margin:0;padding:0 10px;border-left:3px solid #353ba7;background-color:#f9f9f9;border-radius:5px;transition:max-height 0.4s ease,padding 0.4s ease,margin 0.4s ease;">
-            Sel kelamin yang berasal dari genotipe, disimbolkan dengan satu huruf. 
-            Contoh: genotipe Aa, gametnya A dan a.
+    <div class="flip-card" onclick="flipCard(this)">
+        <div class="flip-card-inner">
+            <div class="flip-card-front">
+                <i class="fas fa-dna"></i>
+                <h3>Genotipe</h3>
+            </div>
+            <div class="flip-card-back">
+                <p>Sifat-sifat menurun yang tidak tampak dari luar, disimbolkan dengan pasangan huruf. Contoh: AA, Aa, aa, AABB, AaBB.</p>
+            </div>
         </div>
-    </li>
+    </div>
 
-    <li style="margin-bottom:10px;">
-        <button onclick="toggle('fenotipe')" 
-            style="background-color:#353ba7;color:white;padding:8px 14px;border:none;border-radius:5px;cursor:pointer;">
-            Fenotipe
-        </button>
-        <div id="fenotipe" style="max-height:0;overflow:hidden;margin:0;padding:0 10px;border-left:3px solid #353ba7;background-color:#f9f9f9;border-radius:5px;transition:max-height 0.4s ease,padding 0.4s ease,margin 0.4s ease;">
-            Sifat menurun yang tampak dari luar. Contoh: buah besar, buah kecil, rasa manis, rasa asam, batang tinggi, batang pendek.
+    <div class="flip-card" onclick="flipCard(this)">
+        <div class="flip-card-inner">
+            <div class="flip-card-front">
+                <i class="fas fa-egg"></i>
+                <h3>Gamet</h3>
+            </div>
+            <div class="flip-card-back">
+                <p>Sel kelamin yang berasal dari genotipe, disimbolkan dengan satu huruf. Contoh: genotipe Aa, gametnya A dan a.</p>
+            </div>
         </div>
-    </li>
+    </div>
 
-    <li style="margin-bottom:10px;">
-        <button onclick="toggle('dominan')" 
-            style="background-color:#353ba7;color:white;padding:8px 14px;border:none;border-radius:5px;cursor:pointer;">
-            Dominan
-        </button>
-        <div id="dominan" style="max-height:0;overflow:hidden;margin:0;padding:0 10px;border-left:3px solid #353ba7;background-color:#f9f9f9;border-radius:5px;transition:max-height 0.4s ease,padding 0.4s ease,margin 0.4s ease;">
-            Sifat-sifat gen yang memiliki ekspresi lebih kuat dan menutupi sifat gen alel-nya, 
-            disimbolkan dengan huruf besar. Contoh: AA, BB, CC.
+    <div class="flip-card" onclick="flipCard(this)">
+        <div class="flip-card-inner">
+            <div class="flip-card-front">
+                <i class="fas fa-eye"></i>
+                <h3>Fenotipe</h3>
+            </div>
+            <div class="flip-card-back">
+                <p>Sifat menurun yang tampak dari luar. Contoh: buah besar, buah kecil, rasa manis, rasa asam, batang tinggi, batang pendek.</p>
+            </div>
         </div>
-    </li>
+    </div>
 
-    <li style="margin-bottom:10px;">
-        <button onclick="toggle('resesif')" 
-            style="background-color:#353ba7;color:white;padding:8px 14px;border:none;border-radius:5px;cursor:pointer;">
-            Resesif
-        </button>
-        <div id="resesif" style="max-height:0;overflow:hidden;margin:0;padding:0 10px;border-left:3px solid #353ba7;background-color:#f9f9f9;border-radius:5px;transition:max-height 0.4s ease,padding 0.4s ease,margin 0.4s ease;">
-            Sifat-sifat gen yang tidak muncul (tertutup) karena dikalahkan oleh sifat pasangannya, 
-            akan muncul apabila bersama-sama gen resesif lainnya, disimbolkan dengan huruf kecil. 
-            Contoh: aa, bb, cc.
+    <div class="flip-card" onclick="flipCard(this)">
+        <div class="flip-card-inner">
+            <div class="flip-card-front">
+                <i class="fas fa-crown"></i>
+                <h3>Dominan</h3>
+            </div>
+            <div class="flip-card-back">
+                <p>Sifat-sifat gen yang memiliki ekspresi lebih kuat dan menutupi sifat gen alel-nya, disimbolkan dengan huruf besar. Contoh: AA, BB, CC.</p>
+            </div>
         </div>
-    </li>
+    </div>
 
-    <li style="margin-bottom:10px;">
-        <button onclick="toggle('homozigot')" 
-            style="background-color:#353ba7;color:white;padding:8px 14px;border:none;border-radius:5px;cursor:pointer;">
-            Homozigot
-        </button>
-        <div id="homozigot" style="max-height:0;overflow:hidden;margin:0;padding:0 10px;border-left:3px solid #353ba7;background-color:#f9f9f9;border-radius:5px;transition:max-height 0.4s ease,padding 0.4s ease,margin 0.4s ease;">
-            Pasangan gen yang sifatnya sama. Contoh: AA, aa, BB, bb, CC, cc.
+    <div class="flip-card" onclick="flipCard(this)">
+        <div class="flip-card-inner">
+            <div class="flip-card-front">
+                <i class="fas fa-low-vision"></i>
+                <h3>Resesif</h3>
+            </div>
+            <div class="flip-card-back">
+                <p>Sifat-sifat gen yang tidak muncul (tertutup) karena dikalahkan oleh sifat pasangannya, akan muncul apabila bersama-sama gen resesif lainnya, disimbolkan dengan huruf kecil. Contoh: aa, bb, cc.</p>
+            </div>
         </div>
-    </li>
+    </div>
 
-    <li style="margin-bottom:10px;">
-        <button onclick="toggle('heterozigot')" 
-            style="background-color:#353ba7;color:white;padding:8px 14px;border:none;border-radius:5px;cursor:pointer;">
-            Heterozigot
-        </button>
-        <div id="heterozigot" style="max-height:0;overflow:hidden;margin:0;padding:0 10px;border-left:3px solid #353ba7;background-color:#f9f9f9;border-radius:5px;transition:max-height 0.4s ease,padding 0.4s ease,margin 0.4s ease;">
-            Pasangan gen yang tidak sama. Contoh: Aa, Bb, Cc.
+    <div class="flip-card" onclick="flipCard(this)">
+        <div class="flip-card-inner">
+            <div class="flip-card-front">
+                <i class="fas fa-equals"></i>
+                <h3>Homozygot</h3>
+            </div>
+            <div class="flip-card-back">
+                <p>Pasangan gen yang sifatnya sama. Contoh: AA, aa, BB, bb, CC, cc.</p>
+            </div>
         </div>
-    </li>
-</ol>
+    </div>
+
+    <div class="flip-card" onclick="flipCard(this)">
+        <div class="flip-card-inner">
+            <div class="flip-card-front">
+                <i class="fas fa-not-equal"></i>
+                <h3>Heterozigot</h3>
+            </div>
+            <div class="flip-card-back">
+                <p>Pasangan gen yang tidak sama. Contoh: Aa, Bb, Cc.</p>
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+</div></div>
+
+<br><br>
+
+<div class="penentuangamet">
+<div class="container">
+    <div class="title">Cara Penentuan Gamet</div>
+
+    <!-- Bagian 1 -->
+    <div class="card">
+        <div class="number">1</div>
+        <h2>Jumlah Gamet</h2>
+
+        <div class="formula">
+            Rumus: 2<sup>n</sup>, n = jumlah pasangan alel heterozigot,
+            yang terdiri dari satu alel dominan dan satu alel resesif
+            (contoh: Aa, Bb, Cc, Dd, dsb).
+        </div>
+
+        <p><strong>Contoh penentuan jumlah gamet:</strong></p>
+        <ul>
+            <li>Aa → 2<sup>n</sup> = 2<sup>1</sup> = 2
+                (n bernilai 1 karena hanya memiliki 1 alel heterozigot, yaitu Aa)</li>
+            <li>AaBb → 2<sup>n</sup> = 2<sup>2</sup> = 4</li>
+        </ul>
+    </div>
+
+    <!-- Bagian 2 -->
+    <div class="card">
+        <div class="number yellow">2</div>
+        <h2>Jenis Gamet</h2>
+
+        <p><strong>Contoh penentuan jenis gamet:</strong></p>
+        <ul>
+            <li>Aa menghasilkan 2 jenis gamet, yaitu A dan a</li>
+            <li>AaBb menghasilkan gamet:
+                AB, Ab, aB, dan ab
+            </li>
+        </ul>
+    </div>
+</div>
+</div>
 
     </div>        
 <br>
@@ -700,17 +951,8 @@
 
 
   
-function toggle(id) {
-    let elemen = document.getElementById(id);
-    if (elemen.style.maxHeight === "0px" || elemen.style.maxHeight === "") {
-        elemen.style.maxHeight = "200px";
-        elemen.style.margin = "5px 0 15px";
-        elemen.style.padding = "10px";
-    } else {
-        elemen.style.maxHeight = "0px";
-        elemen.style.margin = "0";
-        elemen.style.padding = "0 10px";
-    }
+function flipCard(card) {
+    card.classList.toggle('flipped');
 }
 
 </script>
