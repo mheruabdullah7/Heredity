@@ -157,7 +157,11 @@ document.addEventListener('DOMContentLoaded', function() {
             const targetNumber = column.dataset.target;
             const text = column.querySelector(".text");
 
-            if (text && text.dataset.source === targetNumber) {
+            // Split target by "||" to allow multiple correct answers
+            const possibleTargets = targetNumber.split("||").map(t => t.trim());
+            const isCorrect = text && possibleTargets.includes(text.dataset.source);
+
+            if (isCorrect) {
                 column.classList.add("correct");
                 column.classList.remove("incorrect");
                 correctCount++;

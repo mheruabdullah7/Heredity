@@ -1,15 +1,4 @@
-# TODO: Update Materi2 Learning Objectives and Pagination
-
-## Tasks
-- [ ] Update learning objectives in html/materi2/materi2_sub1.html
-- [ ] Fix pagination in html/materi2/materi2_sub1.html
-- [ ] Update learning objectives in html/materi2/materi2_sub2.html
-- [ ] Fix pagination in html/materi2/materi2_sub2.html
-- [ ] Update learning objectives in html/materi2/materi2_sub3.html
-- [ ] Fix pagination in html/materi2/materi2_sub3.html
-- [ ] Update learning objectives in html/materi2/materi2_sub4.html
-- [ ] Fix pagination in html/materi2/materi2_sub4.html
-- [ ] Update learning objectives in html/materi2/materi2_sub5.html
-- [ ] Fix pagination in html/materi2/materi2_sub5.html
-- [ ] Update learning objectives in html/materi2/materi2_sub6.html
-- [ ] Fix pagination in html/materi2/materi2_sub6.html
+- [ ] Update jawaban-soal-1 with correct answers for question 1 (atavism)
+- [ ] Update jawaban-soal-2 with correct answers for question 2 (epistasis)
+- [ ] Update jawaban-soal-3 with correct answers for question 3 (complementation)
+- [ ] Test the drag-and-drop functionality by launching the page in browser
