@@ -261,10 +261,12 @@
 
     .correct {
         background: #4CAF50 !important;
+        color: black !important;
     }
 
     .wrong {
         background: #e84545 !important;
+        color: black !important;
     }
 </style>
 
@@ -354,10 +356,10 @@
             const correct = drop.parentElement.dataset.answer;
 
             if(value === correct){
-                drop.innerHTML = `<span style="color:green;font-weight:bold">${value}</span>`;
+                drop.innerHTML = `<span style="color:black;font-weight:bold">${value}</span>`;
                 drop.classList.add("correct");
             } else {
-                drop.innerHTML = `<span style="color:red;font-weight:bold">${value}</span>`;
+                drop.innerHTML = `<span style="color:black;font-weight:bold">${value}</span>`;
                 drop.classList.add("wrong");
             }
             // Remove the dragged item
