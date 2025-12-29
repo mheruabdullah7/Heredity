@@ -1,8 +1,9 @@
-# TODO: Replace Learning Objectives in Materi 1 Sub-files
+# TODO: Fix Paths After Moving index.html to Root
 
-- [x] Edit html/materi1/materi1_sub1.html: Replace Tujuan Pembelajaran with new objectives
-- [x] Edit html/materi1/materi1_sub2.html: Replace Tujuan Pembelajaran with new objectives
-- [x] Edit html/materi1/materi1_sub3.html: Replace Tujuan Pembelajaran with new objectives
-- [x] Edit html/materi1/materi1_sub4.html: Replace Tujuan Pembelajaran with new objectives
-- [x] Edit html/materi1/materi1_sub5.html: Replace Tujuan Pembelajaran with new objectives
-- [x] Edit html/materi1/materi1_sub6.html: Replace Tujuan Pembelajaran with new objectives
+- [ ] Update index.html: Change href="loginguru.html" to "html/loginguru.html", href="register.html" to "html/register.html", window.location = "beranda.html" to "html/beranda.html"
+- [ ] Update html/beranda.html: window.location.href = "index.html" to "../index.html"
+- [ ] Update html/register.html: href="index.html" to "../index.html", document.location.href = "index.html" to "../index.html"
+- [ ] Update html/loginguru.html: href="index.html" to "../index.html"
+- [ ] Update html/petunjuk-aplikasi.html: window.location = "../html/index.html" to "../index.html"
+- [ ] Update html/profil.html: document.location.href = "../../index.html" to "../index.html"
+- [ ] Update js/db/dataSiswa.js: "../../html/index.html" to "../../index.html" (two instances)

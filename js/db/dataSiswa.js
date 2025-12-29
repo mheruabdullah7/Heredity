@@ -64,7 +64,7 @@ function menampilkanIdentitas(){
       title: 'Mohon Maaf',
       text: 'Kamu Harus Login Terlebih dahulu!',
     }).then(()=>{
-      document.location.href  = "../../html/index.html";
+      document.location.href  = "../../index.html";
     })
   }
   else{
@@ -141,7 +141,7 @@ function LogOut(){
         showConfirmButton: false,
         timer: 1500
       }).then(() => {
-        location.href = "../../html/index.html";
+        location.href = "../../index.html";
       });
     }
   });

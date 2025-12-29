@@ -44,7 +44,7 @@
 
     <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <!-- css -->
-    <link href="/css/index.CSS" rel="stylesheet" />
+    <link href="/css/index.css" rel="stylesheet" />
 
     <link rel="icon" type="image/png" href="/img/iconWebsite.svg" />
   </head>
@@ -84,7 +84,7 @@
 
             <button type="text" class="btn-masuk" id="sub_btn">Masuk</button>
             <div>
-              <a href="loginguru.html">
+              <a href="html/loginguru.html">
                 <button class="btn-sebagai">Masuk sebagai Guru</button></a
               >
             </div>
@@ -92,7 +92,7 @@
             <p>
               Belum mempunyai Akun?
               <a
-                href="register.html"
+                href="html/register.html"
                 class="buatAKun"
                 style="
                   margin: -5px auto 0px auto;
@@ -214,7 +214,7 @@
                   title: "Selamat!",
                   text: "Anda berhasil masuk",
                 }).then(() => {
-                  window.location = "beranda.html";
+                  window.location = "html/beranda.html";
                 });
               } else {
                 Swal.fire({
@@ -243,7 +243,7 @@
       // assign the events
       submit.addEventListener("click", AuthenticateUser);
       btnguru.addEventListener("click", function () {
-        window.location = "loginGuru.html";
+        window.location = "html/loginguru.html";
       });
 
       // Ambil data nama dari localStorage dan masukkan ke dalam elemen HTML
