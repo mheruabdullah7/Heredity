@@ -69,7 +69,7 @@ function LogOut(){
         showConfirButton: false,
         Timer: 1500,
       }).then(function () {
-        location.href = "../../indexGuru.html";
+        location.href = "../../index.html";
       sessionStorage.removeItem('nama');
       sessionStorage.removeItem('nip');
       // sessionStorage.removeItem('jeniskelamin');
